@@ -27,7 +27,7 @@ namespace Domain::Session
       struct   BadCommand     : SessionException   {using SessionException::SessionException;};
 
       // Object Factory returning a specialized object specific to the specified user and role
-      static std::unique_ptr<SessionHandler> createSession( const UserCredentials & credentials );
+      static std::unique_ptr<SessionHandler> userAuthenticates( const UserCredentials & credentials );
 
 
       // Operations

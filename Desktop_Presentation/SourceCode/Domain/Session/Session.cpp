@@ -24,15 +24,103 @@ namespace  // anonymous (private) working area
 
 // this function takes in a session and a number of arguments
 // we should change this with our own function or like createMedicalAppt()
-  std::any checkoutBook( Domain::Session::SessionBase & session, const std::vector<std::string> & args )
+  std::any createMedicalAppt( Domain::Session::SessionBase & session, const std::vector<std::string> & args )
   {
     // TO-DO  Verify there is such a book and the mark the book as being checked out by user
-    //std::string results = "Title \"" + args[0] + "\" checkout by \"" + session._credentials.userName + '"';
-    //session._logger << "checkoutBook:  " + results;
-    std::string results = "This is a test";
-    session._logger << "Testing authentication: " + results;
+    std::string results = args[0];
+    std::string output = "Here is the list of available doctors\n";
+    session._logger << "Patient reported to have issue:  " + results;
+    std::vector<std::string> doctor_list = {"Dr. Jones", "Dr. Rich", "Dr. Stone", "Dr. Mike", "Dr. Nguyen"};
+    int count = 1;
+    for(auto it = doctor_list.begin(); it != doctor_list.end(); ++it){
+      session._logger << "Doctor " + std::to_string(count) + ": " + *it + " ";
+      ++count;
+    
+    }
+
+    return {output};
+  }
+
+  std::any reqDoctor( Domain::Session::SessionBase & session, const std::vector<std::string> & args) 
+  {
+    session._logger << "Patient requested " + args[0];
+    if(args[0] == "Dr. Jones") {
+      
+      std::string results = "Available times: \n 10:00 AM \n 11:00 AM \n 2:00 PM \n";
+      return {results};
+    }
+    else if(args[0] == "Dr. Rich") {
+      std::string results = "Available times: \n 1:00 PM \n 3:00 PM \n 5:00 PM \n";
+      return {results};
+    }
+    else if(args[0] == "Dr. Stone") {
+      std::string results = "Available times: \n 2:30 PM \n 4:00 PM \n 5:00 PM \n";
+      return {results};
+    
+    }
+    else if(args[0] == "Dr. Mike") {
+      std::string results = "Available times: \n 5:00 PM \n 6:00 PM \n 7:00 PM \n";
+      return {results};
+ 
+    }
+    else if(args[0] == "Dr. Nguyen") {
+      std::string results = "Available times: \n 8:00 PM \n 9:00 PM \n 10:00 PM \n";
+      return {results};
+    }
+  }
+
+  std::any bookAppt( Domain::Session::SessionBase & session, const std::vector<std::string> & args) 
+  {
+    std::string output = "Here is your reservation: Your appointment with " + args[0] + " will be on " + args[1] + " at " + args[2] + "\n A receipt copy has been sent to the patient's email.";
+    return {output};
+  }
+
+  std::any generateServicesList( Domain::Session::SessionBase & session, const std::vector<std::string> & args )
+{
+  std::string results = args[0];
+  std::string output = "Here is the list of the services offered by the system \n";
+
+  std::vector<std::string> services_list = {"Create Medical Appointment", "Pay Medical Invoice", "Generate Medical Report", "Generate Prescription History"};
+  int count = 1;
+  session._logger << "List of Services \n";
+  for(auto it = services_list.begin(); it != services_list.end(); ++it) {
+    session._logger << std::to_string(count) + ". " + *it + " ";
+    ++count;
+  }
+
+  return {output};
+}
+
+std::any reqPayService ( Domain::Session::SessionBase & session, const std::vector<std::string> & args )
+{
+  session._logger << "Patient requested " + args[0];
+  if(args[0] == "Create Medical Appointment") {
+    std::string results = "Payment methods: \n Credit card \n Debit card \n Cash";
     return {results};
   }
+
+  else if(args[0] == "Pay Medical Invoice") {
+    std::string results = "Payment methods: \n Credit card \n Debit card \n Direct deposit \n Cash";
+    return {results};
+  }
+
+  else if(args[0] == "Generate Medical Report") {
+    std::string results = "Payment methods: \n Credit card \n Debit card";
+    return {results};
+  }
+
+  else if(args[0] == "Generate Prescription History") {
+    std::string results = "Payment methods: \n Credit card \n Debit card \n Direct deposit";
+    return {results};
+  }
+}
+
+std::any reqPaymentOption ( Domain::Session::SessionBase & session, const std::vector<std::string> & args )
+{
+  std::string output = "Here is the your payment receipt: You made a payment using the card ending with " + args[0] + "with the cvv code of " + args[1] + ".";
+  return {output};
+}
+
  /*
    std::any userAuthenticate( Domain::Session::SessionBase & session, const std::vector<std::string> & args)
   {
@@ -45,11 +133,6 @@ namespace  // anonymous (private) working area
 }    // anonymous (private) working area
 
  
-
-
-
-
-
 
 
 // these are the different Session namespaces
@@ -121,21 +204,29 @@ namespace Domain::Session
 
   // 2) Now map the above system events to roles authorized to make such a request.  Many roles can request the same event, and many
   //    events can be requested by a single role.
-  AdministratorSession::AdministratorSession( const UserCredentials & credentials ) : SessionBase( "Administrator", credentials )
-  {
-    _commandDispatch = { {"Help",            help        },
-                         {"Reset Account",   resetAccount},
-                         {"Shutdown System", shutdown    } };
-  }
+  
   // this works
   PatientSession::PatientSession( const UserCredentials & credentials ) : SessionBase( "Patient", credentials )
   {
     _commandDispatch = { {"Help",            help        },
-                         {"Reset Account",   resetAccount},
-                         {"Shutdown System", shutdown    } };
+                         {"Shutdown System", shutdown    },
+                         {"Create Medical Appointment", createMedicalAppt}, 
+                         {"Request Doctor", reqDoctor},
+                         {"Generate List of Services", generateServicesList},
+                         {"Book Appointment", bookAppt},
+                         {"Pay for Service", reqPayService},
+                         {"Request Payment Option", reqPaymentOption }};
   }
   
 
+/*
+
+    AdministratorSession::AdministratorSession( const UserCredentials & credentials ) : SessionBase( "Administrator", credentials )
+  {
+    _commandDispatch = { {"Help",            help        },
+                         {"Reset Account",   resetAccount},
+                         {"Shutdown System", shutdown    } };
+  }
 
   BorrowerSession::BorrowerSession( const UserCredentials & credentials ) : SessionBase( "Borrower", credentials )
   {
@@ -164,4 +255,5 @@ namespace Domain::Session
     _commandDispatch = { {"Bug People", bugPeople},
                          {"Help",       help} };
   }
+*/
 }    // namespace Domain::Session

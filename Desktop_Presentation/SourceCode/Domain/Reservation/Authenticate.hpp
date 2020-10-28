@@ -16,6 +16,7 @@ namespace Domain::Reservation    // change folder name Library -> Reservation la
   
   };
 
+  inline Authenticate::~Authenticate() noexcept = default;
 
 
 }

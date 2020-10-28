@@ -293,7 +293,7 @@ EXTRN	?_Xlength_error@std@@YAXPEBD@Z:PROC		; std::_Xlength_error
 EXTRN	?create@LoggerHandler@Logging@TechnicalServices@@SA?AV?$unique_ptr@VLoggerHandler@Logging@TechnicalServices@@U?$default_delete@VLoggerHandler@Logging@TechnicalServices@@@std@@@std@@AEAV?$basic_ostream@DU?$char_traits@D@std@@@5@@Z:PROC ; TechnicalServices::Logging::LoggerHandler::create
 EXTRN	??1UserInterfaceHandler@UI@@UEAA@XZ:PROC	; UI::UserInterfaceHandler::~UserInterfaceHandler
 EXTRN	??_ESystemDriverUI@UI@@UEAAPEAXI@Z:PROC		; UI::SystemDriverUI::`vector deleting destructor'
-EXTRN	?createSession@SessionHandler@Session@Domain@@SA?AV?$unique_ptr@VSessionHandler@Session@Domain@@U?$default_delete@VSessionHandler@Session@Domain@@@std@@@std@@AEBUUserCredentials@Persistence@TechnicalServices@@@Z:PROC ; Domain::Session::SessionHandler::createSession
+EXTRN	?userAuthenticates@SessionHandler@Session@Domain@@SA?AV?$unique_ptr@VSessionHandler@Session@Domain@@U?$default_delete@VSessionHandler@Session@Domain@@@std@@@std@@AEBUUserCredentials@Persistence@TechnicalServices@@@Z:PROC ; Domain::Session::SessionHandler::userAuthenticates
 EXTRN	_CxxThrowException:PROC
 EXTRN	_RTC_CheckStackVars:PROC
 EXTRN	_RTC_InitBase:PROC
@@ -9155,7 +9155,7 @@ $LN20:
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 
 ; 36   : 
-; 37   :       auto session  = Domain::Session::SessionHandler::createSession( {"Tom", "CPSC 462 Rocks!", {"Borrower"}} );
+; 37   :       auto session  = Domain::Session::SessionHandler::userAuthenticates( {"Tom", "CPSC 462 Rocks!", {"Borrower"}} );
 
 	mov	edx, 8
 	lea	rcx, QWORD PTR session$6[rbp]
@@ -9198,7 +9198,7 @@ $LN20:
 	npad	1
 	lea	rdx, QWORD PTR $T10[rbp]
 	lea	rcx, QWORD PTR session$6[rbp]
-	call	?createSession@SessionHandler@Session@Domain@@SA?AV?$unique_ptr@VSessionHandler@Session@Domain@@U?$default_delete@VSessionHandler@Session@Domain@@@std@@@std@@AEBUUserCredentials@Persistence@TechnicalServices@@@Z ; Domain::Session::SessionHandler::createSession
+	call	?userAuthenticates@SessionHandler@Session@Domain@@SA?AV?$unique_ptr@VSessionHandler@Session@Domain@@U?$default_delete@VSessionHandler@Session@Domain@@@std@@@std@@AEBUUserCredentials@Persistence@TechnicalServices@@@Z ; Domain::Session::SessionHandler::userAuthenticates
 	npad	1
 	lea	rcx, QWORD PTR $T10[rbp]
 	call	??1UserCredentials@Persistence@TechnicalServices@@QEAA@XZ

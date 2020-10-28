@@ -10,7 +10,7 @@
 
 //#include "Domain/Library/Books.hpp"    // Include for now - will replace next increment
 #include "Domain/Session/SessionHandler.hpp"
-#include "Domain/Reservation/Authenticate.hpp"
+//#include "Domain/Reservation/Authenticate.hpp"
 #include "TechnicalServices/Logging/LoggerHandler.hpp"
 #include "TechnicalServices/Persistence/PersistenceHandler.hpp"
 
@@ -22,7 +22,7 @@ namespace UI
   // Default constructor
   SimpleUI::SimpleUI()
   : //_bookHandler   ( std::make_unique<Domain::Library::Books>()                     ),   // will replace these with factory calls in the next increment
-    //_authenticate (std::make_unique<Domain::Reservation::Authenticate>()),
+    //_authenticate (std::make_unique<Domain::Reservation::Books>()     ),
     _loggerPtr     ( TechnicalServices::Logging::LoggerHandler::create()            ),
     _persistentData( TechnicalServices::Persistence::PersistenceHandler::instance() )
   {
@@ -58,28 +58,36 @@ namespace UI
     {
       std::cin.ignore(  std::numeric_limits<std::streamsize>::max(), '\n' );
 
-      std::cout << "  name: ";
+      std::cout << "  email: ";
       std::getline( std::cin, credentials.userName );
 
       std::cout << "  pass phrase: ";
       std::getline( std::cin, credentials.passPhrase );
 
+      /* uncomment for original code
       unsigned menuSelection;
+      
       do
       {
         for( unsigned i = 0; i != roleLegalValues.size(); ++i )   std::cout << std::setw( 2 ) << i << " - " << roleLegalValues[i] << '\n';
         std::cout << "  role (0-" << roleLegalValues.size()-1 << "): ";
         std::cin  >> menuSelection;
       } while( menuSelection >= roleLegalValues.size() );
+      
+      selectedRole = roleLegalValues[menuSelection]; 
+      */
 
-      selectedRole = roleLegalValues[menuSelection];
-
+      selectedRole = roleLegalValues[0]; // Hardcoded so that it logs in patients only
 
       // 3) Validate user is authorized for this role, and if so create session
-      sessionControl = Domain::Session::SessionHandler::createSession( credentials );
+      sessionControl = Domain::Session::SessionHandler::userAuthenticates( credentials );
+      int visit_number = 0;
       if( sessionControl != nullptr )
-      {
-        _logger << "Login Successful for \"" + credentials.userName + "\" as role \"" + selectedRole + "\"";
+      { 
+        ++visit_number;
+        
+        _logger << "Login Successful for \"" + credentials.userName + "\" as role \"" + selectedRole + "\" with visiting number: \"" + std::to_string(visit_number);
+        //_logger << "atient Visiting Number: " + visit_number ;
         break;
       }
 
@@ -117,18 +125,73 @@ namespace UI
       **     no coupling. This can be achieved in a variety of ways, but one common way is to pass strings instead of strong typed
       **     parameters.
       ******************************************************************************************************************************/
-      if( selectedCommand == "Checkout Book" )
+      if( selectedCommand == "Create Medical Appointment" )
       {
-        std::vector<std::string> parameters( 3 );
+        std::vector<std::string> parameters( 1 );
 
-        std::cout << " Enter book's title:  ";  std::cin >> std::ws;  std::getline( std::cin, parameters[0] );
-        std::cout << " Enter book's author: ";  std::cin >> std::ws;  std::getline( std::cin, parameters[1] );
-        std::cout << " Enter book's ISBN:   ";  std::cin >> std::ws;  std::getline( std::cin, parameters[2] );
+        std::cout << " Enter your issue/medical concern:  ";  std::cin >> std::ws;  std::getline( std::cin, parameters[0] );
 
         auto results = sessionControl->executeCommand( selectedCommand, parameters );
-        if( results.has_value() ) _logger << "Received reply: \"" + std::any_cast<const std::string &>( results ) + '"';
+        //if( results.has_value() ) _logger << "Received reply: \"" + std::any_cast<const std::string &>( results ) + '"';
       }
 
+      else if( selectedCommand == "Request Doctor")
+      {
+        std::vector<std::string> parameters( 1 );
+          std::cout << " Enter your desired Doctor:  ";  std::cin >> std::ws;  std::getline( std::cin, parameters[0] );
+
+        auto results = sessionControl->executeCommand( selectedCommand, parameters );
+       // if( results.has_value() ) _logger << "Received reply: \"" + std::any_cast<const std::string &>( results ) + '"';
+      }
+
+       else if( selectedCommand == "Generate List of Services")
+      {
+        std::vector<std::string> parameters( 1 );
+          std::cout << " Enter your visting number:  ";  std::cin >> std::ws;  std::getline( std::cin, parameters[0] );
+
+        auto results = sessionControl->executeCommand( selectedCommand, parameters );
+        //if( results.has_value() ) _logger << "Received reply: \"" + std::any_cast<const std::string &>( results ) + '"';
+      }
+       else if( selectedCommand == "Book Appointment")
+      {
+        std::vector<std::string> parameters( 3 );
+          std::cout << " Enter requested doctor:  ";  std::cin >> std::ws;  std::getline( std::cin, parameters[0] );
+          std::cout << " Enter requested date:  ";  std::cin >> std::ws;  std::getline( std::cin, parameters[1] );
+          std::cout << " Enter requested time:  ";  std::cin >> std::ws;  std::getline( std::cin, parameters[2] );
+        auto results = sessionControl->executeCommand( selectedCommand, parameters );
+        //if( results.has_value() ) _logger << "Received reply: \"" + std::any_cast<const std::string &>( results ) + '"';
+      }
+      else if( selectedCommand == "Pay for Service")
+      {
+        std::vector<std::string> parameters( 1 );
+          std::string options = "Please select one of the following options (1-4)";
+          std::cout << " 1) Create Medical Appointment \n" << "2) Pay Medical Invoice \n" << "3) Generate Medical Report \n" << "4) Generate Prescription History \n";  std::cin >> std::ws;  std::getline( std::cin, parameters[0] );
+          if(parameters[0] == "1"){
+            parameters[0] = "Create Medical Appointment"; 
+          }
+          else if (parameters[0] == "2"){
+            parameters[0] = "Pay Medical Invoice"; 
+          }
+          else if (parameters[0] == "3"){
+            parameters[0] = "Generate Medical Report"; 
+          }
+          else if (parameters[0] == "4"){
+            parameters[0] = "Generate Prescription History"; 
+          }
+
+        auto results = sessionControl->executeCommand( selectedCommand, parameters );
+        //if( results.has_value() ) _logger << "Received reply: \"" + std::any_cast<const std::string &>( results ) + '"';
+      }
+       else if( selectedCommand == "Request Payment Option")
+      {
+        std::vector<std::string> parameters( 2 );
+          std::cout << " Enter Credit Card Number:  ";  std::cin >> std::ws;  std::getline( std::cin, parameters[0] );
+          std::cout << " Enter CVV:  ";  std::cin >> std::ws;  std::getline( std::cin, parameters[1] );
+
+        auto results = sessionControl->executeCommand( selectedCommand, parameters );
+        //if( results.has_value() ) _logger << "Received reply: \"" + std::any_cast<const std::string &>( results ) + '"';
+      }
+      //"Request Payment Option"
       else if( selectedCommand == "Another command" ) /* ... */ {}
 
       else sessionControl->executeCommand( selectedCommand, {} );

@@ -1,3 +1,6 @@
 ﻿  Session.cpp
-C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\Domain\Session\Session.cpp(27,99): warning C4100: 'args': unreferenced formal parameter
+C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\Domain\Session\Session.cpp(72,53): warning C4100: 'session': unreferenced formal parameter
+C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\Domain\Session\Session.cpp(118,60): warning C4100: 'session': unreferenced formal parameter
+C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\Domain\Session\Session.cpp(70): warning C4715: '`anonymous namespace'::reqDoctor': not all control paths return a value
+C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\Domain\Session\Session.cpp(116): warning C4715: '`anonymous namespace'::reqPayService': not all control paths return a value
   ConsoleApplication.vcxproj -> C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\MSVC++v16 (2019) Solution Space\ConsoleApplication\x64\Debug\ConsoleApplication-x64-Debug.exe
