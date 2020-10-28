@@ -3,7 +3,7 @@
 #include <memory>    // std::unique_ptr
 
 //#include "Domain/Library/MaintainBooksHandler.hpp"
-#include "Domain/Reservation/Authenticate.hpp"
+#include "Domain/Reservation/ReservationHandler.hpp"
 #include "TechnicalServices/Logging/LoggerHandler.hpp"
 #include "TechnicalServices/Persistence/PersistenceHandler.hpp"
 
@@ -44,7 +44,7 @@ namespace UI
       TODO:
       add your new domain here
       */
-      std::unique_ptr<Domain::Reservation::Authenticate> _authenticate;
+      std::unique_ptr<Domain::Reservation::ReservationHandler> _reserve;
 
       std::unique_ptr<TechnicalServices::Logging::LoggerHandler>            _loggerPtr;
       TechnicalServices::Persistence::PersistenceHandler                  & _persistentData;

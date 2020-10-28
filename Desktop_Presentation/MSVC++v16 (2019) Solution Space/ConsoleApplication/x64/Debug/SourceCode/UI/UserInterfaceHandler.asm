@@ -40,7 +40,7 @@ __6D5B120B_stdexcept DB 01H
 __03665793_xtree DB 01H
 __40DF0D2D_ctype@h DB 01H
 __3AFA803E_string DB 01H
-__669750BD_Authenticate@hpp DB 01H
+__80BA7649_ReservationHandler@hpp DB 01H
 __0A4FAB91_cmath DB 01H
 __160863A3_xcall_once@h DB 01H
 __99B256EE_atomic DB 01H

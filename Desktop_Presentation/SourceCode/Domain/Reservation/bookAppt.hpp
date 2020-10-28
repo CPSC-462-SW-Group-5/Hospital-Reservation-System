@@ -1,25 +1,27 @@
 #pragma once
-#include<string>
+#include <string>
+#include <vector>
 // this is our Domain for Authentication
 namespace Domain::Reservation    // change folder name Library -> Reservation later
 {
   // Reservation Package within the Domain Layer Abstract class
-  class bookAppt
+  class ReservationHandler // this refers to the session that's being handled
   {
   public:
-    virtual ~bookAppt() noexcept = 0;
-    virtual std::string getDoctor();
-    virtual std::string getDate();
-    virtual std::string getTime();
+    virtual ~ReservationHandler() noexcept = 0; // no exception
+
+    virtual std::vector<std::string> createMedicalAppt( std::string issue ) = 0;
+    virtual std::vector<std::string> reqDoctor( std::string doctor_name )   = 0;
+    virtual std::string              bookAppt( std::string date, std::string time ) = 0;
 
   protected:
     // Copy assignment operators, protected to prevent mix derived-type assignments
-    bookAppt & operator=( const bookAppt & rhs ) = default;    // copy assignment
-    bookAppt & operator=( bookAppt && rhs ) = default;         // move assignment
+    ReservationHandler & operator=( const ReservationHandler & rhs ) = default;    // copy assignment
+    ReservationHandler & operator=( ReservationHandler && rhs ) = default;    // move assignment
   
   };
 
-  inline bookAppt::~bookAppt() noexcept = default;
+  inline ReservationHandler::~ReservationHandler() noexcept = default;
 
 
 }

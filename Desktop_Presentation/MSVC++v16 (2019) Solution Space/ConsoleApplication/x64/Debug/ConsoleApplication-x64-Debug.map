@@ -1,6 +1,6 @@
  ConsoleApplication-x64-Debug
 
- Timestamp is 5f994c04 (Wed Oct 28 03:46:28 2020)
+ Timestamp is 5f99501c (Wed Oct 28 04:03:56 2020)
 
  Preferred load address is 0000000140000000
 
@@ -58,30 +58,30 @@
 
   Address         Publics by Value              Rva+Base               Lib:Object
 
+ 0000:00000000       __arm64x_redirection_metadata_count 0000000000000000     <absolute>
  0000:00000000       __guard_eh_cont_count      0000000000000000     <absolute>
  0000:00000000       __guard_eh_cont_table      0000000000000000     <absolute>
- 0000:00000000       __AbsoluteZero             0000000000000000     <absolute>
- 0000:00000000       __x64_code_ranges_to_entry_points 0000000000000000     <absolute>
- 0000:00000000       __hybrid_code_map_count    0000000000000000     <absolute>
- 0000:00000000       __guard_fids_table         0000000000000000     <absolute>
- 0000:00000000       __guard_fids_count         0000000000000000     <absolute>
- 0000:00000000       __dynamic_value_reloc_table 0000000000000000     <absolute>
- 0000:00000000       __arm64x_extra_rfe_table_size 0000000000000000     <absolute>
- 0000:00000000       __hybrid_code_map          0000000000000000     <absolute>
- 0000:00000000       __volatile_metadata        0000000000000000     <absolute>
+ 0000:00000000       __x64_code_ranges_to_entry_points_count 0000000000000000     <absolute>
  0000:00000000       __arm64x_native_entrypoint 0000000000000000     <absolute>
  0000:00000000       __arm64x_extra_rfe_table   0000000000000000     <absolute>
- 0000:00000000       __guard_iat_count          0000000000000000     <absolute>
- 0000:00000000       __x64_code_ranges_to_entry_points_count 0000000000000000     <absolute>
- 0000:00000000       __arm64x_redirection_metadata_count 0000000000000000     <absolute>
- 0000:00000000       __guard_longjmp_count      0000000000000000     <absolute>
  0000:00000000       ___safe_se_handler_count   0000000000000000     <absolute>
- 0000:00000000       __enclave_config           0000000000000000     <absolute>
- 0000:00000000       ___safe_se_handler_table   0000000000000000     <absolute>
- 0000:00000000       __guard_longjmp_table      0000000000000000     <absolute>
+ 0000:00000000       __dynamic_value_reloc_table 0000000000000000     <absolute>
+ 0000:00000000       __hybrid_code_map          0000000000000000     <absolute>
+ 0000:00000000       __hybrid_code_map_count    0000000000000000     <absolute>
+ 0000:00000000       __volatile_metadata        0000000000000000     <absolute>
  0000:00000000       __arm64x_redirection_metadata 0000000000000000     <absolute>
+ 0000:00000000       __guard_fids_table         0000000000000000     <absolute>
  0000:00000000       __guard_iat_table          0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   0000000000000000     <absolute>
+ 0000:00000000       __arm64x_extra_rfe_table_size 0000000000000000     <absolute>
  0000:00000000       __hybrid_auxiliary_iat     0000000000000000     <absolute>
+ 0000:00000000       __guard_longjmp_count      0000000000000000     <absolute>
+ 0000:00000000       __x64_code_ranges_to_entry_points 0000000000000000     <absolute>
+ 0000:00000000       __guard_longjmp_table      0000000000000000     <absolute>
+ 0000:00000000       __guard_iat_count          0000000000000000     <absolute>
+ 0000:00000000       __guard_fids_count         0000000000000000     <absolute>
+ 0000:00000000       __enclave_config           0000000000000000     <absolute>
+ 0000:00000000       __AbsoluteZero             0000000000000000     <absolute>
  0000:00000100       __guard_flags              0000000000000100     <absolute>
  0000:00000000       __ImageBase                0000000140000000     <linker-defined>
  0001:00000000       __enc$textbss$begin        0000000140001000     <linker-defined>
@@ -368,20 +368,20 @@
  0002:00011950       ??_GBadCommand@SessionHandler@Session@Domain@@UEAAPEAXI@Z 000000014002f950 f i Session.obj
  0002:000119e0       ??_EPatientSession@Session@Domain@@UEAAPEAXI@Z 000000014002f9e0 f i Session.obj
  0002:000119e0       ??_GPatientSession@Session@Domain@@UEAAPEAXI@Z 000000014002f9e0 f i Session.obj
- 0002:00011a70       ??_ESessionException@SessionHandler@Session@Domain@@UEAAPEAXI@Z 000000014002fa70 f i Session.obj
  0002:00011a70       ??_GSessionException@SessionHandler@Session@Domain@@UEAAPEAXI@Z 000000014002fa70 f i Session.obj
+ 0002:00011a70       ??_ESessionException@SessionHandler@Session@Domain@@UEAAPEAXI@Z 000000014002fa70 f i Session.obj
  0002:00011b00       ??_Ebad_alloc@std@@UEAAPEAXI@Z 000000014002fb00 f i Session.obj
  0002:00011b00       ??_Gbad_alloc@std@@UEAAPEAXI@Z 000000014002fb00 f i Session.obj
  0002:00011b90       ??_Gbad_any_cast@std@@UEAAPEAXI@Z 000000014002fb90 f i Session.obj
  0002:00011b90       ??_Ebad_any_cast@std@@UEAAPEAXI@Z 000000014002fb90 f i Session.obj
  0002:00011c20       ??_Ebad_array_new_length@std@@UEAAPEAXI@Z 000000014002fc20 f i Session.obj
  0002:00011c20       ??_Gbad_array_new_length@std@@UEAAPEAXI@Z 000000014002fc20 f i Session.obj
- 0002:00011cb0       ??_Gbad_cast@std@@UEAAPEAXI@Z 000000014002fcb0 f i Session.obj
  0002:00011cb0       ??_Ebad_cast@std@@UEAAPEAXI@Z 000000014002fcb0 f i Session.obj
- 0002:00011d40       ??_Eexception@std@@UEAAPEAXI@Z 000000014002fd40 f i Session.obj
+ 0002:00011cb0       ??_Gbad_cast@std@@UEAAPEAXI@Z 000000014002fcb0 f i Session.obj
  0002:00011d40       ??_Gexception@std@@UEAAPEAXI@Z 000000014002fd40 f i Session.obj
- 0002:00011dd0       ??_Gruntime_error@std@@UEAAPEAXI@Z 000000014002fdd0 f i Session.obj
+ 0002:00011d40       ??_Eexception@std@@UEAAPEAXI@Z 000000014002fd40 f i Session.obj
  0002:00011dd0       ??_Eruntime_error@std@@UEAAPEAXI@Z 000000014002fdd0 f i Session.obj
+ 0002:00011dd0       ??_Gruntime_error@std@@UEAAPEAXI@Z 000000014002fdd0 f i Session.obj
  0002:00011e60       ?_Adjust_manually_vector_aligned@std@@YAXAEAPEAXAEA_K@Z 000000014002fe60 f i Session.obj
  0002:000120c0       ?_Adopt@_Iterator_base0@std@@QEAAXPEBX@Z 00000001400300c0 f i Session.obj
  0002:00012120       ?_Adopt@_Iterator_base12@std@@QEAAXPEBU_Container_base12@2@@Z 0000000140030120 f i Session.obj
@@ -550,8 +550,8 @@
  0002:0001b4d0       ??1SessionHandler@Session@Domain@@UEAA@XZ 00000001400394d0 f   SessionHandler.obj
  0002:0001b540       ??1logic_error@std@@UEAA@XZ 0000000140039540 f i SessionHandler.obj
  0002:0001b680       ??R?$default_delete@UPatientSession@Session@Domain@@@std@@QEBAXPEAUPatientSession@Session@Domain@@@Z 0000000140039680 f i SessionHandler.obj
- 0002:0001b740       ??_Glogic_error@std@@UEAAPEAXI@Z 0000000140039740 f i SessionHandler.obj
  0002:0001b740       ??_Elogic_error@std@@UEAAPEAXI@Z 0000000140039740 f i SessionHandler.obj
+ 0002:0001b740       ??_Glogic_error@std@@UEAAPEAXI@Z 0000000140039740 f i SessionHandler.obj
  0002:0001b7d0       ?_Equal@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBA_NAEBV12@@Z 00000001400397d0 f i SessionHandler.obj
  0002:0001b8c0       ?_Get_first@?$_Compressed_pair@U?$default_delete@UPatientSession@Session@Domain@@@std@@PEAUPatientSession@Session@Domain@@$00@std@@QEAAAEAU?$default_delete@UPatientSession@Session@Domain@@@2@XZ 00000001400398c0 f i SessionHandler.obj
  0002:0001b920       ?_Unwrapped@?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@@std@@QEBAPEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ 0000000140039920 f i SessionHandler.obj
@@ -643,10 +643,10 @@
  0002:00020e70       ??R?$default_delete@VSimpleLogger@Logging@TechnicalServices@@@std@@QEBAXPEAVSimpleLogger@Logging@TechnicalServices@@@Z 000000014003ee70 f i LoggerHandler.obj
  0002:00020f30       ??_GBadLoggerRequest@LoggerHandler@Logging@TechnicalServices@@UEAAPEAXI@Z 000000014003ef30 f i LoggerHandler.obj
  0002:00020f30       ??_EBadLoggerRequest@LoggerHandler@Logging@TechnicalServices@@UEAAPEAXI@Z 000000014003ef30 f i LoggerHandler.obj
- 0002:00020fc0       ??_GLoggerException@LoggerHandler@Logging@TechnicalServices@@UEAAPEAXI@Z 000000014003efc0 f i LoggerHandler.obj
  0002:00020fc0       ??_ELoggerException@LoggerHandler@Logging@TechnicalServices@@UEAAPEAXI@Z 000000014003efc0 f i LoggerHandler.obj
- 0002:00021050       ??_ESimpleLogger@Logging@TechnicalServices@@UEAAPEAXI@Z 000000014003f050 f i LoggerHandler.obj
+ 0002:00020fc0       ??_GLoggerException@LoggerHandler@Logging@TechnicalServices@@UEAAPEAXI@Z 000000014003efc0 f i LoggerHandler.obj
  0002:00021050       ??_GSimpleLogger@Logging@TechnicalServices@@UEAAPEAXI@Z 000000014003f050 f i LoggerHandler.obj
+ 0002:00021050       ??_ESimpleLogger@Logging@TechnicalServices@@UEAAPEAXI@Z 000000014003f050 f i LoggerHandler.obj
  0002:000210e0       ?_Get_first@?$_Compressed_pair@U?$default_delete@VSimpleLogger@Logging@TechnicalServices@@@std@@PEAVSimpleLogger@Logging@TechnicalServices@@$00@std@@QEAAAEAU?$default_delete@VSimpleLogger@Logging@TechnicalServices@@@2@XZ 000000014003f0e0 f i LoggerHandler.obj
  0002:00021140       ?count@?$duration@_JU?$ratio@$00$0JIJGIA@@std@@@chrono@std@@QEBA_JXZ 000000014003f140 f i LoggerHandler.obj
  0002:000211a0       ?create@LoggerHandler@Logging@TechnicalServices@@SA?AV?$unique_ptr@VLoggerHandler@Logging@TechnicalServices@@U?$default_delete@VLoggerHandler@Logging@TechnicalServices@@@std@@@std@@AEAV?$basic_ostream@DU?$char_traits@D@std@@@5@@Z 000000014003f1a0 f   LoggerHandler.obj
@@ -821,17 +821,17 @@
  0002:00029a90       ??F?$_Tree_unchecked_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@std@@@std@@U_Iterator_base0@2@@std@@QEAAAEAV01@XZ 0000000140047a90 f i SimpleDB.obj
  0002:00029be0       ??_D?$basic_ifstream@DU?$char_traits@D@std@@@std@@QEAAXXZ 0000000140047be0 f i SimpleDB.obj
  0002:00029c58       ??_E?$basic_ifstream@DU?$char_traits@D@std@@@std@@$4PPPPPPPM@A@EAAPEAXI@Z 0000000140047c58 f i SimpleDB.obj
- 0002:00029c70       ??_G?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z 0000000140047c70 f i SimpleDB.obj
  0002:00029c70       ??_E?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z 0000000140047c70 f i SimpleDB.obj
- 0002:00029d00       ??_G?$basic_ifstream@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z 0000000140047d00 f i SimpleDB.obj
+ 0002:00029c70       ??_G?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z 0000000140047c70 f i SimpleDB.obj
  0002:00029d00       ??_E?$basic_ifstream@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z 0000000140047d00 f i SimpleDB.obj
+ 0002:00029d00       ??_G?$basic_ifstream@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z 0000000140047d00 f i SimpleDB.obj
  0002:00029db0       ??_G?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@QEAAPEAXI@Z 0000000140047db0 f i SimpleDB.obj
  0002:00029e40       ??_GNoSuchProperty@PersistenceHandler@Persistence@TechnicalServices@@UEAAPEAXI@Z 0000000140047e40 f i SimpleDB.obj
  0002:00029e40       ??_ENoSuchProperty@PersistenceHandler@Persistence@TechnicalServices@@UEAAPEAXI@Z 0000000140047e40 f i SimpleDB.obj
- 0002:00029ed0       ??_GNoSuchUser@PersistenceHandler@Persistence@TechnicalServices@@UEAAPEAXI@Z 0000000140047ed0 f i SimpleDB.obj
  0002:00029ed0       ??_ENoSuchUser@PersistenceHandler@Persistence@TechnicalServices@@UEAAPEAXI@Z 0000000140047ed0 f i SimpleDB.obj
- 0002:00029f60       ??_EPersistenceException@PersistenceHandler@Persistence@TechnicalServices@@UEAAPEAXI@Z 0000000140047f60 f i SimpleDB.obj
+ 0002:00029ed0       ??_GNoSuchUser@PersistenceHandler@Persistence@TechnicalServices@@UEAAPEAXI@Z 0000000140047ed0 f i SimpleDB.obj
  0002:00029f60       ??_GPersistenceException@PersistenceHandler@Persistence@TechnicalServices@@UEAAPEAXI@Z 0000000140047f60 f i SimpleDB.obj
+ 0002:00029f60       ??_EPersistenceException@PersistenceHandler@Persistence@TechnicalServices@@UEAAPEAXI@Z 0000000140047f60 f i SimpleDB.obj
  0002:00029ff0       ??_GSimpleDB@Persistence@TechnicalServices@@UEAAPEAXI@Z 0000000140047ff0 f i SimpleDB.obj
  0002:00029ff0       ??_ESimpleDB@Persistence@TechnicalServices@@UEAAPEAXI@Z 0000000140047ff0 f i SimpleDB.obj
  0002:0002a080       ??_GUserCredentials@Persistence@TechnicalServices@@QEAAPEAXI@Z 0000000140048080 f i SimpleDB.obj
@@ -931,9 +931,9 @@
  0002:0002fa30       ?underflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAHXZ 000000014004da30 f i SimpleDB.obj
  0002:0002fbc0       ?xsgetn@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z 000000014004dbc0 f i SimpleDB.obj
  0002:0002fed0       ?xsputn@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z 000000014004ded0 f i SimpleDB.obj
- 0002:00030130       ??$?0$$V@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z 000000014004e130 f i SimpleUI.obj
+ 0002:00030130       ??$?0$$V@?$_Compressed_pair@U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@PEAVReservationHandler@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z 000000014004e130 f i SimpleUI.obj
  0002:000301a0       ??$?0AEAV?$allocator@D@std@@$$V@?$_Compressed_pair@V?$allocator@D@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QEAA@U_One_then_variadic_args_t@1@AEAV?$allocator@D@1@@Z 000000014004e1a0 f i SimpleUI.obj
- 0002:00030230       ??$?0U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ 000000014004e230 f i SimpleUI.obj
+ 0002:00030230       ??$?0U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VReservationHandler@Reservation@Domain@@U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@@std@@QEAA@XZ 000000014004e230 f i SimpleUI.obj
  0002:000302c0       ??$?0U?$default_delete@VSessionHandler@Session@Domain@@@std@@$0A@@?$unique_ptr@VSessionHandler@Session@Domain@@U?$default_delete@VSessionHandler@Session@Domain@@@std@@@std@@QEAA@XZ 000000014004e2c0 f i SimpleUI.obj
  0002:00030350       ??$?4U?$default_delete@VSessionHandler@Session@Domain@@@std@@$0A@@?$unique_ptr@VSessionHandler@Session@Domain@@U?$default_delete@VSessionHandler@Session@Domain@@@std@@@std@@QEAAAEAV01@$$QEAV01@@Z 000000014004e350 f i SimpleUI.obj
  0002:00030420       ??$?6DU?$char_traits@D@std@@_J@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@AEBU?$_Smanip@_J@0@@Z 000000014004e420 f i SimpleUI.obj
@@ -957,19 +957,19 @@
  0002:00031c20       ??0?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QEAA@_KAEBV?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@@Z 000000014004fc20 f i SimpleUI.obj
  0002:00031ce0       ??0SimpleUI@UI@@QEAA@XZ    000000014004fce0 f   SimpleUI.obj
  0002:00031e50       ??0UserInterfaceHandler@UI@@QEAA@XZ 000000014004fe50 f i SimpleUI.obj
- 0002:00031eb0       ??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ 000000014004feb0 f i SimpleUI.obj
+ 0002:00031eb0       ??1?$unique_ptr@VReservationHandler@Reservation@Domain@@U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@@std@@QEAA@XZ 000000014004feb0 f i SimpleUI.obj
  0002:00031f60       ??1?$unique_ptr@VSessionHandler@Session@Domain@@U?$default_delete@VSessionHandler@Session@Domain@@@std@@@std@@QEAA@XZ 000000014004ff60 f i SimpleUI.obj
  0002:00032010       ??1SimpleUI@UI@@UEAA@XZ    0000000140050010 f   SimpleUI.obj
  0002:00032130       ??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV01@QEBD@Z 0000000140050130 f i SimpleUI.obj
  0002:000321a0       ??A?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QEAAAEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@_K@Z 00000001400501a0 f i SimpleUI.obj
  0002:000322e0       ??B?$unique_ptr@VSessionHandler@Session@Domain@@U?$default_delete@VSessionHandler@Session@Domain@@@std@@@std@@QEBA_NXZ 00000001400502e0 f i SimpleUI.obj
  0002:00032360       ??C?$unique_ptr@VSessionHandler@Session@Domain@@U?$default_delete@VSessionHandler@Session@Domain@@@std@@@std@@QEBAPEAVSessionHandler@Session@Domain@@XZ 0000000140050360 f i SimpleUI.obj
- 0002:000323c0       ??R?$default_delete@VAuthenticate@Reservation@Domain@@@std@@QEBAXPEAVAuthenticate@Reservation@Domain@@@Z 00000001400503c0 f i SimpleUI.obj
+ 0002:000323c0       ??R?$default_delete@VReservationHandler@Reservation@Domain@@@std@@QEBAXPEAVReservationHandler@Reservation@Domain@@@Z 00000001400503c0 f i SimpleUI.obj
  0002:00032480       ??R?$default_delete@VSessionHandler@Session@Domain@@@std@@QEBAXPEAVSessionHandler@Session@Domain@@@Z 0000000140050480 f i SimpleUI.obj
  0002:00032540       ??Y?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV01@D@Z 0000000140050540 f i SimpleUI.obj
  0002:000325c0       ??_GSimpleUI@UI@@UEAAPEAXI@Z 00000001400505c0 f i SimpleUI.obj
  0002:000325c0       ??_ESimpleUI@UI@@UEAAPEAXI@Z 00000001400505c0 f i SimpleUI.obj
- 0002:00032650       ?_Get_first@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VAuthenticate@Reservation@Domain@@@2@XZ 0000000140050650 f i SimpleUI.obj
+ 0002:00032650       ?_Get_first@?$_Compressed_pair@U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@PEAVReservationHandler@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VReservationHandler@Reservation@Domain@@@2@XZ 0000000140050650 f i SimpleUI.obj
  0002:000326b0       ?_Get_first@?$_Compressed_pair@U?$default_delete@VSessionHandler@Session@Domain@@@std@@PEAVSessionHandler@Session@Domain@@$00@std@@QEAAAEAU?$default_delete@VSessionHandler@Session@Domain@@@2@XZ 00000001400506b0 f i SimpleUI.obj
  0002:00032710       ?_Ufill@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@AEAAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@PEAV32@_KU_Value_init_tag@2@@Z 0000000140050710 f i SimpleUI.obj
  0002:000327a0       ?__autoclassinit2@?$unique_ptr@VSessionHandler@Session@Domain@@U?$default_delete@VSessionHandler@Session@Domain@@@std@@@std@@QEAAX_K@Z 00000001400507a0 f i SimpleUI.obj
@@ -978,8 +978,8 @@
  0002:000340e0       ?reset@?$unique_ptr@VSessionHandler@Session@Domain@@U?$default_delete@VSessionHandler@Session@Domain@@@std@@@std@@QEAAXPEAVSessionHandler@Session@Domain@@@Z 00000001400520e0 f i SimpleUI.obj
  0002:00034190       ??0SystemDriverUI@UI@@QEAA@XZ 0000000140052190 f   SystemDriverUI.obj
  0002:000342d0       ??1SystemDriverUI@UI@@UEAA@XZ 00000001400522d0 f   SystemDriverUI.obj
- 0002:000343e0       ??_ESystemDriverUI@UI@@UEAAPEAXI@Z 00000001400523e0 f i SystemDriverUI.obj
  0002:000343e0       ??_GSystemDriverUI@UI@@UEAAPEAXI@Z 00000001400523e0 f i SystemDriverUI.obj
+ 0002:000343e0       ??_ESystemDriverUI@UI@@UEAAPEAXI@Z 00000001400523e0 f i SystemDriverUI.obj
  0002:00034470       ?launch@SystemDriverUI@UI@@UEAAXXZ 0000000140052470 f   SystemDriverUI.obj
  0002:00034940       ??$?0AEAPEAVSimpleUI@UI@@@?$_Compressed_pair@U?$default_delete@VSimpleUI@UI@@@std@@PEAVSimpleUI@UI@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAVSimpleUI@UI@@@Z 0000000140052940 f i UserInterfaceHandler.obj
  0002:000349d0       ??$?0AEAPEAVSystemDriverUI@UI@@@?$_Compressed_pair@U?$default_delete@VSystemDriverUI@UI@@@std@@PEAVSystemDriverUI@UI@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAVSystemDriverUI@UI@@@Z 00000001400529d0 f i UserInterfaceHandler.obj
@@ -1012,8 +1012,8 @@
  0002:00035900       ??1UserInterfaceHandler@UI@@UEAA@XZ 0000000140053900 f   UserInterfaceHandler.obj
  0002:00035970       ??R?$default_delete@VSimpleUI@UI@@@std@@QEBAXPEAVSimpleUI@UI@@@Z 0000000140053970 f i UserInterfaceHandler.obj
  0002:00035a30       ??R?$default_delete@VSystemDriverUI@UI@@@std@@QEBAXPEAVSystemDriverUI@UI@@@Z 0000000140053a30 f i UserInterfaceHandler.obj
- 0002:00035af0       ??_EBadUIRequest@UserInterfaceHandler@UI@@UEAAPEAXI@Z 0000000140053af0 f i UserInterfaceHandler.obj
  0002:00035af0       ??_GBadUIRequest@UserInterfaceHandler@UI@@UEAAPEAXI@Z 0000000140053af0 f i UserInterfaceHandler.obj
+ 0002:00035af0       ??_EBadUIRequest@UserInterfaceHandler@UI@@UEAAPEAXI@Z 0000000140053af0 f i UserInterfaceHandler.obj
  0002:00035b80       ??_EUIException@UserInterfaceHandler@UI@@UEAAPEAXI@Z 0000000140053b80 f i UserInterfaceHandler.obj
  0002:00035b80       ??_GUIException@UserInterfaceHandler@UI@@UEAAPEAXI@Z 0000000140053b80 f i UserInterfaceHandler.obj
  0002:00035c10       ?_Get_first@?$_Compressed_pair@U?$default_delete@VSimpleUI@UI@@@std@@PEAVSimpleUI@UI@@$00@std@@QEAAAEAU?$default_delete@VSimpleUI@UI@@@2@XZ 0000000140053c10 f i UserInterfaceHandler.obj
@@ -1129,8 +1129,8 @@
  0002:00036f60       __GSHandlerCheck_EH4       0000000140054f60 f   MSVCRTD:gshandlereh4.obj
  0002:00037040       __security_check_cookie    0000000140055040 f   MSVCRTD:amdsecgs.obj
  0002:00037070       ??1type_info@@UEAA@XZ      0000000140055070 f   MSVCRTD:std_type_info_static.obj
- 0002:00037090       ??_Etype_info@@UEAAPEAXI@Z 0000000140055090 f i MSVCRTD:std_type_info_static.obj
  0002:00037090       ??_Gtype_info@@UEAAPEAXI@Z 0000000140055090 f i MSVCRTD:std_type_info_static.obj
+ 0002:00037090       ??_Etype_info@@UEAAPEAXI@Z 0000000140055090 f i MSVCRTD:std_type_info_static.obj
  0002:000370e0       ?__scrt_initialize_type_info@@YAXXZ 00000001400550e0 f   MSVCRTD:tncleanup.obj
  0002:00037100       ?__scrt_uninitialize_type_info@@YAXXZ 0000000140055100 f   MSVCRTD:tncleanup.obj
  0002:00037120       ?configure_argv@__scrt_narrow_argv_policy@@SAHXZ 0000000140055120 f i MSVCRTD:utility.obj
@@ -1337,20 +1337,20 @@
  0002:0003aed0       __scrt_stub_for_acrt_initialize 0000000140058ed0 f   MSVCRTD:ucrt_stubs.obj
  0002:0003aed0       __vcrt_initialize          0000000140058ed0 f   MSVCRTD:ucrt_stubs.obj
  0002:0003aed0       __acrt_initialize          0000000140058ed0 f   MSVCRTD:ucrt_stubs.obj
- 0002:0003aee0       __vcrt_thread_attach       0000000140058ee0 f   MSVCRTD:ucrt_stubs.obj
  0002:0003aee0       __scrt_stub_for_acrt_thread_attach 0000000140058ee0 f   MSVCRTD:ucrt_stubs.obj
+ 0002:0003aee0       __vcrt_thread_attach       0000000140058ee0 f   MSVCRTD:ucrt_stubs.obj
  0002:0003aee0       __acrt_thread_attach       0000000140058ee0 f   MSVCRTD:ucrt_stubs.obj
  0002:0003aef0       __acrt_thread_detach       0000000140058ef0 f   MSVCRTD:ucrt_stubs.obj
  0002:0003aef0       __vcrt_thread_detach       0000000140058ef0 f   MSVCRTD:ucrt_stubs.obj
  0002:0003aef0       __scrt_stub_for_acrt_thread_detach 0000000140058ef0 f   MSVCRTD:ucrt_stubs.obj
- 0002:0003af00       __scrt_stub_for_acrt_uninitialize 0000000140058f00 f   MSVCRTD:ucrt_stubs.obj
  0002:0003af00       __acrt_uninitialize        0000000140058f00 f   MSVCRTD:ucrt_stubs.obj
  0002:0003af00       __vcrt_uninitialize        0000000140058f00 f   MSVCRTD:ucrt_stubs.obj
- 0002:0003af10       __scrt_stub_for_acrt_uninitialize_critical 0000000140058f10 f   MSVCRTD:ucrt_stubs.obj
- 0002:0003af10       __vcrt_uninitialize_critical 0000000140058f10 f   MSVCRTD:ucrt_stubs.obj
+ 0002:0003af00       __scrt_stub_for_acrt_uninitialize 0000000140058f00 f   MSVCRTD:ucrt_stubs.obj
  0002:0003af10       __acrt_uninitialize_critical 0000000140058f10 f   MSVCRTD:ucrt_stubs.obj
- 0002:0003af20       __scrt_stub_for_is_c_termination_complete 0000000140058f20 f   MSVCRTD:ucrt_stubs.obj
+ 0002:0003af10       __vcrt_uninitialize_critical 0000000140058f10 f   MSVCRTD:ucrt_stubs.obj
+ 0002:0003af10       __scrt_stub_for_acrt_uninitialize_critical 0000000140058f10 f   MSVCRTD:ucrt_stubs.obj
  0002:0003af20       _is_c_termination_complete 0000000140058f20 f   MSVCRTD:ucrt_stubs.obj
+ 0002:0003af20       __scrt_stub_for_is_c_termination_complete 0000000140058f20 f   MSVCRTD:ucrt_stubs.obj
  0002:0003c9d0       _guard_dispatch_icall_nop  000000014005a9d0 f   MSVCRTD:guard_dispatch.obj
  0002:0003c9f0       _guard_xfg_dispatch_icall_nop 000000014005a9f0 f   MSVCRTD:guard_xfg_dispatch.obj
  0003:00000000       __xc_a                     0000000140062000     MSVCRTD:initializers.obj
@@ -8173,19 +8173,19 @@
  0003:000152ec       $unwind$??1SimpleUI@UI@@UEAA@XZ 00000001400772ec     SimpleUI.obj
  0003:00015306       $cppxdata$??1SimpleUI@UI@@UEAA@XZ 0000000140077306     SimpleUI.obj
  0003:0001530b       $ip2state$??1SimpleUI@UI@@UEAA@XZ 000000014007730b     SimpleUI.obj
- 0003:00015310       $unwind$??R?$default_delete@VAuthenticate@Reservation@Domain@@@std@@QEBAXPEAVAuthenticate@Reservation@Domain@@@Z 0000000140077310     SimpleUI.obj
- 0003:0001532a       $cppxdata$??R?$default_delete@VAuthenticate@Reservation@Domain@@@std@@QEBAXPEAVAuthenticate@Reservation@Domain@@@Z 000000014007732a     SimpleUI.obj
- 0003:0001532f       $ip2state$??R?$default_delete@VAuthenticate@Reservation@Domain@@@std@@QEBAXPEAVAuthenticate@Reservation@Domain@@@Z 000000014007732f     SimpleUI.obj
- 0003:00015334       $unwind$??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ 0000000140077334     SimpleUI.obj
- 0003:0001534e       $cppxdata$??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ 000000014007734e     SimpleUI.obj
- 0003:00015353       $ip2state$??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ 0000000140077353     SimpleUI.obj
- 0003:00015358       $unwind$?_Get_first@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VAuthenticate@Reservation@Domain@@@2@XZ 0000000140077358     SimpleUI.obj
- 0003:00015372       $cppxdata$?_Get_first@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VAuthenticate@Reservation@Domain@@@2@XZ 0000000140077372     SimpleUI.obj
- 0003:00015377       $ip2state$?_Get_first@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VAuthenticate@Reservation@Domain@@@2@XZ 0000000140077377     SimpleUI.obj
+ 0003:00015310       $unwind$??R?$default_delete@VReservationHandler@Reservation@Domain@@@std@@QEBAXPEAVReservationHandler@Reservation@Domain@@@Z 0000000140077310     SimpleUI.obj
+ 0003:0001532a       $cppxdata$??R?$default_delete@VReservationHandler@Reservation@Domain@@@std@@QEBAXPEAVReservationHandler@Reservation@Domain@@@Z 000000014007732a     SimpleUI.obj
+ 0003:0001532f       $ip2state$??R?$default_delete@VReservationHandler@Reservation@Domain@@@std@@QEBAXPEAVReservationHandler@Reservation@Domain@@@Z 000000014007732f     SimpleUI.obj
+ 0003:00015334       $unwind$??1?$unique_ptr@VReservationHandler@Reservation@Domain@@U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@@std@@QEAA@XZ 0000000140077334     SimpleUI.obj
+ 0003:0001534e       $cppxdata$??1?$unique_ptr@VReservationHandler@Reservation@Domain@@U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@@std@@QEAA@XZ 000000014007734e     SimpleUI.obj
+ 0003:00015353       $ip2state$??1?$unique_ptr@VReservationHandler@Reservation@Domain@@U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@@std@@QEAA@XZ 0000000140077353     SimpleUI.obj
+ 0003:00015358       $unwind$?_Get_first@?$_Compressed_pair@U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@PEAVReservationHandler@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VReservationHandler@Reservation@Domain@@@2@XZ 0000000140077358     SimpleUI.obj
+ 0003:00015372       $cppxdata$?_Get_first@?$_Compressed_pair@U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@PEAVReservationHandler@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VReservationHandler@Reservation@Domain@@@2@XZ 0000000140077372     SimpleUI.obj
+ 0003:00015377       $ip2state$?_Get_first@?$_Compressed_pair@U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@PEAVReservationHandler@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VReservationHandler@Reservation@Domain@@@2@XZ 0000000140077377     SimpleUI.obj
  0003:0001537c       $unwind$??_GSimpleUI@UI@@UEAAPEAXI@Z 000000014007737c     SimpleUI.obj
- 0003:00015390       $unwind$??$?0U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ 0000000140077390     SimpleUI.obj
- 0003:000153aa       $cppxdata$??$?0U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ 00000001400773aa     SimpleUI.obj
- 0003:000153af       $ip2state$??$?0U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ 00000001400773af     SimpleUI.obj
+ 0003:00015390       $unwind$??$?0U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VReservationHandler@Reservation@Domain@@U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@@std@@QEAA@XZ 0000000140077390     SimpleUI.obj
+ 0003:000153aa       $cppxdata$??$?0U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VReservationHandler@Reservation@Domain@@U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@@std@@QEAA@XZ 00000001400773aa     SimpleUI.obj
+ 0003:000153af       $ip2state$??$?0U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VReservationHandler@Reservation@Domain@@U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@@std@@QEAA@XZ 00000001400773af     SimpleUI.obj
  0003:000153b4       $unwind$??R?$default_delete@VSessionHandler@Session@Domain@@@std@@QEBAXPEAVSessionHandler@Session@Domain@@@Z 00000001400773b4     SimpleUI.obj
  0003:000153ce       $cppxdata$??R?$default_delete@VSessionHandler@Session@Domain@@@std@@QEBAXPEAVSessionHandler@Session@Domain@@@Z 00000001400773ce     SimpleUI.obj
  0003:000153d3       $ip2state$??R?$default_delete@VSessionHandler@Session@Domain@@@std@@QEBAXPEAVSessionHandler@Session@Domain@@@Z 00000001400773d3     SimpleUI.obj
@@ -8235,9 +8235,9 @@
  0003:0001562b       $ip2state$??$_Construct_n_copies_of_ty@U_Value_init_tag@std@@@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z 000000014007762b     SimpleUI.obj
  0003:00015638       $unwind$?dtor$0@?0???$_Construct_n_copies_of_ty@U_Value_init_tag@std@@@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z@4HA 0000000140077638     SimpleUI.obj
  0003:00015648       $unwind$?dtor$1@?0???$_Construct_n_copies_of_ty@U_Value_init_tag@std@@@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z@4HA 0000000140077648     SimpleUI.obj
- 0003:00015658       $unwind$??$?0$$V@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z 0000000140077658     SimpleUI.obj
- 0003:00015672       $cppxdata$??$?0$$V@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z 0000000140077672     SimpleUI.obj
- 0003:00015677       $ip2state$??$?0$$V@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z 0000000140077677     SimpleUI.obj
+ 0003:00015658       $unwind$??$?0$$V@?$_Compressed_pair@U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@PEAVReservationHandler@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z 0000000140077658     SimpleUI.obj
+ 0003:00015672       $cppxdata$??$?0$$V@?$_Compressed_pair@U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@PEAVReservationHandler@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z 0000000140077672     SimpleUI.obj
+ 0003:00015677       $ip2state$??$?0$$V@?$_Compressed_pair@U?$default_delete@VReservationHandler@Reservation@Domain@@@std@@PEAVReservationHandler@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z 0000000140077677     SimpleUI.obj
  0003:0001567c       $unwind$??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAEAV?$basic_istream@DU?$char_traits@D@std@@@0@$$QEAV10@AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@D@Z 000000014007767c     SimpleUI.obj
  0003:0001569a       $cppxdata$??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAEAV?$basic_istream@DU?$char_traits@D@std@@@0@$$QEAV10@AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@D@Z 000000014007769a     SimpleUI.obj
  0003:000156a8       $stateUnwindMap$??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAEAV?$basic_istream@DU?$char_traits@D@std@@@0@$$QEAV10@AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@D@Z 00000001400776a8     SimpleUI.obj
@@ -8964,23 +8964,23 @@
  0007:000001be       __4324C6B3_xutility        00000001400871be     SimpleUI.obj
  0007:000001bf       __A58979FC_xmemory         00000001400871bf     SimpleUI.obj
  0007:000001c0       __4E2906A2_memory          00000001400871c0     SimpleUI.obj
- 0007:000001c1       __669750BD_Authenticate@hpp 00000001400871c1     SimpleUI.obj
- 0007:000001c2       __AC6CB2D0_tuple           00000001400871c2     SimpleUI.obj
- 0007:000001c3       __E0552A5D_xpolymorphic_allocator@h 00000001400871c3     SimpleUI.obj
- 0007:000001c4       __D15AFF60_xstring         00000001400871c4     SimpleUI.obj
- 0007:000001c5       __6D5B120B_stdexcept       00000001400871c5     SimpleUI.obj
- 0007:000001c6       __0A4FAB91_cmath           00000001400871c6     SimpleUI.obj
- 0007:000001c7       __160863A3_xcall_once@h    00000001400871c7     SimpleUI.obj
- 0007:000001c8       __99B256EE_atomic          00000001400871c8     SimpleUI.obj
- 0007:000001c9       __A9557183_system_error    00000001400871c9     SimpleUI.obj
- 0007:000001ca       __626C51AD_xfacet          00000001400871ca     SimpleUI.obj
- 0007:000001cb       __40DF0D2D_ctype@h         00000001400871cb     SimpleUI.obj
- 0007:000001cc       __2C72D662_xlocinfo        00000001400871cc     SimpleUI.obj
- 0007:000001cd       __0E648B51_xlocale         00000001400871cd     SimpleUI.obj
- 0007:000001ce       __1597A171_xiosbase        00000001400871ce     SimpleUI.obj
- 0007:000001cf       __90E3ED46_xlocnum         00000001400871cf     SimpleUI.obj
- 0007:000001d0       __165C22CB_ios             00000001400871d0     SimpleUI.obj
- 0007:000001d1       __3AFA803E_string          00000001400871d1     SimpleUI.obj
+ 0007:000001c1       __AC6CB2D0_tuple           00000001400871c1     SimpleUI.obj
+ 0007:000001c2       __E0552A5D_xpolymorphic_allocator@h 00000001400871c2     SimpleUI.obj
+ 0007:000001c3       __D15AFF60_xstring         00000001400871c3     SimpleUI.obj
+ 0007:000001c4       __40DF0D2D_ctype@h         00000001400871c4     SimpleUI.obj
+ 0007:000001c5       __3AFA803E_string          00000001400871c5     SimpleUI.obj
+ 0007:000001c6       __80BA7649_ReservationHandler@hpp 00000001400871c6     SimpleUI.obj
+ 0007:000001c7       __6D5B120B_stdexcept       00000001400871c7     SimpleUI.obj
+ 0007:000001c8       __0A4FAB91_cmath           00000001400871c8     SimpleUI.obj
+ 0007:000001c9       __160863A3_xcall_once@h    00000001400871c9     SimpleUI.obj
+ 0007:000001ca       __99B256EE_atomic          00000001400871ca     SimpleUI.obj
+ 0007:000001cb       __A9557183_system_error    00000001400871cb     SimpleUI.obj
+ 0007:000001cc       __626C51AD_xfacet          00000001400871cc     SimpleUI.obj
+ 0007:000001cd       __2C72D662_xlocinfo        00000001400871cd     SimpleUI.obj
+ 0007:000001ce       __0E648B51_xlocale         00000001400871ce     SimpleUI.obj
+ 0007:000001cf       __1597A171_xiosbase        00000001400871cf     SimpleUI.obj
+ 0007:000001d0       __90E3ED46_xlocnum         00000001400871d0     SimpleUI.obj
+ 0007:000001d1       __165C22CB_ios             00000001400871d1     SimpleUI.obj
  0007:000001d2       __F80FFDE3_LoggerHandler@hpp 00000001400871d2     SimpleUI.obj
  0007:000001d3       __03665793_xtree           00000001400871d3     SimpleUI.obj
  0007:000001d4       __E181AB2C_any             00000001400871d4     SimpleUI.obj
@@ -9092,7 +9092,7 @@
  0007:00000255       __03665793_xtree           0000000140087255     UserInterfaceHandler.obj
  0007:00000256       __40DF0D2D_ctype@h         0000000140087256     UserInterfaceHandler.obj
  0007:00000257       __3AFA803E_string          0000000140087257     UserInterfaceHandler.obj
- 0007:00000258       __669750BD_Authenticate@hpp 0000000140087258     UserInterfaceHandler.obj
+ 0007:00000258       __80BA7649_ReservationHandler@hpp 0000000140087258     UserInterfaceHandler.obj
  0007:00000259       __0A4FAB91_cmath           0000000140087259     UserInterfaceHandler.obj
  0007:0000025a       __160863A3_xcall_once@h    000000014008725a     UserInterfaceHandler.obj
  0007:0000025b       __99B256EE_atomic          000000014008725b     UserInterfaceHandler.obj
