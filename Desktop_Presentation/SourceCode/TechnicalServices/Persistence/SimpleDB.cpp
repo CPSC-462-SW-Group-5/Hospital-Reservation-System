@@ -48,7 +48,7 @@ namespace TechnicalServices::Persistence
   {
     _logger << "Simple DB being used and has been successfully initialized";
 
-
+    // NO NEED TO CHANGE
     // Let's look for an adaptation data file, and if found load the contents.  Otherwise create some default values.
     std::ifstream adaptationDataFile( "Library_System_AdaptableData.dat", std::ios::binary );
 

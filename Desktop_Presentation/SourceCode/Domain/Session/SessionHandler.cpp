@@ -51,10 +51,6 @@ namespace Domain::Session
         )
       {
         // 2) If authenticated user is authorized for the selected role, create a session specific for that role
-        if( credentials.roles[0] == "Borrower"      ) return std::make_unique<Domain::Session::BorrowerSession>     ( credentials );
-        if( credentials.roles[0] == "Librarian"     ) return std::make_unique<Domain::Session::LibrarianSession>    ( credentials );
-        if( credentials.roles[0] == "Administrator" ) return std::make_unique<Domain::Session::AdministratorSession>( credentials );
-        if( credentials.roles[0] == "Management"    ) return std::make_unique<Domain::Session::ManagementSession>   ( credentials );
         
         // added Patient credential role
         if( credentials.roles[0] == "Patient" ) return std::make_unique<Domain::Session::PatientSession> (credentials);

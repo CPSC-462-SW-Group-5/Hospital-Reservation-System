@@ -40,7 +40,6 @@ __6D5B120B_stdexcept DB 01H
 __03665793_xtree DB 01H
 __40DF0D2D_ctype@h DB 01H
 __3AFA803E_string DB 01H
-__31783858_MaintainBooksHandler@hpp DB 01H
 __0A4FAB91_cmath DB 01H
 __160863A3_xcall_once@h DB 01H
 __99B256EE_atomic DB 01H
@@ -51,8 +50,8 @@ __0E648B51_xlocale DB 01H
 __1597A171_xiosbase DB 01H
 __90E3ED46_xlocnum DB 01H
 __165C22CB_ios DB 01H
-__B10E8B20_LoggerHandler@hpp DB 01H
-__F439F173_UserInterfaceHandler@cpp DB 01H
+__F80FFDE3_LoggerHandler@hpp DB 01H
+__176079BD_UserInterfaceHandler@cpp DB 01H
 __7EA464AF_istream DB 01H
 __1D745195_ostream DB 01H
 __6FFBAAB7_streambuf DB 01H
@@ -8434,7 +8433,7 @@ $LN3:
 ?__autoclassinit2@SimpleUI@UI@@QEAAX_K@Z ENDP		; UI::SimpleUI::__autoclassinit2
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\UserInterfaceHandler.cpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\UserInterfaceHandler.cpp
 ;	COMDAT ??1UserInterfaceHandler@UI@@UEAA@XZ
 _TEXT	SEGMENT
 this$ = 224
@@ -8453,7 +8452,7 @@ $LN3:
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
 	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__F439F173_UserInterfaceHandler@cpp
+	lea	rcx, OFFSET FLAT:__176079BD_UserInterfaceHandler@cpp
 	call	__CheckForDebuggerJustMyCode
 	mov	rax, QWORD PTR this$[rbp]
 	lea	rcx, OFFSET FLAT:??_7UserInterfaceHandler@UI@@6B@
@@ -8465,7 +8464,7 @@ $LN3:
 ??1UserInterfaceHandler@UI@@UEAA@XZ ENDP		; UI::UserInterfaceHandler::~UserInterfaceHandler
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\UserInterfaceHandler.cpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\UserInterfaceHandler.cpp
 ;	COMDAT ?createUI@UserInterfaceHandler@UI@@SA?AV?$unique_ptr@VUserInterfaceHandler@UI@@U?$default_delete@VUserInterfaceHandler@UI@@@std@@@std@@XZ
 _TEXT	SEGMENT
 persistantData$ = 8
@@ -8508,7 +8507,7 @@ $LN16:
 	xor	rax, rbp
 	mov	QWORD PTR __$ArrayPad$[rbp], rax
 	mov	DWORD PTR $T11[rbp], 0
-	lea	rcx, OFFSET FLAT:__F439F173_UserInterfaceHandler@cpp
+	lea	rcx, OFFSET FLAT:__176079BD_UserInterfaceHandler@cpp
 	call	__CheckForDebuggerJustMyCode
 
 ; 22   :     auto & persistantData = TechnicalServices::Persistence::PersistenceHandler::instance();
@@ -13828,7 +13827,7 @@ $LN3:
 ??2@YAPEAX_KPEAX@Z ENDP					; operator new
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\UserInterfaceHandler.cpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\UserInterfaceHandler.cpp
 ;	COMDAT ?__empty_global_delete@@YAXPEAX_KW4align_val_t@std@@@Z
 _TEXT	SEGMENT
 __formal$ = 224
@@ -13849,7 +13848,7 @@ $LN3:
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
 	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__F439F173_UserInterfaceHandler@cpp
+	lea	rcx, OFFSET FLAT:__176079BD_UserInterfaceHandler@cpp
 	call	__CheckForDebuggerJustMyCode
 	npad	1
 	lea	rsp, QWORD PTR [rbp+200]
@@ -13859,7 +13858,7 @@ $LN3:
 ?__empty_global_delete@@YAXPEAX_KW4align_val_t@std@@@Z ENDP ; __empty_global_delete
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\UserInterfaceHandler.cpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\UserInterfaceHandler.cpp
 ;	COMDAT ?__empty_global_delete@@YAXPEAXW4align_val_t@std@@@Z
 _TEXT	SEGMENT
 __formal$ = 224
@@ -13878,7 +13877,7 @@ $LN3:
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
 	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__F439F173_UserInterfaceHandler@cpp
+	lea	rcx, OFFSET FLAT:__176079BD_UserInterfaceHandler@cpp
 	call	__CheckForDebuggerJustMyCode
 	npad	1
 	lea	rsp, QWORD PTR [rbp+200]
@@ -13888,7 +13887,7 @@ $LN3:
 ?__empty_global_delete@@YAXPEAXW4align_val_t@std@@@Z ENDP ; __empty_global_delete
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\UserInterfaceHandler.cpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\UserInterfaceHandler.cpp
 ;	COMDAT ?__empty_global_delete@@YAXPEAX_K@Z
 _TEXT	SEGMENT
 __formal$ = 224
@@ -13907,7 +13906,7 @@ $LN3:
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
 	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__F439F173_UserInterfaceHandler@cpp
+	lea	rcx, OFFSET FLAT:__176079BD_UserInterfaceHandler@cpp
 	call	__CheckForDebuggerJustMyCode
 	npad	1
 	lea	rsp, QWORD PTR [rbp+200]
@@ -13917,7 +13916,7 @@ $LN3:
 ?__empty_global_delete@@YAXPEAX_K@Z ENDP		; __empty_global_delete
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\UserInterfaceHandler.cpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\UserInterfaceHandler.cpp
 ;	COMDAT ?__empty_global_delete@@YAXPEAX@Z
 _TEXT	SEGMENT
 __formal$ = 224
@@ -13934,7 +13933,7 @@ $LN3:
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
 	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__F439F173_UserInterfaceHandler@cpp
+	lea	rcx, OFFSET FLAT:__176079BD_UserInterfaceHandler@cpp
 	call	__CheckForDebuggerJustMyCode
 	npad	1
 	lea	rsp, QWORD PTR [rbp+200]

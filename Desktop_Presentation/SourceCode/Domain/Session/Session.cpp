@@ -23,20 +23,28 @@ namespace  // anonymous (private) working area
   STUB(userAuthenticate )
 
 // this function takes in a session and a number of arguments
-// we should change this with our own function
+// we should change this with our own function or like createMedicalAppt()
   std::any checkoutBook( Domain::Session::SessionBase & session, const std::vector<std::string> & args )
   {
     // TO-DO  Verify there is such a book and the mark the book as being checked out by user
-    std::string results = "Title \"" + args[0] + "\" checkout by \"" + session._credentials.userName + '"';
-    session._logger << "checkoutBook:  " + results;
+    //std::string results = "Title \"" + args[0] + "\" checkout by \"" + session._credentials.userName + '"';
+    //session._logger << "checkoutBook:  " + results;
+    std::string results = "This is a test";
+    session._logger << "Testing authentication: " + results;
     return {results};
   }
-}    // anonymous (private) working area
-
-  std::any userAuthenticate( Domain::Session::SessionBase & session, const std::vector<std::string> & args)
+ /*
+   std::any userAuthenticate( Domain::Session::SessionBase & session, const std::vector<std::string> & args)
   {
     // should the authentication go here?
+    std::string results = "testing";
+    session._logger << "this is a test: " + results;
+    return {results};
   }
+  */
+}    // anonymous (private) working area
+
+ 
 
 
 
@@ -119,8 +127,14 @@ namespace Domain::Session
                          {"Reset Account",   resetAccount},
                          {"Shutdown System", shutdown    } };
   }
-
-
+  // this works
+  PatientSession::PatientSession( const UserCredentials & credentials ) : SessionBase( "Patient", credentials )
+  {
+    _commandDispatch = { {"Help",            help        },
+                         {"Reset Account",   resetAccount},
+                         {"Shutdown System", shutdown    } };
+  }
+  
 
 
   BorrowerSession::BorrowerSession( const UserCredentials & credentials ) : SessionBase( "Borrower", credentials )

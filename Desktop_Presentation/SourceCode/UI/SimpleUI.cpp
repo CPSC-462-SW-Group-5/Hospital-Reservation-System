@@ -8,9 +8,9 @@
 #include <string>      // string, getline()
 #include <vector>
 
-#include "Domain/Library/Books.hpp"    // Include for now - will replace next increment
+//#include "Domain/Library/Books.hpp"    // Include for now - will replace next increment
 #include "Domain/Session/SessionHandler.hpp"
-// #include "Domain/Reservation/Authentication.hpp"
+#include "Domain/Reservation/Authenticate.hpp"
 #include "TechnicalServices/Logging/LoggerHandler.hpp"
 #include "TechnicalServices/Persistence/PersistenceHandler.hpp"
 
@@ -21,7 +21,8 @@ namespace UI
 {
   // Default constructor
   SimpleUI::SimpleUI()
-  : _bookHandler   ( std::make_unique<Domain::Library::Books>()                     ),   // will replace these with factory calls in the next increment
+  : //_bookHandler   ( std::make_unique<Domain::Library::Books>()                     ),   // will replace these with factory calls in the next increment
+    //_authenticate (std::make_unique<Domain::Reservation::Authenticate>()),
     _loggerPtr     ( TechnicalServices::Logging::LoggerHandler::create()            ),
     _persistentData( TechnicalServices::Persistence::PersistenceHandler::instance() )
   {

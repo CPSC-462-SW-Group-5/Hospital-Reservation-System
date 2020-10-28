@@ -33,7 +33,6 @@ __F2870A2C_limits DB 01H
 __4324C6B3_xutility DB 01H
 __A58979FC_xmemory DB 01H
 __4E2906A2_memory DB 01H
-__31783858_MaintainBooksHandler@hpp DB 01H
 __AC6CB2D0_tuple DB 01H
 __E0552A5D_xpolymorphic_allocator@h DB 01H
 __D15AFF60_xstring DB 01H
@@ -50,15 +49,14 @@ __1597A171_xiosbase DB 01H
 __90E3ED46_xlocnum DB 01H
 __165C22CB_ios DB 01H
 __3AFA803E_string DB 01H
-__B10E8B20_LoggerHandler@hpp DB 01H
+__F80FFDE3_LoggerHandler@hpp DB 01H
 __03665793_xtree DB 01H
 __E181AB2C_any DB 01H
 __BB81F87E_xlocmon DB 01H
 __CF01F9AA_time@h DB 01H
 __886F7F70_xloctime DB 01H
-__0FEA4C0A_Books@hpp DB 01H
-__69769871_SimpleUI@hpp DB 01H
-__65237790_SimpleUI@cpp DB 01H
+__775F67AE_SimpleUI@hpp DB 01H
+__7B0A884F_SimpleUI@cpp DB 01H
 __43822A97_initializer_list DB 01H
 __BF2A7ACC_vector DB 01H
 __7EA464AF_istream DB 01H
@@ -108,8 +106,6 @@ PUBLIC	?_Swap_proxy_and_iterators@_Container_base12@std@@QEAAXAEAU12@@Z ; std::_
 PUBLIC	?_Release@_Basic_container_proxy_ptr12@std@@QEAAXXZ ; std::_Basic_container_proxy_ptr12::_Release
 PUBLIC	??$addressof@U_Container_base12@std@@@std@@YAPEAU_Container_base12@0@AEAU10@@Z ; std::addressof<std::_Container_base12>
 PUBLIC	??$_Construct_in_place@U_Container_proxy@std@@PEAU_Container_base12@2@@std@@YAXAEAU_Container_proxy@0@$$QEAPEAU_Container_base12@0@@Z ; std::_Construct_in_place<std::_Container_proxy,std::_Container_base12 *>
-PUBLIC	??1MaintainBooksHandler@Library@Domain@@UEAA@XZ	; Domain::Library::MaintainBooksHandler::~MaintainBooksHandler
-PUBLIC	??0MaintainBooksHandler@Library@Domain@@QEAA@XZ	; Domain::Library::MaintainBooksHandler::MaintainBooksHandler
 PUBLIC	??0?$allocator@D@std@@QEAA@XZ			; std::allocator<char>::allocator<char>
 PUBLIC	?deallocate@?$allocator@D@std@@QEAAXQEAD_K@Z	; std::allocator<char>::deallocate
 PUBLIC	?allocate@?$allocator@D@std@@QEAAPEAD_K@Z	; std::allocator<char>::allocate
@@ -204,9 +200,9 @@ PUBLIC	??0UserInterfaceHandler@UI@@QEAA@XZ		; UI::UserInterfaceHandler::UserInte
 PUBLIC	??0SimpleUI@UI@@QEAA@XZ				; UI::SimpleUI::SimpleUI
 PUBLIC	?launch@SimpleUI@UI@@UEAAXXZ			; UI::SimpleUI::launch
 PUBLIC	??1SimpleUI@UI@@UEAA@XZ				; UI::SimpleUI::~SimpleUI
-PUBLIC	??R?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEBAXPEAVMaintainBooksHandler@Library@Domain@@@Z ; std::default_delete<Domain::Library::MaintainBooksHandler>::operator()
-PUBLIC	??1?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@XZ ; std::unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> >::~unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> >
-PUBLIC	?_Get_first@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VMaintainBooksHandler@Library@Domain@@@2@XZ ; std::_Compressed_pair<std::default_delete<Domain::Library::MaintainBooksHandler>,Domain::Library::MaintainBooksHandler *,1>::_Get_first
+PUBLIC	??R?$default_delete@VAuthenticate@Reservation@Domain@@@std@@QEBAXPEAVAuthenticate@Reservation@Domain@@@Z ; std::default_delete<Domain::Reservation::Authenticate>::operator()
+PUBLIC	??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ ; std::unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> >::~unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> >
+PUBLIC	?_Get_first@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VAuthenticate@Reservation@Domain@@@2@XZ ; std::_Compressed_pair<std::default_delete<Domain::Reservation::Authenticate>,Domain::Reservation::Authenticate *,1>::_Get_first
 PUBLIC	??R?$default_delete@VLoggerHandler@Logging@TechnicalServices@@@std@@QEBAXPEAVLoggerHandler@Logging@TechnicalServices@@@Z ; std::default_delete<TechnicalServices::Logging::LoggerHandler>::operator()
 PUBLIC	??1?$unique_ptr@VLoggerHandler@Logging@TechnicalServices@@U?$default_delete@VLoggerHandler@Logging@TechnicalServices@@@std@@@std@@QEAA@XZ ; std::unique_ptr<TechnicalServices::Logging::LoggerHandler,std::default_delete<TechnicalServices::Logging::LoggerHandler> >::~unique_ptr<TechnicalServices::Logging::LoggerHandler,std::default_delete<TechnicalServices::Logging::LoggerHandler> >
 PUBLIC	??D?$unique_ptr@VLoggerHandler@Logging@TechnicalServices@@U?$default_delete@VLoggerHandler@Logging@TechnicalServices@@@std@@@std@@QEBAAEAVLoggerHandler@Logging@TechnicalServices@@XZ ; std::unique_ptr<TechnicalServices::Logging::LoggerHandler,std::default_delete<TechnicalServices::Logging::LoggerHandler> >::operator*
@@ -225,17 +221,7 @@ PUBLIC	?_Rep@any@std@@AEBA?AW4_Any_representation@2@XZ	; std::any::_Rep
 PUBLIC	?_TypeInfo@any@std@@AEBAPEBVtype_info@@XZ	; std::any::_TypeInfo
 PUBLIC	??$_Getvals@_W@?$time_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@IEAAX_WAEBV_Locinfo@1@@Z ; std::time_get<char,std::istreambuf_iterator<char,std::char_traits<char> > >::_Getvals<wchar_t>
 PUBLIC	??$_Getvals@_W@?$time_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@IEAAX_WAEBV_Locinfo@1@@Z ; std::time_get<wchar_t,std::istreambuf_iterator<wchar_t,std::char_traits<wchar_t> > >::_Getvals<wchar_t>
-PUBLIC	??1Books@Library@Domain@@UEAA@XZ		; Domain::Library::Books::~Books
-PUBLIC	??0Books@Library@Domain@@QEAA@XZ		; Domain::Library::Books::Books
-PUBLIC	??_GBooks@Library@Domain@@UEAAPEAXI@Z		; Domain::Library::Books::`scalar deleting destructor'
-PUBLIC	??$make_unique@VBooks@Library@Domain@@$$V$0A@@std@@YA?AV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@0@XZ ; std::make_unique<Domain::Library::Books,0>
-PUBLIC	??R?$default_delete@VBooks@Library@Domain@@@std@@QEBAXPEAVBooks@Library@Domain@@@Z ; std::default_delete<Domain::Library::Books>::operator()
-PUBLIC	??1?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@XZ ; std::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >::~unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >
-PUBLIC	?get_deleter@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ ; std::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >::get_deleter
-PUBLIC	?release@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAPEAVBooks@Library@Domain@@XZ ; std::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >::release
-PUBLIC	?_Get_first@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ ; std::_Compressed_pair<std::default_delete<Domain::Library::Books>,Domain::Library::Books *,1>::_Get_first
-PUBLIC	??$?0VBooks@Library@Domain@@$0A@@?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEAA@AEBU?$default_delete@VBooks@Library@Domain@@@1@@Z ; std::default_delete<Domain::Library::MaintainBooksHandler>::default_delete<Domain::Library::MaintainBooksHandler><Domain::Library::Books,0>
-PUBLIC	??$?0VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@$$QEAV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@1@@Z ; std::unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> >::unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> ><Domain::Library::Books,std::default_delete<Domain::Library::Books>,0>
+PUBLIC	??$?0U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ ; std::unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> >::unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> ><std::default_delete<Domain::Reservation::Authenticate>,0>
 PUBLIC	??0?$initializer_list@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@QEAA@PEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@0@Z ; std::initializer_list<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::initializer_list<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >
 PUBLIC	?begin@?$initializer_list@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@QEBAPEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ ; std::initializer_list<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::begin
 PUBLIC	?end@?$initializer_list@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@QEBAPEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ ; std::initializer_list<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::end
@@ -317,9 +303,7 @@ PUBLIC	?release@?$unique_ptr@V_Facet_base@std@@U?$default_delete@V_Facet_base@st
 PUBLIC	?_Get_first@?$_Compressed_pair@U?$default_delete@V_Facet_base@std@@@std@@PEAV_Facet_base@2@$00@std@@QEAAAEAU?$default_delete@V_Facet_base@std@@@2@XZ ; std::_Compressed_pair<std::default_delete<std::_Facet_base>,std::_Facet_base *,1>::_Get_first
 PUBLIC	?__autoclassinit2@?$unique_ptr@V_Facet_base@std@@U?$default_delete@V_Facet_base@std@@@2@@std@@QEAAX_K@Z ; std::unique_ptr<std::_Facet_base,std::default_delete<std::_Facet_base> >::__autoclassinit2
 PUBLIC	??$?0U?$default_delete@V_Facet_base@std@@@std@@$0A@@?$unique_ptr@V_Facet_base@std@@U?$default_delete@V_Facet_base@std@@@2@@std@@QEAA@PEAV_Facet_base@1@@Z ; std::unique_ptr<std::_Facet_base,std::default_delete<std::_Facet_base> >::unique_ptr<std::_Facet_base,std::default_delete<std::_Facet_base> ><std::default_delete<std::_Facet_base>,0>
-PUBLIC	??$?0U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@PEAVBooks@Library@Domain@@@Z ; std::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> ><std::default_delete<Domain::Library::Books>,0>
-PUBLIC	??$forward@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@YA$$QEAU?$default_delete@VBooks@Library@Domain@@@0@AEAU10@@Z ; std::forward<std::default_delete<Domain::Library::Books> >
-PUBLIC	??$?0U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAA@U_One_then_variadic_args_t@1@$$QEAU?$default_delete@VBooks@Library@Domain@@@1@$$QEAPEAVBooks@Library@Domain@@@Z ; std::_Compressed_pair<std::default_delete<Domain::Library::MaintainBooksHandler>,Domain::Library::MaintainBooksHandler *,1>::_Compressed_pair<std::default_delete<Domain::Library::MaintainBooksHandler>,Domain::Library::MaintainBooksHandler *,1><std::default_delete<Domain::Library::Books>,Domain::Library::Books *>
+PUBLIC	??$?0$$V@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z ; std::_Compressed_pair<std::default_delete<Domain::Reservation::Authenticate>,Domain::Reservation::Authenticate *,1>::_Compressed_pair<std::default_delete<Domain::Reservation::Authenticate>,Domain::Reservation::Authenticate *,1><>
 PUBLIC	??$?0$$V@?$_Compressed_pair@U?$default_delete@VSessionHandler@Session@Domain@@@std@@PEAVSessionHandler@Session@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z ; std::_Compressed_pair<std::default_delete<Domain::Session::SessionHandler>,Domain::Session::SessionHandler *,1>::_Compressed_pair<std::default_delete<Domain::Session::SessionHandler>,Domain::Session::SessionHandler *,1><>
 PUBLIC	??$move@AEAV?$basic_istream@DU?$char_traits@D@std@@@std@@@std@@YA$$QEAV?$basic_istream@DU?$char_traits@D@std@@@0@AEAV10@@Z ; std::move<std::basic_istream<char,std::char_traits<char> > &>
 PUBLIC	??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAEAV?$basic_istream@DU?$char_traits@D@std@@@0@$$QEAV10@AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@D@Z ; std::getline<char,std::char_traits<char>,std::allocator<char> >
@@ -342,13 +326,10 @@ PUBLIC	??$destroy@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@
 PUBLIC	??$exchange@PEAV_Facet_base@std@@PEAV12@@std@@YAPEAV_Facet_base@0@AEAPEAV10@$$QEAPEAV10@@Z ; std::exchange<std::_Facet_base *,std::_Facet_base *>
 PUBLIC	??$exchange@PEAVSessionHandler@Session@Domain@@AEAPEAV123@@std@@YAPEAVSessionHandler@Session@Domain@@AEAPEAV123@0@Z ; std::exchange<Domain::Session::SessionHandler *,Domain::Session::SessionHandler * &>
 PUBLIC	??$exchange@PEAVSessionHandler@Session@Domain@@PEAV123@@std@@YAPEAVSessionHandler@Session@Domain@@AEAPEAV123@$$QEAPEAV123@@Z ; std::exchange<Domain::Session::SessionHandler *,Domain::Session::SessionHandler *>
-PUBLIC	??$exchange@PEAVBooks@Library@Domain@@PEAV123@@std@@YAPEAVBooks@Library@Domain@@AEAPEAV123@$$QEAPEAV123@@Z ; std::exchange<Domain::Library::Books *,Domain::Library::Books *>
 PUBLIC	??$_Uninitialized_value_construct_n@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@PEAV10@_KAEAV?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@0@@Z ; std::_Uninitialized_value_construct_n<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >
 PUBLIC	??$_Traits_equal@U?$char_traits@D@std@@@std@@YA_NQEBD_K01@Z ; std::_Traits_equal<std::char_traits<char> >
 PUBLIC	??$_Get_size_of_n@$0CI@@std@@YA_K_K@Z		; std::_Get_size_of_n<40>
 PUBLIC	??$?0AEAPEAV_Facet_base@std@@@?$_Compressed_pair@U?$default_delete@V_Facet_base@std@@@std@@PEAV_Facet_base@2@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAV_Facet_base@1@@Z ; std::_Compressed_pair<std::default_delete<std::_Facet_base>,std::_Facet_base *,1>::_Compressed_pair<std::default_delete<std::_Facet_base>,std::_Facet_base *,1><std::_Facet_base * &>
-PUBLIC	??$?0AEAPEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAVBooks@Library@Domain@@@Z ; std::_Compressed_pair<std::default_delete<Domain::Library::Books>,Domain::Library::Books *,1>::_Compressed_pair<std::default_delete<Domain::Library::Books>,Domain::Library::Books *,1><Domain::Library::Books * &>
-PUBLIC	??$forward@PEAVBooks@Library@Domain@@@std@@YA$$QEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z ; std::forward<Domain::Library::Books *>
 PUBLIC	??$_Cast@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@any@std@@QEAAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@XZ ; std::any::_Cast<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >
 PUBLIC	??$_Cast@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@any@std@@QEBAPEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@XZ ; std::any::_Cast<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >
 PUBLIC	?deallocate@?$_Default_allocator_traits@V?$allocator@U_Container_proxy@std@@@std@@@std@@SAXAEAV?$allocator@U_Container_proxy@std@@@2@QEAU_Container_proxy@2@_K@Z ; std::_Default_allocator_traits<std::allocator<std::_Container_proxy> >::deallocate
@@ -359,7 +340,6 @@ PUBLIC	?_Release@?$_Uninitialized_backout_al@V?$allocator@V?$basic_string@DU?$ch
 PUBLIC	?__autoclassinit2@?$_Uninitialized_backout_al@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@QEAAX_K@Z ; std::_Uninitialized_backout_al<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::__autoclassinit2
 PUBLIC	??$_Emplace_back@$$V@?$_Uninitialized_backout_al@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@QEAAXXZ ; std::_Uninitialized_backout_al<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Emplace_back<>
 PUBLIC	??$forward@AEAPEAV_Facet_base@std@@@std@@YAAEAPEAV_Facet_base@0@AEAPEAV10@@Z ; std::forward<std::_Facet_base * &>
-PUBLIC	??$forward@AEAPEAVBooks@Library@Domain@@@std@@YAAEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z ; std::forward<Domain::Library::Books * &>
 PUBLIC	??$_Get_unwrapped@AEBQEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@YA@AEBQEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z ; std::_Get_unwrapped<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const * const &>
 PUBLIC	??$_Emplace_back@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@?$_Uninitialized_backout_al@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@QEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z ; std::_Uninitialized_backout_al<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Emplace_back<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const &>
 PUBLIC	??$construct@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@$$V@?$_Default_allocator_traits@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@SAXAEAV?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@QEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z ; std::_Default_allocator_traits<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >
@@ -392,7 +372,6 @@ PUBLIC	??_C@_0GI@JMEOMKJO@C?3?2Program?5Files?5?$CIx86?$CJ?2Microsof@ ; `string'
 PUBLIC	??_C@_1NA@FEEOBALC@?$AAC?$AA?3?$AA?2?$AAP?$AAr?$AAo?$AAg?$AAr?$AAa?$AAm?$AA?5?$AAF?$AAi?$AAl?$AAe@ ; `string'
 PUBLIC	??_C@_1EK@NIFDJFDG@?$AAs?$AAt?$AAd?$AA?3?$AA?3?$AA_?$AAA?$AAd?$AAj?$AAu?$AAs?$AAt?$AA_?$AAm?$AAa@ ; `string'
 PUBLIC	??_C@_1CG@JNLFBNGN@?$AA?$CC?$AAi?$AAn?$AAv?$AAa?$AAl?$AAi?$AAd?$AA?5?$AAa?$AAr?$AAg?$AAu?$AAm?$AAe@ ; `string'
-PUBLIC	??_7MaintainBooksHandler@Library@Domain@@6B@	; Domain::Library::MaintainBooksHandler::`vftable'
 PUBLIC	??_C@_0BA@JFNIOLAK@string?5too?5long@		; `string'
 PUBLIC	??_C@_00CNPNBAHC@@				; `string'
 PUBLIC	??_C@_0GI@DEICPIDJ@C?3?2Program?5Files?5?$CIx86?$CJ?2Microsof@ ; `string'
@@ -406,7 +385,6 @@ PUBLIC	_TI3?AVbad_any_cast@std@@
 PUBLIC	_CTA3?AVbad_any_cast@std@@
 PUBLIC	??_R0?AVbad_any_cast@std@@@8			; std::bad_any_cast `RTTI Type Descriptor'
 PUBLIC	_CT??_R0?AVbad_any_cast@std@@@8??0bad_any_cast@std@@QEAA@AEBV01@@Z24
-PUBLIC	??_7Books@Library@Domain@@6B@			; Domain::Library::Books::`vftable'
 PUBLIC	??_C@_0DL@DGNBDAFF@Simple?5UI?5being?5used?5and?5has?5be@ ; `string'
 PUBLIC	??_C@_0CA@GAGEKOHD@Simple?5UI?5shutdown?5successfully@ ; `string'
 PUBLIC	??_C@_08KLHCBAMK@?5?5name?3?5@			; `string'
@@ -457,11 +435,6 @@ PUBLIC	??_R4bad_cast@std@@6B@				; std::bad_cast::`RTTI Complete Object Locator'
 PUBLIC	??_R3bad_cast@std@@8				; std::bad_cast::`RTTI Class Hierarchy Descriptor'
 PUBLIC	??_R2bad_cast@std@@8				; std::bad_cast::`RTTI Base Class Array'
 PUBLIC	??_R1A@?0A@EA@bad_cast@std@@8			; std::bad_cast::`RTTI Base Class Descriptor at (0,-1,0,64)'
-PUBLIC	??_R4MaintainBooksHandler@Library@Domain@@6B@	; Domain::Library::MaintainBooksHandler::`RTTI Complete Object Locator'
-PUBLIC	??_R0?AVMaintainBooksHandler@Library@Domain@@@8	; Domain::Library::MaintainBooksHandler `RTTI Type Descriptor'
-PUBLIC	??_R3MaintainBooksHandler@Library@Domain@@8	; Domain::Library::MaintainBooksHandler::`RTTI Class Hierarchy Descriptor'
-PUBLIC	??_R2MaintainBooksHandler@Library@Domain@@8	; Domain::Library::MaintainBooksHandler::`RTTI Base Class Array'
-PUBLIC	??_R1A@?0A@EA@MaintainBooksHandler@Library@Domain@@8 ; Domain::Library::MaintainBooksHandler::`RTTI Base Class Descriptor at (0,-1,0,64)'
 PUBLIC	??_R4UserInterfaceHandler@UI@@6B@		; UI::UserInterfaceHandler::`RTTI Complete Object Locator'
 PUBLIC	??_R0?AVUserInterfaceHandler@UI@@@8		; UI::UserInterfaceHandler `RTTI Type Descriptor'
 PUBLIC	??_R3UserInterfaceHandler@UI@@8			; UI::UserInterfaceHandler::`RTTI Class Hierarchy Descriptor'
@@ -476,11 +449,6 @@ PUBLIC	??_R4bad_any_cast@std@@6B@			; std::bad_any_cast::`RTTI Complete Object L
 PUBLIC	??_R3bad_any_cast@std@@8			; std::bad_any_cast::`RTTI Class Hierarchy Descriptor'
 PUBLIC	??_R2bad_any_cast@std@@8			; std::bad_any_cast::`RTTI Base Class Array'
 PUBLIC	??_R1A@?0A@EA@bad_any_cast@std@@8		; std::bad_any_cast::`RTTI Base Class Descriptor at (0,-1,0,64)'
-PUBLIC	??_R4Books@Library@Domain@@6B@			; Domain::Library::Books::`RTTI Complete Object Locator'
-PUBLIC	??_R0?AVBooks@Library@Domain@@@8		; Domain::Library::Books `RTTI Type Descriptor'
-PUBLIC	??_R3Books@Library@Domain@@8			; Domain::Library::Books::`RTTI Class Hierarchy Descriptor'
-PUBLIC	??_R2Books@Library@Domain@@8			; Domain::Library::Books::`RTTI Base Class Array'
-PUBLIC	??_R1A@?0A@EA@Books@Library@Domain@@8		; Domain::Library::Books::`RTTI Base Class Descriptor at (0,-1,0,64)'
 EXTRN	??_M@YAXPEAX_K1P6AX0@Z@Z:PROC			; `eh vector destructor iterator'
 EXTRN	_purecall:PROC
 EXTRN	??2@YAPEAX_K@Z:PROC				; operator new
@@ -545,7 +513,6 @@ EXTRN	??1UserInterfaceHandler@UI@@UEAA@XZ:PROC	; UI::UserInterfaceHandler::~User
 EXTRN	??_ESimpleUI@UI@@UEAAPEAXI@Z:PROC		; UI::SimpleUI::`vector deleting destructor'
 EXTRN	??_Ebad_any_cast@std@@UEAAPEAXI@Z:PROC		; std::bad_any_cast::`vector deleting destructor'
 EXTRN	?setw@std@@YA?AU?$_Smanip@_J@1@_J@Z:PROC	; std::setw
-EXTRN	??_EBooks@Library@Domain@@UEAAPEAXI@Z:PROC	; Domain::Library::Books::`vector deleting destructor'
 EXTRN	?createSession@SessionHandler@Session@Domain@@SA?AV?$unique_ptr@VSessionHandler@Session@Domain@@U?$default_delete@VSessionHandler@Session@Domain@@@std@@@std@@AEBUUserCredentials@Persistence@TechnicalServices@@@Z:PROC ; Domain::Session::SessionHandler::createSession
 EXTRN	_CxxThrowException:PROC
 EXTRN	_RTC_CheckStackVars:PROC
@@ -788,18 +755,6 @@ pdata	SEGMENT
 $pdata$??$_Construct_in_place@U_Container_proxy@std@@PEAU_Container_base12@2@@std@@YAXAEAU_Container_proxy@0@$$QEAPEAU_Container_base12@0@@Z DD imagerel $LN3
 	DD	imagerel $LN3+143
 	DD	imagerel $unwind$??$_Construct_in_place@U_Container_proxy@std@@PEAU_Container_base12@2@@std@@YAXAEAU_Container_proxy@0@$$QEAPEAU_Container_base12@0@@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??1MaintainBooksHandler@Library@Domain@@UEAA@XZ DD imagerel $LN3
-	DD	imagerel $LN3+81
-	DD	imagerel $unwind$??1MaintainBooksHandler@Library@Domain@@UEAA@XZ
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??0MaintainBooksHandler@Library@Domain@@QEAA@XZ DD imagerel $LN3
-	DD	imagerel $LN3+74
-	DD	imagerel $unwind$??0MaintainBooksHandler@Library@Domain@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -1403,8 +1358,8 @@ $pdata$??0UserInterfaceHandler@UI@@QEAA@XZ DD imagerel $LN3
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0SimpleUI@UI@@QEAA@XZ DD imagerel $LN8
-	DD	imagerel $LN8+339
+$pdata$??0SimpleUI@UI@@QEAA@XZ DD imagerel $LN7
+	DD	imagerel $LN7+290
 	DD	imagerel $unwind$??0SimpleUI@UI@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1415,6 +1370,12 @@ $pdata$?dtor$0@?0???0SimpleUI@UI@@QEAA@XZ@4HA DD imagerel ?dtor$0@?0???0SimpleUI
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$?dtor$1@?0???0SimpleUI@UI@@QEAA@XZ@4HA DD imagerel ?dtor$1@?0???0SimpleUI@UI@@QEAA@XZ@4HA
+	DD	imagerel ?dtor$1@?0???0SimpleUI@UI@@QEAA@XZ@4HA+43
+	DD	imagerel $unwind$?dtor$1@?0???0SimpleUI@UI@@QEAA@XZ@4HA
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$?dtor$2@?0???0SimpleUI@UI@@QEAA@XZ@4HA DD imagerel ?dtor$2@?0???0SimpleUI@UI@@QEAA@XZ@4HA
 	DD	imagerel ?dtor$2@?0???0SimpleUI@UI@@QEAA@XZ@4HA+43
 	DD	imagerel $unwind$?dtor$2@?0???0SimpleUI@UI@@QEAA@XZ@4HA
@@ -1422,14 +1383,8 @@ pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?dtor$3@?0???0SimpleUI@UI@@QEAA@XZ@4HA DD imagerel ?dtor$3@?0???0SimpleUI@UI@@QEAA@XZ@4HA
-	DD	imagerel ?dtor$3@?0???0SimpleUI@UI@@QEAA@XZ@4HA+43
+	DD	imagerel ?dtor$3@?0???0SimpleUI@UI@@QEAA@XZ@4HA+39
 	DD	imagerel $unwind$?dtor$3@?0???0SimpleUI@UI@@QEAA@XZ@4HA
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$?dtor$4@?0???0SimpleUI@UI@@QEAA@XZ@4HA DD imagerel ?dtor$4@?0???0SimpleUI@UI@@QEAA@XZ@4HA
-	DD	imagerel ?dtor$4@?0???0SimpleUI@UI@@QEAA@XZ@4HA+39
-	DD	imagerel $unwind$?dtor$4@?0???0SimpleUI@UI@@QEAA@XZ@4HA
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -1595,21 +1550,21 @@ $pdata$??1SimpleUI@UI@@UEAA@XZ DD imagerel $LN3
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??R?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEBAXPEAVMaintainBooksHandler@Library@Domain@@@Z DD imagerel $LN5
+$pdata$??R?$default_delete@VAuthenticate@Reservation@Domain@@@std@@QEBAXPEAVAuthenticate@Reservation@Domain@@@Z DD imagerel $LN5
 	DD	imagerel $LN5+151
-	DD	imagerel $unwind$??R?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEBAXPEAVMaintainBooksHandler@Library@Domain@@@Z
+	DD	imagerel $unwind$??R?$default_delete@VAuthenticate@Reservation@Domain@@@std@@QEBAXPEAVAuthenticate@Reservation@Domain@@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@XZ DD imagerel $LN4
+$pdata$??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ DD imagerel $LN4
 	DD	imagerel $LN4+136
-	DD	imagerel $unwind$??1?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@XZ
+	DD	imagerel $unwind$??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?_Get_first@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VMaintainBooksHandler@Library@Domain@@@2@XZ DD imagerel $LN3
+$pdata$?_Get_first@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VAuthenticate@Reservation@Domain@@@2@XZ DD imagerel $LN3
 	DD	imagerel $LN3+71
-	DD	imagerel $unwind$?_Get_first@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VMaintainBooksHandler@Library@Domain@@@2@XZ
+	DD	imagerel $unwind$?_Get_first@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VAuthenticate@Reservation@Domain@@@2@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -1721,69 +1676,9 @@ $pdata$??$_Getvals@_W@?$time_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@st
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1Books@Library@Domain@@UEAA@XZ DD imagerel $LN3
-	DD	imagerel $LN3+94
-	DD	imagerel $unwind$??1Books@Library@Domain@@UEAA@XZ
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??0Books@Library@Domain@@QEAA@XZ DD imagerel $LN3
-	DD	imagerel $LN3+88
-	DD	imagerel $unwind$??0Books@Library@Domain@@QEAA@XZ
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??_GBooks@Library@Domain@@UEAAPEAXI@Z DD imagerel $LN4
-	DD	imagerel $LN4+105
-	DD	imagerel $unwind$??_GBooks@Library@Domain@@UEAAPEAXI@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??$make_unique@VBooks@Library@Domain@@$$V$0A@@std@@YA?AV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@0@XZ DD imagerel $LN7
-	DD	imagerel $LN7+190
-	DD	imagerel $unwind$??$make_unique@VBooks@Library@Domain@@$$V$0A@@std@@YA?AV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@0@XZ
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??R?$default_delete@VBooks@Library@Domain@@@std@@QEBAXPEAVBooks@Library@Domain@@@Z DD imagerel $LN5
-	DD	imagerel $LN5+151
-	DD	imagerel $unwind$??R?$default_delete@VBooks@Library@Domain@@@std@@QEBAXPEAVBooks@Library@Domain@@@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??1?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+136
-	DD	imagerel $unwind$??1?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@XZ
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$?get_deleter@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ DD imagerel $LN3
-	DD	imagerel $LN3+80
-	DD	imagerel $unwind$?get_deleter@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$?release@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAPEAVBooks@Library@Domain@@XZ DD imagerel $LN3
-	DD	imagerel $LN3+98
-	DD	imagerel $unwind$?release@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAPEAVBooks@Library@Domain@@XZ
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$?_Get_first@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ DD imagerel $LN3
-	DD	imagerel $LN3+71
-	DD	imagerel $unwind$?_Get_first@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??$?0VBooks@Library@Domain@@$0A@@?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEAA@AEBU?$default_delete@VBooks@Library@Domain@@@1@@Z DD imagerel $LN3
-	DD	imagerel $LN3+76
-	DD	imagerel $unwind$??$?0VBooks@Library@Domain@@$0A@@?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEAA@AEBU?$default_delete@VBooks@Library@Domain@@@1@@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??$?0VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@$$QEAV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@1@@Z DD imagerel $LN3
-	DD	imagerel $LN3+182
-	DD	imagerel $unwind$??$?0VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@$$QEAV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@1@@Z
+$pdata$??$?0U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+104
+	DD	imagerel $unwind$??$?0U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -2345,21 +2240,9 @@ $pdata$??$?0U?$default_delete@V_Facet_base@std@@@std@@$0A@@?$unique_ptr@V_Facet_
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$?0U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@PEAVBooks@Library@Domain@@@Z DD imagerel $LN3
-	DD	imagerel $LN3+116
-	DD	imagerel $unwind$??$?0U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@PEAVBooks@Library@Domain@@@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??$forward@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@YA$$QEAU?$default_delete@VBooks@Library@Domain@@@0@AEAU10@@Z DD imagerel $LN3
-	DD	imagerel $LN3+71
-	DD	imagerel $unwind$??$forward@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@YA$$QEAU?$default_delete@VBooks@Library@Domain@@@0@AEAU10@@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??$?0U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAA@U_One_then_variadic_args_t@1@$$QEAU?$default_delete@VBooks@Library@Domain@@@1@$$QEAPEAVBooks@Library@Domain@@@Z DD imagerel $LN3
-	DD	imagerel $LN3+137
-	DD	imagerel $unwind$??$?0U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAA@U_One_then_variadic_args_t@1@$$QEAU?$default_delete@VBooks@Library@Domain@@@1@$$QEAPEAVBooks@Library@Domain@@@Z
+$pdata$??$?0$$V@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z DD imagerel $LN3
+	DD	imagerel $LN3+89
+	DD	imagerel $unwind$??$?0$$V@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -2519,12 +2402,6 @@ $pdata$??$exchange@PEAVSessionHandler@Session@Domain@@PEAV123@@std@@YAPEAVSessio
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$exchange@PEAVBooks@Library@Domain@@PEAV123@@std@@YAPEAVBooks@Library@Domain@@AEAPEAV123@$$QEAPEAV123@@Z DD imagerel $LN3
-	DD	imagerel $LN3+107
-	DD	imagerel $unwind$??$exchange@PEAVBooks@Library@Domain@@PEAV123@@std@@YAPEAVBooks@Library@Domain@@AEAPEAV123@$$QEAPEAV123@@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
 $pdata$??$_Uninitialized_value_construct_n@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@PEAV10@_KAEAV?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@0@@Z DD imagerel $LN7
 	DD	imagerel $LN7+238
 	DD	imagerel $unwind$??$_Uninitialized_value_construct_n@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@PEAV10@_KAEAV?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@0@@Z
@@ -2552,18 +2429,6 @@ pdata	SEGMENT
 $pdata$??$?0AEAPEAV_Facet_base@std@@@?$_Compressed_pair@U?$default_delete@V_Facet_base@std@@@std@@PEAV_Facet_base@2@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAV_Facet_base@1@@Z DD imagerel $LN3
 	DD	imagerel $LN3+105
 	DD	imagerel $unwind$??$?0AEAPEAV_Facet_base@std@@@?$_Compressed_pair@U?$default_delete@V_Facet_base@std@@@std@@PEAV_Facet_base@2@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAV_Facet_base@1@@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??$?0AEAPEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAVBooks@Library@Domain@@@Z DD imagerel $LN3
-	DD	imagerel $LN3+105
-	DD	imagerel $unwind$??$?0AEAPEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAVBooks@Library@Domain@@@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??$forward@PEAVBooks@Library@Domain@@@std@@YA$$QEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z DD imagerel $LN3
-	DD	imagerel $LN3+71
-	DD	imagerel $unwind$??$forward@PEAVBooks@Library@Domain@@@std@@YA$$QEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -2633,12 +2498,6 @@ $pdata$??$forward@AEAPEAV_Facet_base@std@@@std@@YAAEAPEAV_Facet_base@0@AEAPEAV10
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$forward@AEAPEAVBooks@Library@Domain@@@std@@YAAEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z DD imagerel $LN3
-	DD	imagerel $LN3+71
-	DD	imagerel $unwind$??$forward@AEAPEAVBooks@Library@Domain@@@std@@YAAEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
 $pdata$??$_Get_unwrapped@AEBQEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@YA@AEBQEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z DD imagerel $LN3
 	DD	imagerel $LN3+74
 	DD	imagerel $unwind$??$_Get_unwrapped@AEBQEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@YA@AEBQEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z
@@ -2675,44 +2534,6 @@ rtc$TMZ	ENDS
 rtc$IMZ	SEGMENT
 _RTC_InitBase.rtc$IMZ DQ FLAT:_RTC_InitBase
 rtc$IMZ	ENDS
-;	COMDAT ??_R1A@?0A@EA@Books@Library@Domain@@8
-rdata$r	SEGMENT
-??_R1A@?0A@EA@Books@Library@Domain@@8 DD imagerel ??_R0?AVBooks@Library@Domain@@@8 ; Domain::Library::Books::`RTTI Base Class Descriptor at (0,-1,0,64)'
-	DD	01H
-	DD	00H
-	DD	0ffffffffH
-	DD	00H
-	DD	040H
-	DD	imagerel ??_R3Books@Library@Domain@@8
-rdata$r	ENDS
-;	COMDAT ??_R2Books@Library@Domain@@8
-rdata$r	SEGMENT
-??_R2Books@Library@Domain@@8 DD imagerel ??_R1A@?0A@EA@Books@Library@Domain@@8 ; Domain::Library::Books::`RTTI Base Class Array'
-	DD	imagerel ??_R1A@?0A@EA@MaintainBooksHandler@Library@Domain@@8
-	ORG $+3
-rdata$r	ENDS
-;	COMDAT ??_R3Books@Library@Domain@@8
-rdata$r	SEGMENT
-??_R3Books@Library@Domain@@8 DD 00H			; Domain::Library::Books::`RTTI Class Hierarchy Descriptor'
-	DD	00H
-	DD	02H
-	DD	imagerel ??_R2Books@Library@Domain@@8
-rdata$r	ENDS
-;	COMDAT ??_R0?AVBooks@Library@Domain@@@8
-data$r	SEGMENT
-??_R0?AVBooks@Library@Domain@@@8 DQ FLAT:??_7type_info@@6B@ ; Domain::Library::Books `RTTI Type Descriptor'
-	DQ	0000000000000000H
-	DB	'.?AVBooks@Library@Domain@@', 00H
-data$r	ENDS
-;	COMDAT ??_R4Books@Library@Domain@@6B@
-rdata$r	SEGMENT
-??_R4Books@Library@Domain@@6B@ DD 01H			; Domain::Library::Books::`RTTI Complete Object Locator'
-	DD	00H
-	DD	00H
-	DD	imagerel ??_R0?AVBooks@Library@Domain@@@8
-	DD	imagerel ??_R3Books@Library@Domain@@8
-	DD	imagerel ??_R4Books@Library@Domain@@6B@
-rdata$r	ENDS
 ;	COMDAT ??_R1A@?0A@EA@bad_any_cast@std@@8
 rdata$r	SEGMENT
 ??_R1A@?0A@EA@bad_any_cast@std@@8 DD imagerel ??_R0?AVbad_any_cast@std@@@8 ; std::bad_any_cast::`RTTI Base Class Descriptor at (0,-1,0,64)'
@@ -2820,43 +2641,6 @@ rdata$r	SEGMENT
 	DD	imagerel ??_R0?AVUserInterfaceHandler@UI@@@8
 	DD	imagerel ??_R3UserInterfaceHandler@UI@@8
 	DD	imagerel ??_R4UserInterfaceHandler@UI@@6B@
-rdata$r	ENDS
-;	COMDAT ??_R1A@?0A@EA@MaintainBooksHandler@Library@Domain@@8
-rdata$r	SEGMENT
-??_R1A@?0A@EA@MaintainBooksHandler@Library@Domain@@8 DD imagerel ??_R0?AVMaintainBooksHandler@Library@Domain@@@8 ; Domain::Library::MaintainBooksHandler::`RTTI Base Class Descriptor at (0,-1,0,64)'
-	DD	00H
-	DD	00H
-	DD	0ffffffffH
-	DD	00H
-	DD	040H
-	DD	imagerel ??_R3MaintainBooksHandler@Library@Domain@@8
-rdata$r	ENDS
-;	COMDAT ??_R2MaintainBooksHandler@Library@Domain@@8
-rdata$r	SEGMENT
-??_R2MaintainBooksHandler@Library@Domain@@8 DD imagerel ??_R1A@?0A@EA@MaintainBooksHandler@Library@Domain@@8 ; Domain::Library::MaintainBooksHandler::`RTTI Base Class Array'
-	ORG $+3
-rdata$r	ENDS
-;	COMDAT ??_R3MaintainBooksHandler@Library@Domain@@8
-rdata$r	SEGMENT
-??_R3MaintainBooksHandler@Library@Domain@@8 DD 00H	; Domain::Library::MaintainBooksHandler::`RTTI Class Hierarchy Descriptor'
-	DD	00H
-	DD	01H
-	DD	imagerel ??_R2MaintainBooksHandler@Library@Domain@@8
-rdata$r	ENDS
-;	COMDAT ??_R0?AVMaintainBooksHandler@Library@Domain@@@8
-data$r	SEGMENT
-??_R0?AVMaintainBooksHandler@Library@Domain@@@8 DQ FLAT:??_7type_info@@6B@ ; Domain::Library::MaintainBooksHandler `RTTI Type Descriptor'
-	DQ	0000000000000000H
-	DB	'.?AVMaintainBooksHandler@Library@Domain@@', 00H
-data$r	ENDS
-;	COMDAT ??_R4MaintainBooksHandler@Library@Domain@@6B@
-rdata$r	SEGMENT
-??_R4MaintainBooksHandler@Library@Domain@@6B@ DD 01H	; Domain::Library::MaintainBooksHandler::`RTTI Complete Object Locator'
-	DD	00H
-	DD	00H
-	DD	imagerel ??_R0?AVMaintainBooksHandler@Library@Domain@@@8
-	DD	imagerel ??_R3MaintainBooksHandler@Library@Domain@@8
-	DD	imagerel ??_R4MaintainBooksHandler@Library@Domain@@6B@
 rdata$r	ENDS
 ;	COMDAT ??_R1A@?0A@EA@bad_cast@std@@8
 rdata$r	SEGMENT
@@ -3196,11 +2980,6 @@ CONST	SEGMENT
 ??_C@_0DL@DGNBDAFF@Simple?5UI?5being?5used?5and?5has?5be@ DB 'Simple UI b'
 	DB	'eing used and has been successfully initialized', 00H ; `string'
 CONST	ENDS
-;	COMDAT ??_7Books@Library@Domain@@6B@
-CONST	SEGMENT
-??_7Books@Library@Domain@@6B@ DQ FLAT:??_R4Books@Library@Domain@@6B@ ; Domain::Library::Books::`vftable'
-	DQ	FLAT:??_EBooks@Library@Domain@@UEAAPEAXI@Z
-CONST	ENDS
 ;	COMDAT _CT??_R0?AVbad_any_cast@std@@@8??0bad_any_cast@std@@QEAA@AEBV01@@Z24
 xdata$x	SEGMENT
 _CT??_R0?AVbad_any_cast@std@@@8??0bad_any_cast@std@@QEAA@AEBV01@@Z24 DD 00H
@@ -3276,11 +3055,6 @@ CONST	ENDS
 ;	COMDAT ??_C@_0BA@JFNIOLAK@string?5too?5long@
 CONST	SEGMENT
 ??_C@_0BA@JFNIOLAK@string?5too?5long@ DB 'string too long', 00H ; `string'
-CONST	ENDS
-;	COMDAT ??_7MaintainBooksHandler@Library@Domain@@6B@
-CONST	SEGMENT
-??_7MaintainBooksHandler@Library@Domain@@6B@ DQ FLAT:??_R4MaintainBooksHandler@Library@Domain@@6B@ ; Domain::Library::MaintainBooksHandler::`vftable'
-	DQ	FLAT:_purecall
 CONST	ENDS
 ;	COMDAT ??_C@_1CG@JNLFBNGN@?$AA?$CC?$AAi?$AAn?$AAv?$AAa?$AAl?$AAi?$AAd?$AA?5?$AAa?$AAr?$AAg?$AAu?$AAm?$AAe@
 CONST	SEGMENT
@@ -3514,26 +3288,6 @@ $unwind$??$_Get_unwrapped@AEBQEBV?$basic_string@DU?$char_traits@D@std@@V?$alloca
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$ip2state$??$forward@AEAPEAVBooks@Library@Domain@@@std@@YAAEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z DB 02H
-	DB	00H
-	DB	00H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$cppxdata$??$forward@AEAPEAVBooks@Library@Domain@@@std@@YAAEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z DB 060H
-	DD	imagerel $ip2state$??$forward@AEAPEAVBooks@Library@Domain@@@std@@YAAEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??$forward@AEAPEAVBooks@Library@Domain@@@std@@YAAEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z DD 025052a19H
-	DD	010e2313H
-	DD	07007001dH
-	DD	05006H
-	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??$forward@AEAPEAVBooks@Library@Domain@@@std@@YAAEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
 $ip2state$??$forward@AEAPEAV_Facet_base@std@@@std@@YAAEAPEAV_Facet_base@0@AEAPEAV10@@Z DB 02H
 	DB	00H
 	DB	00H
@@ -3707,46 +3461,6 @@ $unwind$??$_Cast@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$ip2state$??$forward@PEAVBooks@Library@Domain@@@std@@YA$$QEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z DB 02H
-	DB	00H
-	DB	00H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$cppxdata$??$forward@PEAVBooks@Library@Domain@@@std@@YA$$QEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z DB 060H
-	DD	imagerel $ip2state$??$forward@PEAVBooks@Library@Domain@@@std@@YA$$QEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??$forward@PEAVBooks@Library@Domain@@@std@@YA$$QEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z DD 025052a19H
-	DD	010e2313H
-	DD	07007001dH
-	DD	05006H
-	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??$forward@PEAVBooks@Library@Domain@@@std@@YA$$QEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$ip2state$??$?0AEAPEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAVBooks@Library@Domain@@@Z DB 02H
-	DB	00H
-	DB	00H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$cppxdata$??$?0AEAPEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAVBooks@Library@Domain@@@Z DB 060H
-	DD	imagerel $ip2state$??$?0AEAPEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAVBooks@Library@Domain@@@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??$?0AEAPEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAVBooks@Library@Domain@@@Z DD 025053319H
-	DD	0117231cH
-	DD	07010001dH
-	DD	0500fH
-	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??$?0AEAPEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAVBooks@Library@Domain@@@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
 $ip2state$??$?0AEAPEAV_Facet_base@std@@@?$_Compressed_pair@U?$default_delete@V_Facet_base@std@@@std@@PEAV_Facet_base@2@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAV_Facet_base@1@@Z DB 02H
 	DB	00H
 	DB	00H
@@ -3850,26 +3564,6 @@ CONST	SEGMENT
 	DD	00H
 	DQ	FLAT:??$_Uninitialized_value_construct_n@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@PEAV10@_KAEAV?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@0@@Z$rtcVarDesc
 CONST	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$ip2state$??$exchange@PEAVBooks@Library@Domain@@PEAV123@@std@@YAPEAVBooks@Library@Domain@@AEAPEAV123@$$QEAPEAV123@@Z DB 02H
-	DB	00H
-	DB	00H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$cppxdata$??$exchange@PEAVBooks@Library@Domain@@PEAV123@@std@@YAPEAVBooks@Library@Domain@@AEAPEAV123@$$QEAPEAV123@@Z DB 060H
-	DD	imagerel $ip2state$??$exchange@PEAVBooks@Library@Domain@@PEAV123@@std@@YAPEAVBooks@Library@Domain@@AEAPEAV123@$$QEAPEAV123@@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??$exchange@PEAVBooks@Library@Domain@@PEAV123@@std@@YAPEAVBooks@Library@Domain@@AEAPEAV123@$$QEAPEAV123@@Z DD 025052f19H
-	DD	01132318H
-	DD	0700c0021H
-	DD	0500bH
-	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??$exchange@PEAVBooks@Library@Domain@@PEAV123@@std@@YAPEAVBooks@Library@Domain@@AEAPEAV123@$$QEAPEAV123@@Z
-xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $ip2state$??$exchange@PEAVSessionHandler@Session@Domain@@PEAV123@@std@@YAPEAVSessionHandler@Session@Domain@@AEAPEAV123@$$QEAPEAV123@@Z DB 02H
@@ -4407,63 +4101,23 @@ $unwind$??$?0$$V@?$_Compressed_pair@U?$default_delete@VSessionHandler@Session@Do
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$ip2state$??$?0U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAA@U_One_then_variadic_args_t@1@$$QEAU?$default_delete@VBooks@Library@Domain@@@1@$$QEAPEAVBooks@Library@Domain@@@Z DB 02H
+$ip2state$??$?0$$V@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z DB 02H
 	DB	00H
 	DB	00H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$cppxdata$??$?0U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAA@U_One_then_variadic_args_t@1@$$QEAU?$default_delete@VBooks@Library@Domain@@@1@$$QEAPEAVBooks@Library@Domain@@@Z DB 060H
-	DD	imagerel $ip2state$??$?0U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAA@U_One_then_variadic_args_t@1@$$QEAU?$default_delete@VBooks@Library@Domain@@@1@$$QEAPEAVBooks@Library@Domain@@@Z
+$cppxdata$??$?0$$V@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z DB 060H
+	DD	imagerel $ip2state$??$?0$$V@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??$?0U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAA@U_One_then_variadic_args_t@1@$$QEAU?$default_delete@VBooks@Library@Domain@@@1@$$QEAPEAVBooks@Library@Domain@@@Z DD 025053819H
-	DD	011c2321H
-	DD	07015001dH
-	DD	05014H
+$unwind$??$?0$$V@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z DD 025052e19H
+	DD	01122317H
+	DD	0700b001dH
+	DD	0500aH
 	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??$?0U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAA@U_One_then_variadic_args_t@1@$$QEAU?$default_delete@VBooks@Library@Domain@@@1@$$QEAPEAVBooks@Library@Domain@@@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$ip2state$??$forward@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@YA$$QEAU?$default_delete@VBooks@Library@Domain@@@0@AEAU10@@Z DB 02H
-	DB	00H
-	DB	00H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$cppxdata$??$forward@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@YA$$QEAU?$default_delete@VBooks@Library@Domain@@@0@AEAU10@@Z DB 060H
-	DD	imagerel $ip2state$??$forward@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@YA$$QEAU?$default_delete@VBooks@Library@Domain@@@0@AEAU10@@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??$forward@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@YA$$QEAU?$default_delete@VBooks@Library@Domain@@@0@AEAU10@@Z DD 025052a19H
-	DD	010e2313H
-	DD	07007001dH
-	DD	05006H
-	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??$forward@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@YA$$QEAU?$default_delete@VBooks@Library@Domain@@@0@AEAU10@@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$ip2state$??$?0U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@PEAVBooks@Library@Domain@@@Z DB 02H
-	DB	00H
-	DB	00H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$cppxdata$??$?0U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@PEAVBooks@Library@Domain@@@Z DB 060H
-	DD	imagerel $ip2state$??$?0U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@PEAVBooks@Library@Domain@@@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??$?0U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@PEAVBooks@Library@Domain@@@Z DD 025052f19H
-	DD	01132318H
-	DD	0700c0021H
-	DD	0500bH
-	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??$?0U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@PEAVBooks@Library@Domain@@@Z
+	DD	imagerel $cppxdata$??$?0$$V@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -6105,184 +5759,23 @@ $unwind$??0?$initializer_list@V?$basic_string@DU?$char_traits@D@std@@V?$allocato
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$ip2state$??$?0VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@$$QEAV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@1@@Z DB 02H
+$ip2state$??$?0U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ DB 02H
 	DB	00H
 	DB	00H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$cppxdata$??$?0VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@$$QEAV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@1@@Z DB 060H
-	DD	imagerel $ip2state$??$?0VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@$$QEAV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@1@@Z
+$cppxdata$??$?0U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ DB 060H
+	DD	imagerel $ip2state$??$?0U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??$?0VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@$$QEAV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@1@@Z DD 025052f19H
-	DD	01132318H
-	DD	0700c002bH
-	DD	0500bH
-	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??$?0VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@$$QEAV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@1@@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$ip2state$??$?0VBooks@Library@Domain@@$0A@@?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEAA@AEBU?$default_delete@VBooks@Library@Domain@@@1@@Z DB 02H
-	DB	00H
-	DB	00H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$cppxdata$??$?0VBooks@Library@Domain@@$0A@@?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEAA@AEBU?$default_delete@VBooks@Library@Domain@@@1@@Z DB 060H
-	DD	imagerel $ip2state$??$?0VBooks@Library@Domain@@$0A@@?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEAA@AEBU?$default_delete@VBooks@Library@Domain@@@1@@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??$?0VBooks@Library@Domain@@$0A@@?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEAA@AEBU?$default_delete@VBooks@Library@Domain@@@1@@Z DD 025052f19H
-	DD	01132318H
-	DD	0700c001dH
-	DD	0500bH
-	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??$?0VBooks@Library@Domain@@$0A@@?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEAA@AEBU?$default_delete@VBooks@Library@Domain@@@1@@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$ip2state$?_Get_first@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ DB 02H
-	DB	00H
-	DB	00H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$cppxdata$?_Get_first@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ DB 060H
-	DD	imagerel $ip2state$?_Get_first@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$?_Get_first@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ DD 025052a19H
-	DD	010e2313H
-	DD	07007001dH
-	DD	05006H
-	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$?_Get_first@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$ip2state$?release@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAPEAVBooks@Library@Domain@@XZ DB 02H
-	DB	00H
-	DB	00H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$cppxdata$?release@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAPEAVBooks@Library@Domain@@XZ DB 060H
-	DD	imagerel $ip2state$?release@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAPEAVBooks@Library@Domain@@XZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$?release@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAPEAVBooks@Library@Domain@@XZ DD 025052a19H
+$unwind$??$?0U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ DD 025052a19H
 	DD	010e2313H
 	DD	070070021H
 	DD	05006H
 	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$?release@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAPEAVBooks@Library@Domain@@XZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$ip2state$?get_deleter@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ DB 02H
-	DB	00H
-	DB	00H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$cppxdata$?get_deleter@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ DB 060H
-	DD	imagerel $ip2state$?get_deleter@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$?get_deleter@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ DD 025052a19H
-	DD	010e2313H
-	DD	07007001dH
-	DD	05006H
-	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$?get_deleter@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$ip2state$??1?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@XZ DB 02H
-	DB	00H
-	DB	00H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$cppxdata$??1?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@XZ DB 060H
-	DD	imagerel $ip2state$??1?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@XZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??1?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@XZ DD 025052a19H
-	DD	010e2313H
-	DD	07007001fH
-	DD	05006H
-	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??1?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@XZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$ip2state$??R?$default_delete@VBooks@Library@Domain@@@std@@QEBAXPEAVBooks@Library@Domain@@@Z DB 02H
-	DB	00H
-	DB	00H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$cppxdata$??R?$default_delete@VBooks@Library@Domain@@@std@@QEBAXPEAVBooks@Library@Domain@@@Z DB 060H
-	DD	imagerel $ip2state$??R?$default_delete@VBooks@Library@Domain@@@std@@QEBAXPEAVBooks@Library@Domain@@@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??R?$default_delete@VBooks@Library@Domain@@@std@@QEBAXPEAVBooks@Library@Domain@@@Z DD 025052f19H
-	DD	01132318H
-	DD	0700c0023H
-	DD	0500bH
-	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??R?$default_delete@VBooks@Library@Domain@@@std@@QEBAXPEAVBooks@Library@Domain@@@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??$make_unique@VBooks@Library@Domain@@$$V$0A@@std@@YA?AV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@0@XZ DD 025052a01H
-	DD	010e2313H
-	DD	070070025H
-	DD	05006H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??_GBooks@Library@Domain@@UEAAPEAXI@Z DD 025052e01H
-	DD	01122317H
-	DD	0700b001dH
-	DD	0500aH
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??0Books@Library@Domain@@QEAA@XZ DD 025052a01H
-	DD	010e2313H
-	DD	07007001dH
-	DD	05006H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$ip2state$??1Books@Library@Domain@@UEAA@XZ DB 02H
-	DB	00H
-	DB	00H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$cppxdata$??1Books@Library@Domain@@UEAA@XZ DB 060H
-	DD	imagerel $ip2state$??1Books@Library@Domain@@UEAA@XZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??1Books@Library@Domain@@UEAA@XZ DD 025052a19H
-	DD	010e2313H
-	DD	07007001dH
-	DD	05006H
-	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??1Books@Library@Domain@@UEAA@XZ
+	DD	imagerel $cppxdata$??$?0U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -6542,63 +6035,63 @@ $unwind$??R?$default_delete@VLoggerHandler@Logging@TechnicalServices@@@std@@QEBA
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$ip2state$?_Get_first@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VMaintainBooksHandler@Library@Domain@@@2@XZ DB 02H
+$ip2state$?_Get_first@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VAuthenticate@Reservation@Domain@@@2@XZ DB 02H
 	DB	00H
 	DB	00H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$cppxdata$?_Get_first@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VMaintainBooksHandler@Library@Domain@@@2@XZ DB 060H
-	DD	imagerel $ip2state$?_Get_first@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VMaintainBooksHandler@Library@Domain@@@2@XZ
+$cppxdata$?_Get_first@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VAuthenticate@Reservation@Domain@@@2@XZ DB 060H
+	DD	imagerel $ip2state$?_Get_first@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VAuthenticate@Reservation@Domain@@@2@XZ
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?_Get_first@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VMaintainBooksHandler@Library@Domain@@@2@XZ DD 025052a19H
+$unwind$?_Get_first@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VAuthenticate@Reservation@Domain@@@2@XZ DD 025052a19H
 	DD	010e2313H
 	DD	07007001dH
 	DD	05006H
 	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$?_Get_first@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VMaintainBooksHandler@Library@Domain@@@2@XZ
+	DD	imagerel $cppxdata$?_Get_first@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VAuthenticate@Reservation@Domain@@@2@XZ
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$ip2state$??1?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@XZ DB 02H
+$ip2state$??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ DB 02H
 	DB	00H
 	DB	00H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$cppxdata$??1?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@XZ DB 060H
-	DD	imagerel $ip2state$??1?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@XZ
+$cppxdata$??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ DB 060H
+	DD	imagerel $ip2state$??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??1?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@XZ DD 025052a19H
+$unwind$??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ DD 025052a19H
 	DD	010e2313H
 	DD	07007001fH
 	DD	05006H
 	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??1?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@XZ
+	DD	imagerel $cppxdata$??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$ip2state$??R?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEBAXPEAVMaintainBooksHandler@Library@Domain@@@Z DB 02H
+$ip2state$??R?$default_delete@VAuthenticate@Reservation@Domain@@@std@@QEBAXPEAVAuthenticate@Reservation@Domain@@@Z DB 02H
 	DB	00H
 	DB	00H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$cppxdata$??R?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEBAXPEAVMaintainBooksHandler@Library@Domain@@@Z DB 060H
-	DD	imagerel $ip2state$??R?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEBAXPEAVMaintainBooksHandler@Library@Domain@@@Z
+$cppxdata$??R?$default_delete@VAuthenticate@Reservation@Domain@@@std@@QEBAXPEAVAuthenticate@Reservation@Domain@@@Z DB 060H
+	DD	imagerel $ip2state$??R?$default_delete@VAuthenticate@Reservation@Domain@@@std@@QEBAXPEAVAuthenticate@Reservation@Domain@@@Z
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??R?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEBAXPEAVMaintainBooksHandler@Library@Domain@@@Z DD 025052f19H
+$unwind$??R?$default_delete@VAuthenticate@Reservation@Domain@@@std@@QEBAXPEAVAuthenticate@Reservation@Domain@@@Z DD 025052f19H
 	DD	01132318H
 	DD	0700c0023H
 	DD	0500bH
 	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??R?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEBAXPEAVMaintainBooksHandler@Library@Domain@@@Z
+	DD	imagerel $cppxdata$??R?$default_delete@VAuthenticate@Reservation@Domain@@@std@@QEBAXPEAVAuthenticate@Reservation@Domain@@@Z
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -7107,12 +6600,6 @@ CONST	SEGMENT
 CONST	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?dtor$4@?0???0SimpleUI@UI@@QEAA@XZ@4HA DD 031001H
-	DD	0700c4210H
-	DD	0500bH
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
 $unwind$?dtor$3@?0???0SimpleUI@UI@@QEAA@XZ@4HA DD 031001H
 	DD	0700c4210H
 	DD	0500bH
@@ -7120,6 +6607,12 @@ xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $unwind$?dtor$2@?0???0SimpleUI@UI@@QEAA@XZ@4HA DD 031001H
+	DD	0700c4210H
+	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?dtor$1@?0???0SimpleUI@UI@@QEAA@XZ@4HA DD 031001H
 	DD	0700c4210H
 	DD	0500bH
 xdata	ENDS
@@ -7136,9 +6629,9 @@ $ip2state$??0SimpleUI@UI@@QEAA@XZ DB 0eH
 	DB	00H
 	DB	086H
 	DB	02H
-	DB	094H
+	DB	'J'
 	DB	04H
-	DB	'N'
+	DB	'6'
 	DB	06H
 	DB	0d8H
 	DB	08H
@@ -7153,11 +6646,11 @@ $stateUnwindMap$??0SimpleUI@UI@@QEAA@XZ DB 08H
 	DB	0eH
 	DD	imagerel ?dtor$0@?0???0SimpleUI@UI@@QEAA@XZ@4HA
 	DB	02eH
+	DD	imagerel ?dtor$1@?0???0SimpleUI@UI@@QEAA@XZ@4HA
+	DB	02eH
 	DD	imagerel ?dtor$2@?0???0SimpleUI@UI@@QEAA@XZ@4HA
 	DB	02eH
 	DD	imagerel ?dtor$3@?0???0SimpleUI@UI@@QEAA@XZ@4HA
-	DB	02eH
-	DD	imagerel ?dtor$4@?0???0SimpleUI@UI@@QEAA@XZ@4HA
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -7169,7 +6662,7 @@ xdata	ENDS
 xdata	SEGMENT
 $unwind$??0SimpleUI@UI@@QEAA@XZ DD 025052a11H
 	DD	010e2313H
-	DD	07007002bH
+	DD	070070027H
 	DD	05006H
 	DD	imagerel __CxxFrameHandler4
 	DD	imagerel $cppxdata$??0SimpleUI@UI@@QEAA@XZ
@@ -8930,33 +8423,6 @@ $unwind$??0?$allocator@D@std@@QEAA@XZ DD 025052a19H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??0MaintainBooksHandler@Library@Domain@@QEAA@XZ DD 05052801H
-	DD	010e0311H
-	DD	070070019H
-	DD	05006H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$ip2state$??1MaintainBooksHandler@Library@Domain@@UEAA@XZ DB 02H
-	DB	00H
-	DB	00H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$cppxdata$??1MaintainBooksHandler@Library@Domain@@UEAA@XZ DB 060H
-	DD	imagerel $ip2state$??1MaintainBooksHandler@Library@Domain@@UEAA@XZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??1MaintainBooksHandler@Library@Domain@@UEAA@XZ DD 025052a19H
-	DD	010e2313H
-	DD	07007001dH
-	DD	05006H
-	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??1MaintainBooksHandler@Library@Domain@@UEAA@XZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
 $ip2state$??$_Construct_in_place@U_Container_proxy@std@@PEAU_Container_base12@2@@std@@YAXAEAU_Container_proxy@0@$$QEAPEAU_Container_base12@0@@Z DB 02H
 	DB	00H
 	DB	00H
@@ -9760,41 +9226,6 @@ $LN3:
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\type_traits
-;	COMDAT ??$forward@AEAPEAVBooks@Library@Domain@@@std@@YAAEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z
-_TEXT	SEGMENT
-_Arg$ = 224
-??$forward@AEAPEAVBooks@Library@Domain@@@std@@YAAEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z PROC ; std::forward<Domain::Library::Books * &>, COMDAT
-
-; 1454 :     remove_reference_t<_Ty>& _Arg) noexcept { // forward an lvalue as either an lvalue or an rvalue
-
-$LN3:
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 232				; 000000e8H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 58					; 0000003aH
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__85A9AA98_type_traits
-	call	__CheckForDebuggerJustMyCode
-
-; 1455 :     return static_cast<_Ty&&>(_Arg);
-
-	mov	rax, QWORD PTR _Arg$[rbp]
-
-; 1456 : }
-
-	lea	rsp, QWORD PTR [rbp+200]
-	pop	rdi
-	pop	rbp
-	ret	0
-??$forward@AEAPEAVBooks@Library@Domain@@@std@@YAAEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z ENDP ; std::forward<Domain::Library::Books * &>
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\type_traits
 ;	COMDAT ??$forward@AEAPEAV_Facet_base@std@@@std@@YAAEAPEAV_Facet_base@0@AEAPEAV10@@Z
 _TEXT	SEGMENT
 _Arg$ = 224
@@ -10367,79 +9798,6 @@ $LN3:
 ??$_Cast@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@any@std@@QEAAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@XZ ENDP ; std::any::_Cast<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\type_traits
-;	COMDAT ??$forward@PEAVBooks@Library@Domain@@@std@@YA$$QEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z
-_TEXT	SEGMENT
-_Arg$ = 224
-??$forward@PEAVBooks@Library@Domain@@@std@@YA$$QEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z PROC ; std::forward<Domain::Library::Books *>, COMDAT
-
-; 1454 :     remove_reference_t<_Ty>& _Arg) noexcept { // forward an lvalue as either an lvalue or an rvalue
-
-$LN3:
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 232				; 000000e8H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 58					; 0000003aH
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__85A9AA98_type_traits
-	call	__CheckForDebuggerJustMyCode
-
-; 1455 :     return static_cast<_Ty&&>(_Arg);
-
-	mov	rax, QWORD PTR _Arg$[rbp]
-
-; 1456 : }
-
-	lea	rsp, QWORD PTR [rbp+200]
-	pop	rdi
-	pop	rbp
-	ret	0
-??$forward@PEAVBooks@Library@Domain@@@std@@YA$$QEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z ENDP ; std::forward<Domain::Library::Books *>
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
-;	COMDAT ??$?0AEAPEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAVBooks@Library@Domain@@@Z
-_TEXT	SEGMENT
-this$ = 224
-__formal$ = 232
-<_Val2_0>$ = 240
-??$?0AEAPEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAVBooks@Library@Domain@@@Z PROC ; std::_Compressed_pair<std::default_delete<Domain::Library::Books>,Domain::Library::Books *,1>::_Compressed_pair<std::default_delete<Domain::Library::Books>,Domain::Library::Books *,1><Domain::Library::Books * &>, COMDAT
-
-; 1336 :         : _Ty1(), _Myval2(_STD forward<_Other2>(_Val2)...) {}
-
-$LN3:
-	mov	QWORD PTR [rsp+24], r8
-	mov	BYTE PTR [rsp+16], dl
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 232				; 000000e8H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 58					; 0000003aH
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__A58979FC_xmemory
-	call	__CheckForDebuggerJustMyCode
-	mov	rcx, QWORD PTR <_Val2_0>$[rbp]
-	call	??$forward@AEAPEAVBooks@Library@Domain@@@std@@YAAEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z ; std::forward<Domain::Library::Books * &>
-	mov	rcx, QWORD PTR this$[rbp]
-	mov	rax, QWORD PTR [rax]
-	mov	QWORD PTR [rcx], rax
-	mov	rax, QWORD PTR this$[rbp]
-	lea	rsp, QWORD PTR [rbp+200]
-	pop	rdi
-	pop	rbp
-	ret	0
-??$?0AEAPEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAVBooks@Library@Domain@@@Z ENDP ; std::_Compressed_pair<std::default_delete<Domain::Library::Books>,Domain::Library::Books *,1>::_Compressed_pair<std::default_delete<Domain::Library::Books>,Domain::Library::Books *,1><Domain::Library::Books * &>
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
 ;	COMDAT ??$?0AEAPEAV_Facet_base@std@@@?$_Compressed_pair@U?$default_delete@V_Facet_base@std@@@std@@PEAV_Facet_base@2@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAV_Facet_base@1@@Z
 _TEXT	SEGMENT
@@ -10743,58 +10101,6 @@ _Al$ = 320
 	ret	0
 ?dtor$0@?0???$_Uninitialized_value_construct_n@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@YAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@PEAV10@_KAEAV?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@0@@Z@4HA ENDP ; `std::_Uninitialized_value_construct_n<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >'::`1'::dtor$0
 text$x	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\utility
-;	COMDAT ??$exchange@PEAVBooks@Library@Domain@@PEAV123@@std@@YAPEAVBooks@Library@Domain@@AEAPEAV123@$$QEAPEAV123@@Z
-_TEXT	SEGMENT
-_Old_val$ = 8
-_Val$ = 256
-_New_val$ = 264
-??$exchange@PEAVBooks@Library@Domain@@PEAV123@@std@@YAPEAVBooks@Library@Domain@@AEAPEAV123@$$QEAPEAV123@@Z PROC ; std::exchange<Domain::Library::Books *,Domain::Library::Books *>, COMDAT
-
-; 597  :     conjunction_v<is_nothrow_move_constructible<_Ty>, is_nothrow_assignable<_Ty&, _Other>>) /* strengthened */ {
-
-$LN3:
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 264				; 00000108H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 66					; 00000042H
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+296]
-	lea	rcx, OFFSET FLAT:__CF1C1A3F_utility
-	call	__CheckForDebuggerJustMyCode
-
-; 598  :     // assign _New_val to _Val, return previous _Val
-; 599  :     _Ty _Old_val = static_cast<_Ty&&>(_Val);
-
-	mov	rax, QWORD PTR _Val$[rbp]
-	mov	rax, QWORD PTR [rax]
-	mov	QWORD PTR _Old_val$[rbp], rax
-
-; 600  :     _Val         = static_cast<_Other&&>(_New_val);
-
-	mov	rax, QWORD PTR _Val$[rbp]
-	mov	rcx, QWORD PTR _New_val$[rbp]
-	mov	rcx, QWORD PTR [rcx]
-	mov	QWORD PTR [rax], rcx
-
-; 601  :     return _Old_val;
-
-	mov	rax, QWORD PTR _Old_val$[rbp]
-
-; 602  : }
-
-	lea	rsp, QWORD PTR [rbp+232]
-	pop	rdi
-	pop	rbp
-	ret	0
-??$exchange@PEAVBooks@Library@Domain@@PEAV123@@std@@YAPEAVBooks@Library@Domain@@AEAPEAV123@$$QEAPEAV123@@Z ENDP ; std::exchange<Domain::Library::Books *,Domain::Library::Books *>
-_TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\utility
 ;	COMDAT ??$exchange@PEAVSessionHandler@Session@Domain@@PEAV123@@std@@YAPEAVSessionHandler@Session@Domain@@AEAPEAV123@$$QEAPEAV123@@Z
@@ -12803,19 +12109,15 @@ $LN3:
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
-;	COMDAT ??$?0U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAA@U_One_then_variadic_args_t@1@$$QEAU?$default_delete@VBooks@Library@Domain@@@1@$$QEAPEAVBooks@Library@Domain@@@Z
+;	COMDAT ??$?0$$V@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z
 _TEXT	SEGMENT
 this$ = 224
 __formal$ = 232
-_Val1$ = 240
-<_Val2_0>$ = 248
-??$?0U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAA@U_One_then_variadic_args_t@1@$$QEAU?$default_delete@VBooks@Library@Domain@@@1@$$QEAPEAVBooks@Library@Domain@@@Z PROC ; std::_Compressed_pair<std::default_delete<Domain::Library::MaintainBooksHandler>,Domain::Library::MaintainBooksHandler *,1>::_Compressed_pair<std::default_delete<Domain::Library::MaintainBooksHandler>,Domain::Library::MaintainBooksHandler *,1><std::default_delete<Domain::Library::Books>,Domain::Library::Books *>, COMDAT
+??$?0$$V@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z PROC ; std::_Compressed_pair<std::default_delete<Domain::Reservation::Authenticate>,Domain::Reservation::Authenticate *,1>::_Compressed_pair<std::default_delete<Domain::Reservation::Authenticate>,Domain::Reservation::Authenticate *,1><>, COMDAT
 
-; 1341 :         : _Ty1(_STD forward<_Other1>(_Val1)), _Myval2(_STD forward<_Other2>(_Val2)...) {}
+; 1336 :         : _Ty1(), _Myval2(_STD forward<_Other2>(_Val2)...) {}
 
 $LN3:
-	mov	QWORD PTR [rsp+32], r9
-	mov	QWORD PTR [rsp+24], r8
 	mov	BYTE PTR [rsp+16], dl
 	mov	QWORD PTR [rsp+8], rcx
 	push	rbp
@@ -12829,96 +12131,14 @@ $LN3:
 	mov	rcx, QWORD PTR [rsp+264]
 	lea	rcx, OFFSET FLAT:__A58979FC_xmemory
 	call	__CheckForDebuggerJustMyCode
-	mov	rcx, QWORD PTR _Val1$[rbp]
-	call	??$forward@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@YA$$QEAU?$default_delete@VBooks@Library@Domain@@@0@AEAU10@@Z ; std::forward<std::default_delete<Domain::Library::Books> >
-	mov	rdx, rax
-	mov	rcx, QWORD PTR this$[rbp]
-	call	??$?0VBooks@Library@Domain@@$0A@@?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEAA@AEBU?$default_delete@VBooks@Library@Domain@@@1@@Z ; std::default_delete<Domain::Library::MaintainBooksHandler>::default_delete<Domain::Library::MaintainBooksHandler><Domain::Library::Books,0>
-	mov	rcx, QWORD PTR <_Val2_0>$[rbp]
-	call	??$forward@PEAVBooks@Library@Domain@@@std@@YA$$QEAPEAVBooks@Library@Domain@@AEAPEAV123@@Z ; std::forward<Domain::Library::Books *>
-	mov	rcx, QWORD PTR this$[rbp]
-	mov	rax, QWORD PTR [rax]
-	mov	QWORD PTR [rcx], rax
+	mov	rax, QWORD PTR this$[rbp]
+	mov	QWORD PTR [rax], 0
 	mov	rax, QWORD PTR this$[rbp]
 	lea	rsp, QWORD PTR [rbp+200]
 	pop	rdi
 	pop	rbp
 	ret	0
-??$?0U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAA@U_One_then_variadic_args_t@1@$$QEAU?$default_delete@VBooks@Library@Domain@@@1@$$QEAPEAVBooks@Library@Domain@@@Z ENDP ; std::_Compressed_pair<std::default_delete<Domain::Library::MaintainBooksHandler>,Domain::Library::MaintainBooksHandler *,1>::_Compressed_pair<std::default_delete<Domain::Library::MaintainBooksHandler>,Domain::Library::MaintainBooksHandler *,1><std::default_delete<Domain::Library::Books>,Domain::Library::Books *>
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\type_traits
-;	COMDAT ??$forward@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@YA$$QEAU?$default_delete@VBooks@Library@Domain@@@0@AEAU10@@Z
-_TEXT	SEGMENT
-_Arg$ = 224
-??$forward@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@YA$$QEAU?$default_delete@VBooks@Library@Domain@@@0@AEAU10@@Z PROC ; std::forward<std::default_delete<Domain::Library::Books> >, COMDAT
-
-; 1454 :     remove_reference_t<_Ty>& _Arg) noexcept { // forward an lvalue as either an lvalue or an rvalue
-
-$LN3:
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 232				; 000000e8H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 58					; 0000003aH
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__85A9AA98_type_traits
-	call	__CheckForDebuggerJustMyCode
-
-; 1455 :     return static_cast<_Ty&&>(_Arg);
-
-	mov	rax, QWORD PTR _Arg$[rbp]
-
-; 1456 : }
-
-	lea	rsp, QWORD PTR [rbp+200]
-	pop	rdi
-	pop	rbp
-	ret	0
-??$forward@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@YA$$QEAU?$default_delete@VBooks@Library@Domain@@@0@AEAU10@@Z ENDP ; std::forward<std::default_delete<Domain::Library::Books> >
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\memory
-;	COMDAT ??$?0U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@PEAVBooks@Library@Domain@@@Z
-_TEXT	SEGMENT
-$T1 = 196
-tv70 = 216
-this$ = 256
-_Ptr$ = 264
-??$?0U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@PEAVBooks@Library@Domain@@@Z PROC ; std::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> ><std::default_delete<Domain::Library::Books>,0>, COMDAT
-
-; 2455 :     explicit unique_ptr(pointer _Ptr) noexcept : _Mypair(_Zero_then_variadic_args_t{}, _Ptr) {}
-
-$LN3:
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 264				; 00000108H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 66					; 00000042H
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+296]
-	lea	rcx, OFFSET FLAT:__4E2906A2_memory
-	call	__CheckForDebuggerJustMyCode
-	mov	rax, QWORD PTR this$[rbp]
-	mov	QWORD PTR tv70[rbp], rax
-	lea	r8, QWORD PTR _Ptr$[rbp]
-	movzx	edx, BYTE PTR $T1[rbp]
-	mov	rcx, QWORD PTR tv70[rbp]
-	call	??$?0AEAPEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@AEAPEAVBooks@Library@Domain@@@Z ; std::_Compressed_pair<std::default_delete<Domain::Library::Books>,Domain::Library::Books *,1>::_Compressed_pair<std::default_delete<Domain::Library::Books>,Domain::Library::Books *,1><Domain::Library::Books * &>
-	mov	rax, QWORD PTR this$[rbp]
-	lea	rsp, QWORD PTR [rbp+232]
-	pop	rdi
-	pop	rbp
-	ret	0
-??$?0U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@PEAVBooks@Library@Domain@@@Z ENDP ; std::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> ><std::default_delete<Domain::Library::Books>,0>
+??$?0$$V@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z ENDP ; std::_Compressed_pair<std::default_delete<Domain::Reservation::Authenticate>,Domain::Reservation::Authenticate *,1>::_Compressed_pair<std::default_delete<Domain::Reservation::Authenticate>,Domain::Reservation::Authenticate *,1><>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\memory
@@ -19183,132 +18403,14 @@ $LN3:
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\memory
-;	COMDAT ??$?0VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@$$QEAV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@1@@Z
+;	COMDAT ??$?0U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ
 _TEXT	SEGMENT
-$T1 = 200
-$T2 = 228
-$T3 = 260
-tv80 = 280
-tv78 = 288
-this$ = 336
-_Right$ = 344
-??$?0VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@$$QEAV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@1@@Z PROC ; std::unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> >::unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> ><Domain::Library::Books,std::default_delete<Domain::Library::Books>,0>, COMDAT
-
-; 2478 :         : _Mypair(_One_then_variadic_args_t{}, _STD forward<_Dx2>(_Right.get_deleter()), _Right.release()) {}
-
-$LN3:
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 344				; 00000158H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 86					; 00000056H
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+376]
-	lea	rcx, OFFSET FLAT:__4E2906A2_memory
-	call	__CheckForDebuggerJustMyCode
-	mov	rax, QWORD PTR this$[rbp]
-	mov	QWORD PTR tv80[rbp], rax
-	mov	rcx, QWORD PTR _Right$[rbp]
-	call	?release@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAPEAVBooks@Library@Domain@@XZ ; std::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >::release
-	mov	QWORD PTR $T1[rbp], rax
-	mov	rcx, QWORD PTR _Right$[rbp]
-	call	?get_deleter@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ ; std::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >::get_deleter
-	mov	rcx, rax
-	call	??$forward@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@YA$$QEAU?$default_delete@VBooks@Library@Domain@@@0@AEAU10@@Z ; std::forward<std::default_delete<Domain::Library::Books> >
-	mov	QWORD PTR tv78[rbp], rax
-	movzx	eax, BYTE PTR $T2[rbp]
-	mov	BYTE PTR $T3[rbp], al
-	lea	r9, QWORD PTR $T1[rbp]
-	mov	r8, QWORD PTR tv78[rbp]
-	movzx	edx, BYTE PTR $T3[rbp]
-	mov	rcx, QWORD PTR tv80[rbp]
-	call	??$?0U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAA@U_One_then_variadic_args_t@1@$$QEAU?$default_delete@VBooks@Library@Domain@@@1@$$QEAPEAVBooks@Library@Domain@@@Z ; std::_Compressed_pair<std::default_delete<Domain::Library::MaintainBooksHandler>,Domain::Library::MaintainBooksHandler *,1>::_Compressed_pair<std::default_delete<Domain::Library::MaintainBooksHandler>,Domain::Library::MaintainBooksHandler *,1><std::default_delete<Domain::Library::Books>,Domain::Library::Books *>
-	mov	rax, QWORD PTR this$[rbp]
-	lea	rsp, QWORD PTR [rbp+312]
-	pop	rdi
-	pop	rbp
-	ret	0
-??$?0VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@$$QEAV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@1@@Z ENDP ; std::unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> >::unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> ><Domain::Library::Books,std::default_delete<Domain::Library::Books>,0>
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\memory
-;	COMDAT ??$?0VBooks@Library@Domain@@$0A@@?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEAA@AEBU?$default_delete@VBooks@Library@Domain@@@1@@Z
-_TEXT	SEGMENT
-this$ = 224
-__formal$ = 232
-??$?0VBooks@Library@Domain@@$0A@@?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEAA@AEBU?$default_delete@VBooks@Library@Domain@@@1@@Z PROC ; std::default_delete<Domain::Library::MaintainBooksHandler>::default_delete<Domain::Library::MaintainBooksHandler><Domain::Library::Books,0>, COMDAT
-
-; 2398 :     default_delete(const default_delete<_Ty2>&) noexcept {}
-
-$LN3:
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 232				; 000000e8H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 58					; 0000003aH
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__4E2906A2_memory
-	call	__CheckForDebuggerJustMyCode
-	mov	rax, QWORD PTR this$[rbp]
-	lea	rsp, QWORD PTR [rbp+200]
-	pop	rdi
-	pop	rbp
-	ret	0
-??$?0VBooks@Library@Domain@@$0A@@?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEAA@AEBU?$default_delete@VBooks@Library@Domain@@@1@@Z ENDP ; std::default_delete<Domain::Library::MaintainBooksHandler>::default_delete<Domain::Library::MaintainBooksHandler><Domain::Library::Books,0>
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
-;	COMDAT ?_Get_first@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ
-_TEXT	SEGMENT
-this$ = 224
-?_Get_first@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ PROC ; std::_Compressed_pair<std::default_delete<Domain::Library::Books>,Domain::Library::Books *,1>::_Get_first, COMDAT
-
-; 1343 :     constexpr _Ty1& _Get_first() noexcept {
-
-$LN3:
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 232				; 000000e8H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 58					; 0000003aH
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__A58979FC_xmemory
-	call	__CheckForDebuggerJustMyCode
-
-; 1344 :         return *this;
-
-	mov	rax, QWORD PTR this$[rbp]
-
-; 1345 :     }
-
-	lea	rsp, QWORD PTR [rbp+200]
-	pop	rdi
-	pop	rbp
-	ret	0
-?_Get_first@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ ENDP ; std::_Compressed_pair<std::default_delete<Domain::Library::Books>,Domain::Library::Books *,1>::_Get_first
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\memory
-;	COMDAT ?release@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAPEAVBooks@Library@Domain@@XZ
-_TEXT	SEGMENT
-$T1 = 200
+$T1 = 196
+tv69 = 216
 this$ = 256
-?release@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAPEAVBooks@Library@Domain@@XZ PROC ; std::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >::release, COMDAT
+??$?0U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ PROC ; std::unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> >::unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> ><std::default_delete<Domain::Reservation::Authenticate>,0>, COMDAT
 
-; 2540 :     pointer release() noexcept {
+; 2444 :     constexpr unique_ptr() noexcept : _Mypair(_Zero_then_variadic_args_t{}) {}
 
 $LN3:
 	mov	QWORD PTR [rsp+8], rcx
@@ -19323,330 +18425,17 @@ $LN3:
 	mov	rcx, QWORD PTR [rsp+296]
 	lea	rcx, OFFSET FLAT:__4E2906A2_memory
 	call	__CheckForDebuggerJustMyCode
-
-; 2541 :         return _STD exchange(_Mypair._Myval2, pointer());
-
-	mov	QWORD PTR $T1[rbp], 0
 	mov	rax, QWORD PTR this$[rbp]
-	lea	rdx, QWORD PTR $T1[rbp]
-	mov	rcx, rax
-	call	??$exchange@PEAVBooks@Library@Domain@@PEAV123@@std@@YAPEAVBooks@Library@Domain@@AEAPEAV123@$$QEAPEAV123@@Z ; std::exchange<Domain::Library::Books *,Domain::Library::Books *>
-	npad	1
-
-; 2542 :     }
-
+	mov	QWORD PTR tv69[rbp], rax
+	movzx	edx, BYTE PTR $T1[rbp]
+	mov	rcx, QWORD PTR tv69[rbp]
+	call	??$?0$$V@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z ; std::_Compressed_pair<std::default_delete<Domain::Reservation::Authenticate>,Domain::Reservation::Authenticate *,1>::_Compressed_pair<std::default_delete<Domain::Reservation::Authenticate>,Domain::Reservation::Authenticate *,1><>
+	mov	rax, QWORD PTR this$[rbp]
 	lea	rsp, QWORD PTR [rbp+232]
 	pop	rdi
 	pop	rbp
 	ret	0
-?release@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAPEAVBooks@Library@Domain@@XZ ENDP ; std::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >::release
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\memory
-;	COMDAT ?get_deleter@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ
-_TEXT	SEGMENT
-this$ = 224
-?get_deleter@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ PROC ; std::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >::get_deleter, COMDAT
-
-; 2516 :     _NODISCARD _Dx& get_deleter() noexcept {
-
-$LN3:
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 232				; 000000e8H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 58					; 0000003aH
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__4E2906A2_memory
-	call	__CheckForDebuggerJustMyCode
-
-; 2517 :         return _Mypair._Get_first();
-
-	mov	rax, QWORD PTR this$[rbp]
-	mov	rcx, rax
-	call	?_Get_first@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ ; std::_Compressed_pair<std::default_delete<Domain::Library::Books>,Domain::Library::Books *,1>::_Get_first
-	npad	1
-
-; 2518 :     }
-
-	lea	rsp, QWORD PTR [rbp+200]
-	pop	rdi
-	pop	rbp
-	ret	0
-?get_deleter@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ ENDP ; std::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >::get_deleter
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\memory
-;	COMDAT ??1?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@XZ
-_TEXT	SEGMENT
-tv77 = 192
-tv75 = 200
-this$ = 240
-??1?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@XZ PROC ; std::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >::~unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >, COMDAT
-
-; 2510 :     ~unique_ptr() noexcept {
-
-$LN4:
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 248				; 000000f8H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 62					; 0000003eH
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+280]
-	lea	rcx, OFFSET FLAT:__4E2906A2_memory
-	call	__CheckForDebuggerJustMyCode
-
-; 2511 :         if (_Mypair._Myval2) {
-
-	mov	rax, QWORD PTR this$[rbp]
-	cmp	QWORD PTR [rax], 0
-	je	SHORT $LN2@unique_ptr
-
-; 2512 :             _Mypair._Get_first()(_Mypair._Myval2);
-
-	mov	rax, QWORD PTR this$[rbp]
-	mov	rcx, rax
-	call	?_Get_first@?$_Compressed_pair@U?$default_delete@VBooks@Library@Domain@@@std@@PEAVBooks@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VBooks@Library@Domain@@@2@XZ ; std::_Compressed_pair<std::default_delete<Domain::Library::Books>,Domain::Library::Books *,1>::_Get_first
-	mov	QWORD PTR tv77[rbp], rax
-	mov	rax, QWORD PTR this$[rbp]
-	mov	rax, QWORD PTR [rax]
-	mov	QWORD PTR tv75[rbp], rax
-	mov	rdx, QWORD PTR tv75[rbp]
-	mov	rcx, QWORD PTR tv77[rbp]
-	call	??R?$default_delete@VBooks@Library@Domain@@@std@@QEBAXPEAVBooks@Library@Domain@@@Z ; std::default_delete<Domain::Library::Books>::operator()
-	npad	1
-$LN2@unique_ptr:
-
-; 2513 :         }
-; 2514 :     }
-
-	lea	rsp, QWORD PTR [rbp+216]
-	pop	rdi
-	pop	rbp
-	ret	0
-??1?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@XZ ENDP ; std::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >::~unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\memory
-;	COMDAT ??R?$default_delete@VBooks@Library@Domain@@@std@@QEBAXPEAVBooks@Library@Domain@@@Z
-_TEXT	SEGMENT
-$T1 = 200
-tv75 = 216
-tv76 = 224
-this$ = 272
-_Ptr$ = 280
-??R?$default_delete@VBooks@Library@Domain@@@std@@QEBAXPEAVBooks@Library@Domain@@@Z PROC ; std::default_delete<Domain::Library::Books>::operator(), COMDAT
-
-; 2400 :     void operator()(_Ty* _Ptr) const noexcept /* strengthened */ { // delete a pointer
-
-$LN5:
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 280				; 00000118H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 70					; 00000046H
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+312]
-	lea	rcx, OFFSET FLAT:__4E2906A2_memory
-	call	__CheckForDebuggerJustMyCode
-
-; 2401 :         static_assert(0 < sizeof(_Ty), "can't delete an incomplete type");
-; 2402 :         delete _Ptr;
-
-	mov	rax, QWORD PTR _Ptr$[rbp]
-	mov	QWORD PTR $T1[rbp], rax
-	cmp	QWORD PTR $T1[rbp], 0
-	je	SHORT $LN3@operator
-	mov	rax, QWORD PTR $T1[rbp]
-	mov	rax, QWORD PTR [rax]
-	mov	rax, QWORD PTR [rax]
-	mov	QWORD PTR tv75[rbp], rax
-	mov	edx, 1
-	mov	rcx, QWORD PTR $T1[rbp]
-	call	QWORD PTR tv75[rbp]
-	mov	QWORD PTR tv76[rbp], rax
-	jmp	SHORT $LN4@operator
-$LN3@operator:
-	mov	QWORD PTR tv76[rbp], 0
-$LN4@operator:
-
-; 2403 :     }
-
-	lea	rsp, QWORD PTR [rbp+248]
-	pop	rdi
-	pop	rbp
-	ret	0
-??R?$default_delete@VBooks@Library@Domain@@@std@@QEBAXPEAVBooks@Library@Domain@@@Z ENDP ; std::default_delete<Domain::Library::Books>::operator()
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\memory
-;	COMDAT ??$make_unique@VBooks@Library@Domain@@$$V$0A@@std@@YA?AV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@0@XZ
-_TEXT	SEGMENT
-$T1 = 200
-$T2 = 228
-tv72 = 248
-__$ReturnUdt$ = 288
-??$make_unique@VBooks@Library@Domain@@$$V$0A@@std@@YA?AV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@0@XZ PROC ; std::make_unique<Domain::Library::Books,0>, COMDAT
-
-; 2697 : _NODISCARD unique_ptr<_Ty> make_unique(_Types&&... _Args) { // make a unique_ptr
-
-$LN7:
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 296				; 00000128H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 74					; 0000004aH
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+328]
-	mov	DWORD PTR $T2[rbp], 0
-	lea	rcx, OFFSET FLAT:__4E2906A2_memory
-	call	__CheckForDebuggerJustMyCode
-
-; 2698 :     return unique_ptr<_Ty>(new _Ty(_STD forward<_Types>(_Args)...));
-
-	mov	ecx, 8
-	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T1[rbp], rax
-	cmp	QWORD PTR $T1[rbp], 0
-	je	SHORT $LN3@make_uniqu
-	mov	rdi, QWORD PTR $T1[rbp]
-	xor	eax, eax
-	mov	ecx, 8
-	rep stosb
-	mov	rcx, QWORD PTR $T1[rbp]
-	call	??0Books@Library@Domain@@QEAA@XZ
-	mov	QWORD PTR tv72[rbp], rax
-	jmp	SHORT $LN4@make_uniqu
-$LN3@make_uniqu:
-	mov	QWORD PTR tv72[rbp], 0
-$LN4@make_uniqu:
-	mov	rdx, QWORD PTR tv72[rbp]
-	mov	rcx, QWORD PTR __$ReturnUdt$[rbp]
-	call	??$?0U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@PEAVBooks@Library@Domain@@@Z ; std::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> ><std::default_delete<Domain::Library::Books>,0>
-	mov	eax, DWORD PTR $T2[rbp]
-	or	eax, 1
-	mov	DWORD PTR $T2[rbp], eax
-	mov	rax, QWORD PTR __$ReturnUdt$[rbp]
-
-; 2699 : }
-
-	lea	rsp, QWORD PTR [rbp+264]
-	pop	rdi
-	pop	rbp
-	ret	0
-??$make_unique@VBooks@Library@Domain@@$$V$0A@@std@@YA?AV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@0@XZ ENDP ; std::make_unique<Domain::Library::Books,0>
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
-;	COMDAT ??_GBooks@Library@Domain@@UEAAPEAXI@Z
-_TEXT	SEGMENT
-this$ = 224
-__flags$ = 232
-??_GBooks@Library@Domain@@UEAAPEAXI@Z PROC		; Domain::Library::Books::`scalar deleting destructor', COMDAT
-$LN4:
-	mov	DWORD PTR [rsp+16], edx
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 232				; 000000e8H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 58					; 0000003aH
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+264]
-	mov	rcx, QWORD PTR this$[rbp]
-	call	??1Books@Library@Domain@@UEAA@XZ	; Domain::Library::Books::~Books
-	mov	eax, DWORD PTR __flags$[rbp]
-	and	eax, 1
-	test	eax, eax
-	je	SHORT $LN2@scalar
-	mov	edx, 8
-	mov	rcx, QWORD PTR this$[rbp]
-	call	??3@YAXPEAX_K@Z				; operator delete
-$LN2@scalar:
-	mov	rax, QWORD PTR this$[rbp]
-	lea	rsp, QWORD PTR [rbp+200]
-	pop	rdi
-	pop	rbp
-	ret	0
-??_GBooks@Library@Domain@@UEAAPEAXI@Z ENDP		; Domain::Library::Books::`scalar deleting destructor'
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
-;	COMDAT ??0Books@Library@Domain@@QEAA@XZ
-_TEXT	SEGMENT
-this$ = 224
-??0Books@Library@Domain@@QEAA@XZ PROC			; Domain::Library::Books::Books, COMDAT
-$LN3:
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 232				; 000000e8H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 58					; 0000003aH
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+264]
-	mov	rcx, QWORD PTR this$[rbp]
-	call	??0MaintainBooksHandler@Library@Domain@@QEAA@XZ
-	mov	rax, QWORD PTR this$[rbp]
-	lea	rcx, OFFSET FLAT:??_7Books@Library@Domain@@6B@
-	mov	QWORD PTR [rax], rcx
-	mov	rax, QWORD PTR this$[rbp]
-	lea	rsp, QWORD PTR [rbp+200]
-	pop	rdi
-	pop	rbp
-	ret	0
-??0Books@Library@Domain@@QEAA@XZ ENDP			; Domain::Library::Books::Books
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\Domain\Library\Books.hpp
-;	COMDAT ??1Books@Library@Domain@@UEAA@XZ
-_TEXT	SEGMENT
-this$ = 224
-??1Books@Library@Domain@@UEAA@XZ PROC			; Domain::Library::Books::~Books, COMDAT
-
-; 23   :   {}
-
-$LN3:
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 232				; 000000e8H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 58					; 0000003aH
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__0FEA4C0A_Books@hpp
-	call	__CheckForDebuggerJustMyCode
-	mov	rax, QWORD PTR this$[rbp]
-	lea	rcx, OFFSET FLAT:??_7Books@Library@Domain@@6B@
-	mov	QWORD PTR [rax], rcx
-	mov	rcx, QWORD PTR this$[rbp]
-	call	??1MaintainBooksHandler@Library@Domain@@UEAA@XZ ; Domain::Library::MaintainBooksHandler::~MaintainBooksHandler
-	npad	1
-	lea	rsp, QWORD PTR [rbp+200]
-	pop	rdi
-	pop	rbp
-	ret	0
-??1Books@Library@Domain@@UEAA@XZ ENDP			; Domain::Library::Books::~Books
+??$?0U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ ENDP ; std::unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> >::unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> ><std::default_delete<Domain::Reservation::Authenticate>,0>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xloctime
@@ -20566,10 +19355,10 @@ $LN4@operator:
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
-;	COMDAT ?_Get_first@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VMaintainBooksHandler@Library@Domain@@@2@XZ
+;	COMDAT ?_Get_first@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VAuthenticate@Reservation@Domain@@@2@XZ
 _TEXT	SEGMENT
 this$ = 224
-?_Get_first@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VMaintainBooksHandler@Library@Domain@@@2@XZ PROC ; std::_Compressed_pair<std::default_delete<Domain::Library::MaintainBooksHandler>,Domain::Library::MaintainBooksHandler *,1>::_Get_first, COMDAT
+?_Get_first@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VAuthenticate@Reservation@Domain@@@2@XZ PROC ; std::_Compressed_pair<std::default_delete<Domain::Reservation::Authenticate>,Domain::Reservation::Authenticate *,1>::_Get_first, COMDAT
 
 ; 1343 :     constexpr _Ty1& _Get_first() noexcept {
 
@@ -20597,16 +19386,16 @@ $LN3:
 	pop	rdi
 	pop	rbp
 	ret	0
-?_Get_first@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VMaintainBooksHandler@Library@Domain@@@2@XZ ENDP ; std::_Compressed_pair<std::default_delete<Domain::Library::MaintainBooksHandler>,Domain::Library::MaintainBooksHandler *,1>::_Get_first
+?_Get_first@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VAuthenticate@Reservation@Domain@@@2@XZ ENDP ; std::_Compressed_pair<std::default_delete<Domain::Reservation::Authenticate>,Domain::Reservation::Authenticate *,1>::_Get_first
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\memory
-;	COMDAT ??1?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@XZ
+;	COMDAT ??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ
 _TEXT	SEGMENT
 tv77 = 192
 tv75 = 200
 this$ = 240
-??1?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@XZ PROC ; std::unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> >::~unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> >, COMDAT
+??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ PROC ; std::unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> >::~unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> >, COMDAT
 
 ; 2510 :     ~unique_ptr() noexcept {
 
@@ -20634,14 +19423,14 @@ $LN4:
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rcx, rax
-	call	?_Get_first@?$_Compressed_pair@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@PEAVMaintainBooksHandler@Library@Domain@@$00@std@@QEAAAEAU?$default_delete@VMaintainBooksHandler@Library@Domain@@@2@XZ ; std::_Compressed_pair<std::default_delete<Domain::Library::MaintainBooksHandler>,Domain::Library::MaintainBooksHandler *,1>::_Get_first
+	call	?_Get_first@?$_Compressed_pair@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@PEAVAuthenticate@Reservation@Domain@@$00@std@@QEAAAEAU?$default_delete@VAuthenticate@Reservation@Domain@@@2@XZ ; std::_Compressed_pair<std::default_delete<Domain::Reservation::Authenticate>,Domain::Reservation::Authenticate *,1>::_Get_first
 	mov	QWORD PTR tv77[rbp], rax
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rax, QWORD PTR [rax]
 	mov	QWORD PTR tv75[rbp], rax
 	mov	rdx, QWORD PTR tv75[rbp]
 	mov	rcx, QWORD PTR tv77[rbp]
-	call	??R?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEBAXPEAVMaintainBooksHandler@Library@Domain@@@Z ; std::default_delete<Domain::Library::MaintainBooksHandler>::operator()
+	call	??R?$default_delete@VAuthenticate@Reservation@Domain@@@std@@QEBAXPEAVAuthenticate@Reservation@Domain@@@Z ; std::default_delete<Domain::Reservation::Authenticate>::operator()
 	npad	1
 $LN2@unique_ptr:
 
@@ -20652,18 +19441,18 @@ $LN2@unique_ptr:
 	pop	rdi
 	pop	rbp
 	ret	0
-??1?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@XZ ENDP ; std::unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> >::~unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> >
+??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ ENDP ; std::unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> >::~unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> >
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\memory
-;	COMDAT ??R?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEBAXPEAVMaintainBooksHandler@Library@Domain@@@Z
+;	COMDAT ??R?$default_delete@VAuthenticate@Reservation@Domain@@@std@@QEBAXPEAVAuthenticate@Reservation@Domain@@@Z
 _TEXT	SEGMENT
 $T1 = 200
 tv71 = 216
 tv72 = 224
 this$ = 272
 _Ptr$ = 280
-??R?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEBAXPEAVMaintainBooksHandler@Library@Domain@@@Z PROC ; std::default_delete<Domain::Library::MaintainBooksHandler>::operator(), COMDAT
+??R?$default_delete@VAuthenticate@Reservation@Domain@@@std@@QEBAXPEAVAuthenticate@Reservation@Domain@@@Z PROC ; std::default_delete<Domain::Reservation::Authenticate>::operator(), COMDAT
 
 ; 2400 :     void operator()(_Ty* _Ptr) const noexcept /* strengthened */ { // delete a pointer
 
@@ -20708,10 +19497,10 @@ $LN4@operator:
 	pop	rdi
 	pop	rbp
 	ret	0
-??R?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@QEBAXPEAVMaintainBooksHandler@Library@Domain@@@Z ENDP ; std::default_delete<Domain::Library::MaintainBooksHandler>::operator()
+??R?$default_delete@VAuthenticate@Reservation@Domain@@@std@@QEBAXPEAVAuthenticate@Reservation@Domain@@@Z ENDP ; std::default_delete<Domain::Reservation::Authenticate>::operator()
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
 ;	COMDAT ??1SimpleUI@UI@@UEAA@XZ
 _TEXT	SEGMENT
 $T1 = 200
@@ -20720,7 +19509,7 @@ tv94 = 256
 this$ = 304
 ??1SimpleUI@UI@@UEAA@XZ PROC				; UI::SimpleUI::~SimpleUI, COMDAT
 
-; 36   :   {
+; 37   :   {
 
 $LN3:
 	mov	QWORD PTR [rsp+8], rcx
@@ -20733,13 +19522,13 @@ $LN3:
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
 	mov	rcx, QWORD PTR [rsp+344]
-	lea	rcx, OFFSET FLAT:__65237790_SimpleUI@cpp
+	lea	rcx, OFFSET FLAT:__7B0A884F_SimpleUI@cpp
 	call	__CheckForDebuggerJustMyCode
 	mov	rax, QWORD PTR this$[rbp]
 	lea	rcx, OFFSET FLAT:??_7SimpleUI@UI@@6B@
 	mov	QWORD PTR [rax], rcx
 
-; 37   :     _logger << "Simple UI shutdown successfully";
+; 38   :     _logger << "Simple UI shutdown successfully";
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rax, QWORD PTR [rax+32]
@@ -20758,7 +19547,7 @@ $LN3:
 	lea	rcx, QWORD PTR $T1[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 
-; 38   :   }
+; 39   :   }
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 16
@@ -20767,7 +19556,7 @@ $LN3:
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 8
 	mov	rcx, rax
-	call	??1?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@XZ ; std::unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> >::~unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> >
+	call	??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ ; std::unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> >::~unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> >
 	mov	rcx, QWORD PTR this$[rbp]
 	call	??1UserInterfaceHandler@UI@@UEAA@XZ	; UI::UserInterfaceHandler::~UserInterfaceHandler
 	npad	1
@@ -20778,7 +19567,7 @@ $LN3:
 ??1SimpleUI@UI@@UEAA@XZ ENDP				; UI::SimpleUI::~SimpleUI
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
 ;	COMDAT ?launch@SimpleUI@UI@@UEAAXXZ
 _TEXT	SEGMENT
 roleLegalValues$ = 8
@@ -20900,7 +19689,7 @@ __$ArrayPad$ = 3168
 this$ = 3216
 ?launch@SimpleUI@UI@@UEAAXXZ PROC			; UI::SimpleUI::launch, COMDAT
 
-; 45   :   {
+; 46   :   {
 
 $LN56:
 	mov	QWORD PTR [rsp+8], rcx
@@ -20917,11 +19706,11 @@ $LN56:
 	mov	rax, QWORD PTR __security_cookie
 	xor	rax, rbp
 	mov	QWORD PTR __$ArrayPad$[rbp], rax
-	lea	rcx, OFFSET FLAT:__65237790_SimpleUI@cpp
+	lea	rcx, OFFSET FLAT:__7B0A884F_SimpleUI@cpp
 	call	__CheckForDebuggerJustMyCode
 
-; 46   :     // 1) Fetch Role legal value list
-; 47   :     std::vector<std::string> roleLegalValues = _persistentData.findRoles();
+; 47   :     // 1) Fetch Role legal value list
+; 48   :     std::vector<std::string> roleLegalValues = _persistentData.findRoles();
 
 	mov	edx, 32					; 00000020H
 	lea	rcx, QWORD PTR roleLegalValues$[rbp]
@@ -20939,10 +19728,10 @@ $LN56:
 	call	QWORD PTR tv78[rbp]
 	npad	1
 
-; 48   : 
 ; 49   : 
-; 50   :     // 2) Present login screen to user and get username, password, and valid role
-; 51   :     Domain::Session::UserCredentials credentials  = {"", "", {""}};           // ensures roles[0] exists
+; 50   : 
+; 51   :     // 2) Present login screen to user and get username, password, and valid role
+; 52   :     Domain::Session::UserCredentials credentials  = {"", "", {""}};           // ensures roles[0] exists
 
 	lea	rdx, OFFSET FLAT:??_C@_00CNPNBAHC@@
 	lea	rcx, QWORD PTR credentials$[rbp]
@@ -20987,15 +19776,15 @@ $LN56:
 	call	??_M@YAXPEAX_K1P6AX0@Z@Z
 	npad	1
 
-; 52   :     auto &                           selectedRole = credentials.roles[0];     // convenience alias
+; 53   :     auto &                           selectedRole = credentials.roles[0];     // convenience alias
 
 	xor	edx, edx
 	lea	rcx, QWORD PTR credentials$[rbp+80]
 	call	??A?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QEAAAEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@_K@Z ; std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::operator[]
 	mov	QWORD PTR selectedRole$[rbp], rax
 
-; 53   : 
-; 54   :     std::unique_ptr<Domain::Session::SessionHandler> sessionControl;
+; 54   : 
+; 55   :     std::unique_ptr<Domain::Session::SessionHandler> sessionControl;
 
 	mov	edx, 8
 	lea	rcx, QWORD PTR sessionControl$[rbp]
@@ -21005,10 +19794,10 @@ $LN56:
 	npad	1
 $LN4@launch:
 
-; 55   : 
-; 56   :     do
-; 57   :     {
-; 58   :       std::cin.ignore(  std::numeric_limits<std::streamsize>::max(), '\n' );
+; 56   : 
+; 57   :     do
+; 58   :     {
+; 59   :       std::cin.ignore(  std::numeric_limits<std::streamsize>::max(), '\n' );
 
 	call	?max@?$numeric_limits@_J@std@@SA_JXZ	; std::numeric_limits<__int64>::max
 	mov	QWORD PTR tv158[rbp], rax
@@ -21017,38 +19806,38 @@ $LN4@launch:
 	mov	rcx, QWORD PTR __imp_?cin@std@@3V?$basic_istream@DU?$char_traits@D@std@@@1@A
 	call	QWORD PTR __imp_?ignore@?$basic_istream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@_JH@Z
 
-; 59   : 
-; 60   :       std::cout << "  name: ";
+; 60   : 
+; 61   :       std::cout << "  name: ";
 
 	lea	rdx, OFFSET FLAT:??_C@_08KLHCBAMK@?5?5name?3?5@
 	mov	rcx, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
 	call	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
 
-; 61   :       std::getline( std::cin, credentials.userName );
+; 62   :       std::getline( std::cin, credentials.userName );
 
 	lea	rdx, QWORD PTR credentials$[rbp]
 	mov	rcx, QWORD PTR __imp_?cin@std@@3V?$basic_istream@DU?$char_traits@D@std@@@1@A
 	call	??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAEAV?$basic_istream@DU?$char_traits@D@std@@@0@AEAV10@AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z ; std::getline<char,std::char_traits<char>,std::allocator<char> >
 
-; 62   : 
-; 63   :       std::cout << "  pass phrase: ";
+; 63   : 
+; 64   :       std::cout << "  pass phrase: ";
 
 	lea	rdx, OFFSET FLAT:??_C@_0BA@ILPNJJBN@?5?5pass?5phrase?3?5@
 	mov	rcx, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
 	call	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
 
-; 64   :       std::getline( std::cin, credentials.passPhrase );
+; 65   :       std::getline( std::cin, credentials.passPhrase );
 
 	lea	rdx, QWORD PTR credentials$[rbp+40]
 	mov	rcx, QWORD PTR __imp_?cin@std@@3V?$basic_istream@DU?$char_traits@D@std@@@1@A
 	call	??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAEAV?$basic_istream@DU?$char_traits@D@std@@@0@AEAV10@AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z ; std::getline<char,std::char_traits<char>,std::allocator<char> >
 $LN7@launch:
 
-; 65   : 
-; 66   :       unsigned menuSelection;
-; 67   :       do
-; 68   :       {
-; 69   :         for( unsigned i = 0; i != roleLegalValues.size(); ++i )   std::cout << std::setw( 2 ) << i << " - " << roleLegalValues[i] << '\n';
+; 66   : 
+; 67   :       unsigned menuSelection;
+; 68   :       do
+; 69   :       {
+; 70   :         for( unsigned i = 0; i != roleLegalValues.size(); ++i )   std::cout << std::setw( 2 ) << i << " - " << roleLegalValues[i] << '\n';
 
 	mov	DWORD PTR i$13[rbp], 0
 	jmp	SHORT $LN10@launch
@@ -21095,7 +19884,7 @@ $LN10@launch:
 	jmp	$LN8@launch
 $LN9@launch:
 
-; 70   :         std::cout << "  role (0-" << roleLegalValues.size()-1 << "): ";
+; 71   :         std::cout << "  role (0-" << roleLegalValues.size()-1 << "): ";
 
 	lea	rdx, OFFSET FLAT:??_C@_0L@DOAODEIC@?5?5role?5?$CI0?9@
 	mov	rcx, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
@@ -21112,13 +19901,13 @@ $LN9@launch:
 	mov	rcx, rax
 	call	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
 
-; 71   :         std::cin  >> menuSelection;
+; 72   :         std::cin  >> menuSelection;
 
 	lea	rdx, QWORD PTR menuSelection$12[rbp]
 	mov	rcx, QWORD PTR __imp_?cin@std@@3V?$basic_istream@DU?$char_traits@D@std@@@1@A
 	call	QWORD PTR __imp_??5?$basic_istream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@AEAI@Z
 
-; 72   :       } while( menuSelection >= roleLegalValues.size() );
+; 73   :       } while( menuSelection >= roleLegalValues.size() );
 
 	mov	eax, DWORD PTR menuSelection$12[rbp]
 	mov	QWORD PTR tv218[rbp], rax
@@ -21128,8 +19917,8 @@ $LN9@launch:
 	cmp	rcx, rax
 	jae	$LN7@launch
 
-; 73   : 
-; 74   :       selectedRole = roleLegalValues[menuSelection];
+; 74   : 
+; 75   :       selectedRole = roleLegalValues[menuSelection];
 
 	mov	eax, DWORD PTR menuSelection$12[rbp]
 	mov	edx, eax
@@ -21139,10 +19928,10 @@ $LN9@launch:
 	mov	rcx, QWORD PTR selectedRole$[rbp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV01@AEBV01@@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
 
-; 75   : 
 ; 76   : 
-; 77   :       // 3) Validate user is authorized for this role, and if so create session
-; 78   :       sessionControl = Domain::Session::SessionHandler::createSession( credentials );
+; 77   : 
+; 78   :       // 3) Validate user is authorized for this role, and if so create session
+; 79   :       sessionControl = Domain::Session::SessionHandler::createSession( credentials );
 
 	lea	rdx, QWORD PTR credentials$[rbp]
 	lea	rcx, QWORD PTR $T24[rbp]
@@ -21154,7 +19943,7 @@ $LN9@launch:
 	lea	rcx, QWORD PTR $T24[rbp]
 	call	??1?$unique_ptr@VSessionHandler@Session@Domain@@U?$default_delete@VSessionHandler@Session@Domain@@@std@@@std@@QEAA@XZ ; std::unique_ptr<Domain::Session::SessionHandler,std::default_delete<Domain::Session::SessionHandler> >::~unique_ptr<Domain::Session::SessionHandler,std::default_delete<Domain::Session::SessionHandler> >
 
-; 79   :       if( sessionControl != nullptr )
+; 80   :       if( sessionControl != nullptr )
 
 	xor	edx, edx
 	lea	rcx, QWORD PTR sessionControl$[rbp]
@@ -21163,8 +19952,8 @@ $LN9@launch:
 	test	eax, eax
 	je	$LN20@launch
 
-; 80   :       {
-; 81   :         _logger << "Login Successful for \"" + credentials.userName + "\" as role \"" + selectedRole + "\"";
+; 81   :       {
+; 82   :         _logger << "Login Successful for \"" + credentials.userName + "\" as role \"" + selectedRole + "\"";
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rax, QWORD PTR [rax+32]
@@ -21220,20 +20009,20 @@ $LN9@launch:
 	lea	rcx, QWORD PTR $T25[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 
-; 82   :         break;
+; 83   :         break;
 
 	jmp	$LN13@launch
 $LN20@launch:
 
-; 83   :       }
-; 84   : 
-; 85   :       std::cout << "** Login failed\n";
+; 84   :       }
+; 85   : 
+; 86   :       std::cout << "** Login failed\n";
 
 	lea	rdx, OFFSET FLAT:??_C@_0BB@MICAEIDH@?$CK?$CK?5Login?5failed?6@
 	mov	rcx, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
 	call	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
 
-; 86   :       _logger << "Login failure for \"" + credentials.userName + "\" as role \"" + selectedRole + "\"";
+; 87   :       _logger << "Login failure for \"" + credentials.userName + "\" as role \"" + selectedRole + "\"";
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rax, QWORD PTR [rax+32]
@@ -21289,20 +20078,20 @@ $LN20@launch:
 	lea	rcx, QWORD PTR $T29[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 
-; 87   : 
-; 88   :     } while( true );
+; 88   : 
+; 89   :     } while( true );
 
 	xor	eax, eax
 	cmp	eax, 1
 	jne	$LN4@launch
 $LN13@launch:
 
-; 89   : 
 ; 90   : 
-; 91   :     // 4) Fetch functionality options for this role
-; 92   :     do
-; 93   :     {
-; 94   :       auto        commands = sessionControl->getCommands();
+; 91   : 
+; 92   :     // 4) Fetch functionality options for this role
+; 93   :     do
+; 94   :     {
+; 95   :       auto        commands = sessionControl->getCommands();
 
 	mov	edx, 32					; 00000020H
 	lea	rcx, QWORD PTR commands$14[rbp]
@@ -21319,18 +20108,18 @@ $LN13@launch:
 	call	QWORD PTR tv331[rbp]
 	npad	1
 
-; 95   :       std::string selectedCommand;
+; 96   :       std::string selectedCommand;
 
 	lea	rcx, QWORD PTR selectedCommand$15[rbp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	npad	1
 $LN16@launch:
 
-; 96   :       unsigned    menuSelection;
-; 97   : 
-; 98   :       do
-; 99   :       {
-; 100  :         for( unsigned i = 0; i != commands.size(); ++i ) std::cout << std::setw( 2 ) << i << " - " << commands[i] << '\n';
+; 97   :       unsigned    menuSelection;
+; 98   : 
+; 99   :       do
+; 100  :       {
+; 101  :         for( unsigned i = 0; i != commands.size(); ++i ) std::cout << std::setw( 2 ) << i << " - " << commands[i] << '\n';
 
 	mov	DWORD PTR i$17[rbp], 0
 	jmp	SHORT $LN19@launch
@@ -21377,7 +20166,7 @@ $LN19@launch:
 	jmp	$LN17@launch
 $LN18@launch:
 
-; 101  :         std::cout << std::setw( 2 ) << commands.size() << " - " << "Quit\n";
+; 102  :         std::cout << std::setw( 2 ) << commands.size() << " - " << "Quit\n";
 
 	mov	rax, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
 	mov	QWORD PTR tv383[rbp], rax
@@ -21402,8 +20191,8 @@ $LN18@launch:
 	mov	rcx, rax
 	call	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
 
-; 102  : 
-; 103  :         std::cout << "  action (0-" << commands.size() << "): ";
+; 103  : 
+; 104  :         std::cout << "  action (0-" << commands.size() << "): ";
 
 	lea	rdx, OFFSET FLAT:??_C@_0N@HNKDLDDO@?5?5action?5?$CI0?9@
 	mov	rcx, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
@@ -21419,13 +20208,13 @@ $LN18@launch:
 	mov	rcx, rax
 	call	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
 
-; 104  :         std::cin >> menuSelection;
+; 105  :         std::cin >> menuSelection;
 
 	lea	rdx, QWORD PTR menuSelection$16[rbp]
 	mov	rcx, QWORD PTR __imp_?cin@std@@3V?$basic_istream@DU?$char_traits@D@std@@@1@A
 	call	QWORD PTR __imp_??5?$basic_istream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@AEAI@Z
 
-; 105  :       } while( menuSelection > commands.size() );
+; 106  :       } while( menuSelection > commands.size() );
 
 	mov	eax, DWORD PTR menuSelection$16[rbp]
 	mov	QWORD PTR tv411[rbp], rax
@@ -21435,8 +20224,8 @@ $LN18@launch:
 	cmp	rcx, rax
 	ja	$LN16@launch
 
-; 106  : 
-; 107  :       if( menuSelection == commands.size() ) break;
+; 107  : 
+; 108  :       if( menuSelection == commands.size() ) break;
 
 	mov	eax, DWORD PTR menuSelection$16[rbp]
 	mov	QWORD PTR tv416[rbp], rax
@@ -21453,8 +20242,8 @@ $LN18@launch:
 	jmp	$LN12@launch
 $LN21@launch:
 
-; 108  : 
-; 109  :       selectedCommand = commands[menuSelection];
+; 109  : 
+; 110  :       selectedCommand = commands[menuSelection];
 
 	mov	eax, DWORD PTR menuSelection$16[rbp]
 	mov	edx, eax
@@ -21464,7 +20253,7 @@ $LN21@launch:
 	lea	rcx, QWORD PTR selectedCommand$15[rbp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV01@AEBV01@@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
 
-; 110  :       _logger << "Command selected \"" + selectedCommand + '"';
+; 111  :       _logger << "Command selected \"" + selectedCommand + '"';
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rax, QWORD PTR [rax+32]
@@ -21500,15 +20289,15 @@ $LN21@launch:
 	lea	rcx, QWORD PTR $T35[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 
-; 111  : 
 ; 112  : 
-; 113  :       /******************************************************************************************************************************
-; 114  :       **  5) The user interface will collect relevant information to execute the chosen command.  This section requires the UI to
-; 115  :       **     know what information to collect, and hence what the available commands are.  Our goal is loose (minimal) coupling, not
-; 116  :       **     no coupling. This can be achieved in a variety of ways, but one common way is to pass strings instead of strong typed
-; 117  :       **     parameters.
-; 118  :       ******************************************************************************************************************************/
-; 119  :       if( selectedCommand == "Checkout Book" )
+; 113  : 
+; 114  :       /******************************************************************************************************************************
+; 115  :       **  5) The user interface will collect relevant information to execute the chosen command.  This section requires the UI to
+; 116  :       **     know what information to collect, and hence what the available commands are.  Our goal is loose (minimal) coupling, not
+; 117  :       **     no coupling. This can be achieved in a variety of ways, but one common way is to pass strings instead of strong typed
+; 118  :       **     parameters.
+; 119  :       ******************************************************************************************************************************/
+; 120  :       if( selectedCommand == "Checkout Book" )
 
 	lea	rdx, OFFSET FLAT:??_C@_0O@OLLJLLAF@Checkout?5Book@
 	lea	rcx, QWORD PTR selectedCommand$15[rbp]
@@ -21517,8 +20306,8 @@ $LN21@launch:
 	test	eax, eax
 	je	$LN22@launch
 
-; 120  :       {
-; 121  :         std::vector<std::string> parameters( 3 );
+; 121  :       {
+; 122  :         std::vector<std::string> parameters( 3 );
 
 	mov	edx, 32					; 00000020H
 	lea	rcx, QWORD PTR parameters$18[rbp]
@@ -21531,8 +20320,8 @@ $LN21@launch:
 	call	??0?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QEAA@_KAEBV?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@@Z ; std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >
 	npad	1
 
-; 122  : 
-; 123  :         std::cout << " Enter book's title:  ";  std::cin >> std::ws;  std::getline( std::cin, parameters[0] );
+; 123  : 
+; 124  :         std::cout << " Enter book's title:  ";  std::cin >> std::ws;  std::getline( std::cin, parameters[0] );
 
 	lea	rdx, OFFSET FLAT:??_C@_0BH@DBMKOIGM@?5Enter?5book?8s?5title?3?5?5@
 	mov	rcx, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
@@ -21550,7 +20339,7 @@ $LN21@launch:
 	mov	rcx, QWORD PTR tv509[rbp]
 	call	??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAEAV?$basic_istream@DU?$char_traits@D@std@@@0@AEAV10@AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z ; std::getline<char,std::char_traits<char>,std::allocator<char> >
 
-; 124  :         std::cout << " Enter book's author: ";  std::cin >> std::ws;  std::getline( std::cin, parameters[1] );
+; 125  :         std::cout << " Enter book's author: ";  std::cin >> std::ws;  std::getline( std::cin, parameters[1] );
 
 	lea	rdx, OFFSET FLAT:??_C@_0BH@GCLJMHPF@?5Enter?5book?8s?5author?3?5@
 	mov	rcx, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
@@ -21568,7 +20357,7 @@ $LN21@launch:
 	mov	rcx, QWORD PTR tv522[rbp]
 	call	??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAEAV?$basic_istream@DU?$char_traits@D@std@@@0@AEAV10@AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z ; std::getline<char,std::char_traits<char>,std::allocator<char> >
 
-; 125  :         std::cout << " Enter book's ISBN:   ";  std::cin >> std::ws;  std::getline( std::cin, parameters[2] );
+; 126  :         std::cout << " Enter book's ISBN:   ";  std::cin >> std::ws;  std::getline( std::cin, parameters[2] );
 
 	lea	rdx, OFFSET FLAT:??_C@_0BH@POIJFLOI@?5Enter?5book?8s?5ISBN?3?5?5?5@
 	mov	rcx, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
@@ -21586,8 +20375,8 @@ $LN21@launch:
 	mov	rcx, QWORD PTR tv535[rbp]
 	call	??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAEAV?$basic_istream@DU?$char_traits@D@std@@@0@AEAV10@AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z ; std::getline<char,std::char_traits<char>,std::allocator<char> >
 
-; 126  : 
-; 127  :         auto results = sessionControl->executeCommand( selectedCommand, parameters );
+; 127  : 
+; 128  :         auto results = sessionControl->executeCommand( selectedCommand, parameters );
 
 	lea	rcx, QWORD PTR sessionControl$[rbp]
 	call	??C?$unique_ptr@VSessionHandler@Session@Domain@@U?$default_delete@VSessionHandler@Session@Domain@@@std@@@std@@QEBAPEAVSessionHandler@Session@Domain@@XZ ; std::unique_ptr<Domain::Session::SessionHandler,std::default_delete<Domain::Session::SessionHandler> >::operator->
@@ -21603,7 +20392,7 @@ $LN21@launch:
 	call	QWORD PTR tv548[rbp]
 	npad	1
 
-; 128  :         if( results.has_value() ) _logger << "Received reply: \"" + std::any_cast<const std::string &>( results ) + '"';
+; 129  :         if( results.has_value() ) _logger << "Received reply: \"" + std::any_cast<const std::string &>( results ) + '"';
 
 	lea	rcx, QWORD PTR results$19[rbp]
 	call	?has_value@any@std@@QEBA_NXZ		; std::any::has_value
@@ -21648,7 +20437,7 @@ $LN21@launch:
 	npad	1
 $LN24@launch:
 
-; 129  :       }
+; 130  :       }
 
 	lea	rcx, QWORD PTR results$19[rbp]
 	call	??1any@std@@QEAA@XZ			; std::any::~any
@@ -21658,8 +20447,8 @@ $LN24@launch:
 	jmp	$LN23@launch
 $LN22@launch:
 
-; 130  : 
-; 131  :       else if( selectedCommand == "Another command" ) /* ... */ {}
+; 131  : 
+; 132  :       else if( selectedCommand == "Another command" ) /* ... */ {}
 
 	lea	rdx, OFFSET FLAT:??_C@_0BA@NFJLLIND@Another?5command@
 	lea	rcx, QWORD PTR selectedCommand$15[rbp]
@@ -21670,8 +20459,8 @@ $LN22@launch:
 	jmp	SHORT $LN23@launch
 $LN25@launch:
 
-; 132  : 
-; 133  :       else sessionControl->executeCommand( selectedCommand, {} );
+; 133  : 
+; 134  :       else sessionControl->executeCommand( selectedCommand, {} );
 
 	lea	rcx, QWORD PTR sessionControl$[rbp]
 	call	??C?$unique_ptr@VSessionHandler@Session@Domain@@U?$default_delete@VSessionHandler@Session@Domain@@@std@@@std@@QEBAPEAVSessionHandler@Session@Domain@@XZ ; std::unique_ptr<Domain::Session::SessionHandler,std::default_delete<Domain::Session::SessionHandler> >::operator->
@@ -21696,7 +20485,7 @@ $LN25@launch:
 	npad	1
 $LN23@launch:
 
-; 134  :     } while( true );
+; 135  :     } while( true );
 
 	lea	rcx, QWORD PTR selectedCommand$15[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
@@ -21708,8 +20497,8 @@ $LN23@launch:
 	jne	$LN13@launch
 $LN12@launch:
 
-; 135  : 
-; 136  :     _logger << "Ending session and terminating";
+; 136  : 
+; 137  :     _logger << "Ending session and terminating";
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rax, QWORD PTR [rax+32]
@@ -21731,7 +20520,7 @@ $LN12@launch:
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 	npad	1
 
-; 137  :   }
+; 138  :   }
 
 	lea	rcx, QWORD PTR sessionControl$[rbp]
 	call	??1?$unique_ptr@VSessionHandler@Session@Domain@@U?$default_delete@VSessionHandler@Session@Domain@@@std@@@std@@QEAA@XZ ; std::unique_ptr<Domain::Session::SessionHandler,std::default_delete<Domain::Session::SessionHandler> >::~unique_ptr<Domain::Session::SessionHandler,std::default_delete<Domain::Session::SessionHandler> >
@@ -28486,34 +27275,31 @@ this$ = 3216
 ?dtor$27@?0??launch@SimpleUI@UI@@UEAAXXZ@4HA ENDP	; `UI::SimpleUI::launch'::`1'::dtor$27
 text$x	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\SimpleUI.hpp
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\SimpleUI.hpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
 ;	COMDAT ??0SimpleUI@UI@@QEAA@XZ
 _TEXT	SEGMENT
 $T1 = 200
-$T2 = 232
-tv150 = 280
-tv89 = 280
-tv155 = 288
-tv152 = 288
-this$ = 336
+tv143 = 248
+tv145 = 256
+this$ = 304
 ??0SimpleUI@UI@@QEAA@XZ PROC				; UI::SimpleUI::SimpleUI, COMDAT
 
-; 27   :   {
+; 28   :   {
 
-$LN8:
+$LN7:
 	mov	QWORD PTR [rsp+8], rcx
 	push	rbp
 	push	rdi
-	sub	rsp, 344				; 00000158H
+	sub	rsp, 312				; 00000138H
 	lea	rbp, QWORD PTR [rsp+32]
 	mov	rdi, rsp
-	mov	ecx, 86					; 00000056H
+	mov	ecx, 78					; 0000004eH
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
-	mov	rcx, QWORD PTR [rsp+376]
-	lea	rcx, OFFSET FLAT:__65237790_SimpleUI@cpp
+	mov	rcx, QWORD PTR [rsp+344]
+	lea	rcx, OFFSET FLAT:__7B0A884F_SimpleUI@cpp
 	call	__CheckForDebuggerJustMyCode
 	mov	rcx, QWORD PTR this$[rbp]
 	call	??0UserInterfaceHandler@UI@@QEAA@XZ
@@ -28521,23 +27307,13 @@ $LN8:
 	mov	rax, QWORD PTR this$[rbp]
 	lea	rcx, OFFSET FLAT:??_7SimpleUI@UI@@6B@
 	mov	QWORD PTR [rax], rcx
-
-; 24   :   : _bookHandler   ( std::make_unique<Domain::Library::Books>()                     ),   // will replace these with factory calls in the next increment
-
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 8
-	mov	QWORD PTR tv89[rbp], rax
-	lea	rcx, QWORD PTR $T1[rbp]
-	call	??$make_unique@VBooks@Library@Domain@@$$V$0A@@std@@YA?AV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@0@XZ ; std::make_unique<Domain::Library::Books,0>
-	mov	QWORD PTR tv155[rbp], rax
-	mov	rdx, QWORD PTR tv155[rbp]
-	mov	rcx, QWORD PTR tv89[rbp]
-	call	??$?0VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@$0A@@?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@$$QEAV?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@1@@Z ; std::unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> >::unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> ><Domain::Library::Books,std::default_delete<Domain::Library::Books>,0>
+	mov	rcx, rax
+	call	??$?0U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@$0A@@?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ ; std::unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> >::unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> ><std::default_delete<Domain::Reservation::Authenticate>,0>
 	npad	1
-	lea	rcx, QWORD PTR $T1[rbp]
-	call	??1?$unique_ptr@VBooks@Library@Domain@@U?$default_delete@VBooks@Library@Domain@@@std@@@std@@QEAA@XZ ; std::unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >::~unique_ptr<Domain::Library::Books,std::default_delete<Domain::Library::Books> >
 
-; 25   :     _loggerPtr     ( TechnicalServices::Logging::LoggerHandler::create()            ),
+; 26   :     _loggerPtr     ( TechnicalServices::Logging::LoggerHandler::create()            ),
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 16
@@ -28546,14 +27322,14 @@ $LN8:
 	call	?create@LoggerHandler@Logging@TechnicalServices@@SA?AV?$unique_ptr@VLoggerHandler@Logging@TechnicalServices@@U?$default_delete@VLoggerHandler@Logging@TechnicalServices@@@std@@@std@@AEAV?$basic_ostream@DU?$char_traits@D@std@@@5@@Z ; TechnicalServices::Logging::LoggerHandler::create
 	npad	1
 
-; 26   :     _persistentData( TechnicalServices::Persistence::PersistenceHandler::instance() )
+; 27   :     _persistentData( TechnicalServices::Persistence::PersistenceHandler::instance() )
 
 	call	?instance@PersistenceHandler@Persistence@TechnicalServices@@SAAEAV123@XZ ; TechnicalServices::Persistence::PersistenceHandler::instance
 	mov	rcx, QWORD PTR this$[rbp]
 	mov	QWORD PTR [rcx+24], rax
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\SimpleUI.hpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\SimpleUI.hpp
 
-; 48   :       TechnicalServices::Logging::LoggerHandler                            & _logger = *_loggerPtr;
+; 55   :       TechnicalServices::Logging::LoggerHandler                            & _logger = *_loggerPtr;
 
 	mov	rax, QWORD PTR this$[rbp]
 	add	rax, 16
@@ -28561,34 +27337,34 @@ $LN8:
 	call	??D?$unique_ptr@VLoggerHandler@Logging@TechnicalServices@@U?$default_delete@VLoggerHandler@Logging@TechnicalServices@@@std@@@std@@QEBAAEAVLoggerHandler@Logging@TechnicalServices@@XZ ; std::unique_ptr<TechnicalServices::Logging::LoggerHandler,std::default_delete<TechnicalServices::Logging::LoggerHandler> >::operator*
 	mov	rcx, QWORD PTR this$[rbp]
 	mov	QWORD PTR [rcx+32], rax
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
 
-; 28   :     _logger << "Simple UI being used and has been successfully initialized";
+; 29   :     _logger << "Simple UI being used and has been successfully initialized";
 
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rax, QWORD PTR [rax+32]
-	mov	QWORD PTR tv150[rbp], rax
+	mov	QWORD PTR tv143[rbp], rax
 	mov	rax, QWORD PTR this$[rbp]
 	mov	rax, QWORD PTR [rax+32]
 	mov	rax, QWORD PTR [rax]
 	mov	rax, QWORD PTR [rax]
-	mov	QWORD PTR tv152[rbp], rax
+	mov	QWORD PTR tv145[rbp], rax
 	lea	rdx, OFFSET FLAT:??_C@_0DL@DGNBDAFF@Simple?5UI?5being?5used?5and?5has?5be@
-	lea	rcx, QWORD PTR $T2[rbp]
+	lea	rcx, QWORD PTR $T1[rbp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@QEBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	npad	1
-	lea	rdx, QWORD PTR $T2[rbp]
-	mov	rcx, QWORD PTR tv150[rbp]
-	call	QWORD PTR tv152[rbp]
+	lea	rdx, QWORD PTR $T1[rbp]
+	mov	rcx, QWORD PTR tv143[rbp]
+	call	QWORD PTR tv145[rbp]
 	npad	1
-	lea	rcx, QWORD PTR $T2[rbp]
+	lea	rcx, QWORD PTR $T1[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 	npad	1
 
-; 29   :   }
+; 30   :   }
 
 	mov	rax, QWORD PTR this$[rbp]
-	lea	rsp, QWORD PTR [rbp+312]
+	lea	rsp, QWORD PTR [rbp+280]
 	pop	rdi
 	pop	rbp
 	ret	0
@@ -28597,12 +27373,9 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 $T1 = 200
-$T2 = 232
-tv150 = 280
-tv89 = 280
-tv155 = 288
-tv152 = 288
-this$ = 336
+tv143 = 248
+tv145 = 256
+this$ = 304
 ?dtor$0@?0???0SimpleUI@UI@@QEAA@XZ@4HA PROC		; `UI::SimpleUI::SimpleUI'::`1'::dtor$0
 	mov	QWORD PTR [rsp+8], rcx
 	mov	QWORD PTR [rsp+16], rdx
@@ -28621,13 +27394,10 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 $T1 = 200
-$T2 = 232
-tv150 = 280
-tv89 = 280
-tv155 = 288
-tv152 = 288
-this$ = 336
-?dtor$2@?0???0SimpleUI@UI@@QEAA@XZ@4HA PROC		; `UI::SimpleUI::SimpleUI'::`1'::dtor$2
+tv143 = 248
+tv145 = 256
+this$ = 304
+?dtor$1@?0???0SimpleUI@UI@@QEAA@XZ@4HA PROC		; `UI::SimpleUI::SimpleUI'::`1'::dtor$1
 	mov	QWORD PTR [rsp+8], rcx
 	mov	QWORD PTR [rsp+16], rdx
 	push	rbp
@@ -28636,23 +27406,20 @@ this$ = 336
 	lea	rbp, QWORD PTR [rdx+32]
 	mov	rcx, QWORD PTR this$[rbp]
 	add	rcx, 8
-	call	??1?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@XZ ; std::unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> >::~unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> >
+	call	??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ ; std::unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> >::~unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> >
 	add	rsp, 40					; 00000028H
 	pop	rdi
 	pop	rbp
 	ret	0
-?dtor$2@?0???0SimpleUI@UI@@QEAA@XZ@4HA ENDP		; `UI::SimpleUI::SimpleUI'::`1'::dtor$2
+?dtor$1@?0???0SimpleUI@UI@@QEAA@XZ@4HA ENDP		; `UI::SimpleUI::SimpleUI'::`1'::dtor$1
 text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 $T1 = 200
-$T2 = 232
-tv150 = 280
-tv89 = 280
-tv155 = 288
-tv152 = 288
-this$ = 336
-?dtor$3@?0???0SimpleUI@UI@@QEAA@XZ@4HA PROC		; `UI::SimpleUI::SimpleUI'::`1'::dtor$3
+tv143 = 248
+tv145 = 256
+this$ = 304
+?dtor$2@?0???0SimpleUI@UI@@QEAA@XZ@4HA PROC		; `UI::SimpleUI::SimpleUI'::`1'::dtor$2
 	mov	QWORD PTR [rsp+8], rcx
 	mov	QWORD PTR [rsp+16], rdx
 	push	rbp
@@ -28666,42 +27433,36 @@ this$ = 336
 	pop	rdi
 	pop	rbp
 	ret	0
-?dtor$3@?0???0SimpleUI@UI@@QEAA@XZ@4HA ENDP		; `UI::SimpleUI::SimpleUI'::`1'::dtor$3
+?dtor$2@?0???0SimpleUI@UI@@QEAA@XZ@4HA ENDP		; `UI::SimpleUI::SimpleUI'::`1'::dtor$2
 text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 $T1 = 200
-$T2 = 232
-tv150 = 280
-tv89 = 280
-tv155 = 288
-tv152 = 288
-this$ = 336
-?dtor$4@?0???0SimpleUI@UI@@QEAA@XZ@4HA PROC		; `UI::SimpleUI::SimpleUI'::`1'::dtor$4
+tv143 = 248
+tv145 = 256
+this$ = 304
+?dtor$3@?0???0SimpleUI@UI@@QEAA@XZ@4HA PROC		; `UI::SimpleUI::SimpleUI'::`1'::dtor$3
 	mov	QWORD PTR [rsp+8], rcx
 	mov	QWORD PTR [rsp+16], rdx
 	push	rbp
 	push	rdi
 	sub	rsp, 40					; 00000028H
 	lea	rbp, QWORD PTR [rdx+32]
-	lea	rcx, QWORD PTR $T2[rbp]
+	lea	rcx, QWORD PTR $T1[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 	add	rsp, 40					; 00000028H
 	pop	rdi
 	pop	rbp
 	ret	0
-?dtor$4@?0???0SimpleUI@UI@@QEAA@XZ@4HA ENDP		; `UI::SimpleUI::SimpleUI'::`1'::dtor$4
+?dtor$3@?0???0SimpleUI@UI@@QEAA@XZ@4HA ENDP		; `UI::SimpleUI::SimpleUI'::`1'::dtor$3
 text$x	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ;	COMDAT text$x
 text$x	SEGMENT
 $T1 = 200
-$T2 = 232
-tv150 = 280
-tv89 = 280
-tv155 = 288
-tv152 = 288
-this$ = 336
+tv143 = 248
+tv145 = 256
+this$ = 304
 ?dtor$0@?0???0SimpleUI@UI@@QEAA@XZ@4HA PROC		; `UI::SimpleUI::SimpleUI'::`1'::dtor$0
 	mov	QWORD PTR [rsp+8], rcx
 	mov	QWORD PTR [rsp+16], rdx
@@ -28721,13 +27482,10 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 $T1 = 200
-$T2 = 232
-tv150 = 280
-tv89 = 280
-tv155 = 288
-tv152 = 288
-this$ = 336
-?dtor$2@?0???0SimpleUI@UI@@QEAA@XZ@4HA PROC		; `UI::SimpleUI::SimpleUI'::`1'::dtor$2
+tv143 = 248
+tv145 = 256
+this$ = 304
+?dtor$1@?0???0SimpleUI@UI@@QEAA@XZ@4HA PROC		; `UI::SimpleUI::SimpleUI'::`1'::dtor$1
 	mov	QWORD PTR [rsp+8], rcx
 	mov	QWORD PTR [rsp+16], rdx
 	push	rbp
@@ -28736,24 +27494,21 @@ this$ = 336
 	lea	rbp, QWORD PTR [rdx+32]
 	mov	rcx, QWORD PTR this$[rbp]
 	add	rcx, 8
-	call	??1?$unique_ptr@VMaintainBooksHandler@Library@Domain@@U?$default_delete@VMaintainBooksHandler@Library@Domain@@@std@@@std@@QEAA@XZ ; std::unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> >::~unique_ptr<Domain::Library::MaintainBooksHandler,std::default_delete<Domain::Library::MaintainBooksHandler> >
+	call	??1?$unique_ptr@VAuthenticate@Reservation@Domain@@U?$default_delete@VAuthenticate@Reservation@Domain@@@std@@@std@@QEAA@XZ ; std::unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> >::~unique_ptr<Domain::Reservation::Authenticate,std::default_delete<Domain::Reservation::Authenticate> >
 	add	rsp, 40					; 00000028H
 	pop	rdi
 	pop	rbp
 	ret	0
-?dtor$2@?0???0SimpleUI@UI@@QEAA@XZ@4HA ENDP		; `UI::SimpleUI::SimpleUI'::`1'::dtor$2
+?dtor$1@?0???0SimpleUI@UI@@QEAA@XZ@4HA ENDP		; `UI::SimpleUI::SimpleUI'::`1'::dtor$1
 text$x	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ;	COMDAT text$x
 text$x	SEGMENT
 $T1 = 200
-$T2 = 232
-tv150 = 280
-tv89 = 280
-tv155 = 288
-tv152 = 288
-this$ = 336
-?dtor$3@?0???0SimpleUI@UI@@QEAA@XZ@4HA PROC		; `UI::SimpleUI::SimpleUI'::`1'::dtor$3
+tv143 = 248
+tv145 = 256
+this$ = 304
+?dtor$2@?0???0SimpleUI@UI@@QEAA@XZ@4HA PROC		; `UI::SimpleUI::SimpleUI'::`1'::dtor$2
 	mov	QWORD PTR [rsp+8], rcx
 	mov	QWORD PTR [rsp+16], rdx
 	push	rbp
@@ -28767,32 +27522,29 @@ this$ = 336
 	pop	rdi
 	pop	rbp
 	ret	0
-?dtor$3@?0???0SimpleUI@UI@@QEAA@XZ@4HA ENDP		; `UI::SimpleUI::SimpleUI'::`1'::dtor$3
+?dtor$2@?0???0SimpleUI@UI@@QEAA@XZ@4HA ENDP		; `UI::SimpleUI::SimpleUI'::`1'::dtor$2
 text$x	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ;	COMDAT text$x
 text$x	SEGMENT
 $T1 = 200
-$T2 = 232
-tv150 = 280
-tv89 = 280
-tv155 = 288
-tv152 = 288
-this$ = 336
-?dtor$4@?0???0SimpleUI@UI@@QEAA@XZ@4HA PROC		; `UI::SimpleUI::SimpleUI'::`1'::dtor$4
+tv143 = 248
+tv145 = 256
+this$ = 304
+?dtor$3@?0???0SimpleUI@UI@@QEAA@XZ@4HA PROC		; `UI::SimpleUI::SimpleUI'::`1'::dtor$3
 	mov	QWORD PTR [rsp+8], rcx
 	mov	QWORD PTR [rsp+16], rdx
 	push	rbp
 	push	rdi
 	sub	rsp, 40					; 00000028H
 	lea	rbp, QWORD PTR [rdx+32]
-	lea	rcx, QWORD PTR $T2[rbp]
+	lea	rcx, QWORD PTR $T1[rbp]
 	call	??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::~basic_string<char,std::char_traits<char>,std::allocator<char> >
 	add	rsp, 40					; 00000028H
 	pop	rdi
 	pop	rbp
 	ret	0
-?dtor$4@?0???0SimpleUI@UI@@QEAA@XZ@4HA ENDP		; `UI::SimpleUI::SimpleUI'::`1'::dtor$4
+?dtor$3@?0???0SimpleUI@UI@@QEAA@XZ@4HA ENDP		; `UI::SimpleUI::SimpleUI'::`1'::dtor$3
 text$x	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
 ;	COMDAT ??0UserInterfaceHandler@UI@@QEAA@XZ
@@ -34942,63 +33694,6 @@ $LN3:
 ??0?$allocator@D@std@@QEAA@XZ ENDP			; std::allocator<char>::allocator<char>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
-;	COMDAT ??0MaintainBooksHandler@Library@Domain@@QEAA@XZ
-_TEXT	SEGMENT
-this$ = 224
-??0MaintainBooksHandler@Library@Domain@@QEAA@XZ PROC	; Domain::Library::MaintainBooksHandler::MaintainBooksHandler, COMDAT
-$LN3:
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 200				; 000000c8H
-	mov	rbp, rsp
-	mov	rdi, rsp
-	mov	ecx, 50					; 00000032H
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+232]
-	mov	rax, QWORD PTR this$[rbp]
-	lea	rcx, OFFSET FLAT:??_7MaintainBooksHandler@Library@Domain@@6B@
-	mov	QWORD PTR [rax], rcx
-	mov	rax, QWORD PTR this$[rbp]
-	lea	rsp, QWORD PTR [rbp+200]
-	pop	rdi
-	pop	rbp
-	ret	0
-??0MaintainBooksHandler@Library@Domain@@QEAA@XZ ENDP	; Domain::Library::MaintainBooksHandler::MaintainBooksHandler
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\Domain\Library\MaintainBooksHandler.hpp
-;	COMDAT ??1MaintainBooksHandler@Library@Domain@@UEAA@XZ
-_TEXT	SEGMENT
-this$ = 224
-??1MaintainBooksHandler@Library@Domain@@UEAA@XZ PROC	; Domain::Library::MaintainBooksHandler::~MaintainBooksHandler, COMDAT
-
-; 31   :   inline MaintainBooksHandler::~MaintainBooksHandler() noexcept = default;
-
-$LN3:
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rdi
-	sub	rsp, 232				; 000000e8H
-	lea	rbp, QWORD PTR [rsp+32]
-	mov	rdi, rsp
-	mov	ecx, 58					; 0000003aH
-	mov	eax, -858993460				; ccccccccH
-	rep stosd
-	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__31783858_MaintainBooksHandler@hpp
-	call	__CheckForDebuggerJustMyCode
-	mov	rax, QWORD PTR this$[rbp]
-	lea	rcx, OFFSET FLAT:??_7MaintainBooksHandler@Library@Domain@@6B@
-	mov	QWORD PTR [rax], rcx
-	lea	rsp, QWORD PTR [rbp+200]
-	pop	rdi
-	pop	rbp
-	ret	0
-??1MaintainBooksHandler@Library@Domain@@UEAA@XZ ENDP	; Domain::Library::MaintainBooksHandler::~MaintainBooksHandler
-_TEXT	ENDS
-; Function compile flags: /Odtp /RTCsu /ZI
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
 ;	COMDAT ??$_Construct_in_place@U_Container_proxy@std@@PEAU_Container_base12@2@@std@@YAXAEAU_Container_proxy@0@$$QEAPEAU_Container_base12@0@@Z
 _TEXT	SEGMENT
@@ -36527,7 +35222,7 @@ $LN3:
 ??2@YAPEAX_KPEAX@Z ENDP					; operator new
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
 ;	COMDAT ?__empty_global_delete@@YAXPEAX_KW4align_val_t@std@@@Z
 _TEXT	SEGMENT
 __formal$ = 224
@@ -36548,7 +35243,7 @@ $LN3:
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
 	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__65237790_SimpleUI@cpp
+	lea	rcx, OFFSET FLAT:__7B0A884F_SimpleUI@cpp
 	call	__CheckForDebuggerJustMyCode
 	npad	1
 	lea	rsp, QWORD PTR [rbp+200]
@@ -36558,7 +35253,7 @@ $LN3:
 ?__empty_global_delete@@YAXPEAX_KW4align_val_t@std@@@Z ENDP ; __empty_global_delete
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
 ;	COMDAT ?__empty_global_delete@@YAXPEAXW4align_val_t@std@@@Z
 _TEXT	SEGMENT
 __formal$ = 224
@@ -36577,7 +35272,7 @@ $LN3:
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
 	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__65237790_SimpleUI@cpp
+	lea	rcx, OFFSET FLAT:__7B0A884F_SimpleUI@cpp
 	call	__CheckForDebuggerJustMyCode
 	npad	1
 	lea	rsp, QWORD PTR [rbp+200]
@@ -36587,7 +35282,7 @@ $LN3:
 ?__empty_global_delete@@YAXPEAXW4align_val_t@std@@@Z ENDP ; __empty_global_delete
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
 ;	COMDAT ?__empty_global_delete@@YAXPEAX_K@Z
 _TEXT	SEGMENT
 __formal$ = 224
@@ -36606,7 +35301,7 @@ $LN3:
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
 	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__65237790_SimpleUI@cpp
+	lea	rcx, OFFSET FLAT:__7B0A884F_SimpleUI@cpp
 	call	__CheckForDebuggerJustMyCode
 	npad	1
 	lea	rsp, QWORD PTR [rbp+200]
@@ -36616,7 +35311,7 @@ $LN3:
 ?__empty_global_delete@@YAXPEAX_K@Z ENDP		; __empty_global_delete
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu /ZI
-; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
+; File C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\UI\SimpleUI.cpp
 ;	COMDAT ?__empty_global_delete@@YAXPEAX@Z
 _TEXT	SEGMENT
 __formal$ = 224
@@ -36633,7 +35328,7 @@ $LN3:
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
 	mov	rcx, QWORD PTR [rsp+264]
-	lea	rcx, OFFSET FLAT:__65237790_SimpleUI@cpp
+	lea	rcx, OFFSET FLAT:__7B0A884F_SimpleUI@cpp
 	call	__CheckForDebuggerJustMyCode
 	npad	1
 	lea	rsp, QWORD PTR [rbp+200]

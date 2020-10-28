@@ -1,7 +1,3 @@
 ﻿  Session.cpp
-C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\Domain\Session\Session.cpp(36,103): warning C4100: 'args': unreferenced formal parameter
-C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\Domain\Session\Session.cpp(36,61): warning C4100: 'session': unreferenced formal parameter
-  SessionHandler.cpp
-  Compiling...
-  Generating Code...
-C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\Domain\Session\Session.cpp(39): error C4716: 'userAuthenticate': must return a value
+C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\SourceCode\Domain\Session\Session.cpp(27,99): warning C4100: 'args': unreferenced formal parameter
+  ConsoleApplication.vcxproj -> C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Hospital-Reservation-System\Desktop_Presentation\MSVC++v16 (2019) Solution Space\ConsoleApplication\x64\Debug\ConsoleApplication-x64-Debug.exe
