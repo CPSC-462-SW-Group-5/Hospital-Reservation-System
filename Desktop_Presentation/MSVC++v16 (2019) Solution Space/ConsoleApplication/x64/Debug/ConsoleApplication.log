@@ -1,0 +1,7 @@
+﻿  Session.cpp
+C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\Domain\Session\Session.cpp(36,103): warning C4100: 'args': unreferenced formal parameter
+C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\Domain\Session\Session.cpp(36,61): warning C4100: 'session': unreferenced formal parameter
+  SessionHandler.cpp
+  Compiling...
+  Generating Code...
+C:\Users\Holland\Desktop\Holland's Stuff\CSUFSchool\CPSC 462\Development Environment\Desktop_Presentation\SourceCode\Domain\Session\Session.cpp(39): error C4716: 'userAuthenticate': must return a value
